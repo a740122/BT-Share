@@ -18,7 +18,7 @@ from cgi import escape
 from traceback import format_exc
 from Queue import Queue, Empty as QueueEmpty
 
-from download-demo import Downloader
+from download_demo import Downloader
 
 from BeautifulSoup import BeautifulSoup
 
@@ -76,6 +76,7 @@ class Crawler(object):
                 except Exception, e:
                     print "ERROR: Can't process url '%s' (%s)" % (url, e)
                     print format_exc()
+
 
 class Fetcher(object):
 
@@ -159,6 +160,9 @@ def parse_options():
 
     return opts, args
 
+def check(url):
+    return True
+
 def main():
     opts, args = parse_options()
 
@@ -175,7 +179,21 @@ def main():
     print "Crawling %s (Max Depth: %d)" % (url, depth)
     crawler = Crawler(url, depth)
     crawler.crawl()
-    print "\n".join(crawler.urls)
+
+    download_queue = Queue.Queue()
+
+    # create a thread pool and give them a queue
+    for i in range(5):
+        t = Downloader(download_queue)
+        t.setDaemon(True)
+        t.start()
+
+    for url in crawler.urls:
+        download_queue.put(url)
+
+    # wait for the queue to finish
+    download_queue.join()
+
 
     eTime = time.time()
     tTime = eTime - sTime
