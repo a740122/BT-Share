@@ -180,7 +180,7 @@ def main():
     crawler = Crawler(url, depth)
     crawler.crawl()
 
-    download_queue = Queue.Queue()
+    download_queue = Queue()
 
     # create a thread pool and give them a queue
     for i in range(5):
