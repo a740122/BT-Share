@@ -7,7 +7,7 @@ options.py
 该模块定义了程序接收的命令行参数，提供参数的默认值与格式。
 """
 
-import argparse 
+import argparse
 
 _default = dict(
     logfile = 'spider.log',
@@ -29,11 +29,12 @@ def positiveInt(rawValue):
         return value
 
 def url(rawValue):
+    value = rawValue
     if not rawValue.startswith('http'):
         value = 'http://' + rawValue
     return value
 
-parser = argparse.ArgumentParser(description='A Web crawler for Knownsec') 
+parser = argparse.ArgumentParser(description='A Web crawler for Knownsec')
 
 parser.add_argument('-u', type=url, required=True, metavar='URL', dest='url',
                    help='Specify the begin url')

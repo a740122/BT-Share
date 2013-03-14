@@ -1,0 +1,21 @@
+2013-03-14 18:30:05,312 Thread-11 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 96, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 114, in _addUnvisitedHrefs
+    hrefs = self._getAllHrefsFromPage(url, pageSource)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 123, in _getAllHrefsFromPage
+    soup = BeautifulSoup(pageSource)
+  File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
+    self.builder.prepare_markup(markup, from_encoding))
+  File "/usr/local/lib/python2.7/site-packages/bs4/builder/_lxml.py", line 68, in prepare_markup
+    dammit = UnicodeDammit(markup, try_encodings, is_html=True)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 203, in __init__
+    self._detectEncoding(markup, is_html)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 373, in _detectEncoding
+    xml_encoding_match = xml_encoding_re.match(xml_data)
+TypeError: expected string or buffer
+
+2013-03-14 20:23:50,201 Thread-8 WARNING Page not avaliable. Status code:404 URL: http://music.baidu.com/artist/44428508 
+

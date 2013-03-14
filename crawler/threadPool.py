@@ -36,9 +36,10 @@ class Worker(Thread):
             except Empty:
                 continue
             try:
-                self.threadPool.increaseRunsNum() 
-                result = func(*args, **kargs) 
+                self.threadPool.increaseRunsNum()
+                result = func(*args, **kargs)
                 self.threadPool.decreaseRunsNum()
+                # no need for the result queue at all
                 if result:
                     self.threadPool.putTaskResult(*result)
                 self.threadPool.taskDone()
@@ -55,17 +56,17 @@ class ThreadPool(object):
         self.running = 0    #正在run的线程数
         self.taskQueue = Queue() #任务队列
         self.resultQueue = Queue() #结果队列
-    
+
     def startThreads(self):
-        for i in range(self.threadNum): 
+        for i in range(self.threadNum):
             self.pool.append(Worker(self))
-    
+
     def stopThreads(self):
         for thread in self.pool:
             thread.stop()
             thread.join()
         del self.pool[:]
-    
+
     def putTask(self, func, *args, **kargs):
         self.taskQueue.put((func, args, kargs))
 
@@ -91,8 +92,8 @@ class ThreadPool(object):
         self.lock.release()
 
     def decreaseRunsNum(self):
-        self.lock.acquire() 
-        self.running -= 1 
+        self.lock.acquire()
+        self.running -= 1
         self.lock.release()
 
     def getTaskLeft(self):
