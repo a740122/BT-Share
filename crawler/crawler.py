@@ -28,23 +28,32 @@ class Crawler(object):
 
     def __init__(self, args):
         #指定网页深度
-        self.depth = args.depth
+        self.depth = args['depth']
         #标注初始爬虫深度，从1开始
         self.currentDepth = 1
         #指定关键词,使用console的默认编码来解码
-        self.keyword = args.keyword.decode(getdefaultlocale()[1])
+        self.keyword = args['keyword'].decode(getdefaultlocale()[1])
         #数据库
-        self.database =  Database(args.dbFile)
+        self.database =  Database()
         #线程池,指定线程数
-        self.threadPool = ThreadPool(args.threadNum)
+        self.threadPool = ThreadPool(args['threadNum'])
         #已访问的链接
         self.visitedHrefs = set()
         #待访问的链接
         self.unvisitedHrefs = deque()
-        #添加首个待访问的链接
-        self.unvisitedHrefs.append(args.url)
+        #添加待访问的链接
+        for url in args['url']:
+            self.unvisitedHrefs.append(url)
         #标记爬虫是否开始执行任务
         self.isCrawling = False
+        # allow or deny crawl url
+        self.entryFilter = args['entryFilter']
+        # allow to output back url
+        self.yieldFilter = args['yieldFilter']
+        #
+        self.collection = args['collection']
+        #
+        self.db = args['db']
 
     def start(self):
         print '\nStart Crawling\n'
@@ -80,6 +89,9 @@ class Crawler(object):
     def _assignCurrentDepthTasks(self):
         while self.unvisitedHrefs:
             url = self.unvisitedHrefs.popleft()
+            if not self.__entry_filter(url):
+                self.visitedHrefs.add(url)
+                continue
             #向任务队列分配任务
             self.threadPool.putTask(self._taskHandler, url)
             #标注该链接已被访问,或即将被访问,防止重复访问相同链接
@@ -88,19 +100,17 @@ class Crawler(object):
     def _taskHandler(self, url):
         #先拿网页源码，再保存,两个都是高阻塞的操作，交给线程处理
         webPage = WebPage(url)
-        if webPage.fetch():
+        tmp = webPage.fetch()
+        # print tmp
+        if tmp:
             self._saveTaskResults(webPage)
             self._addUnvisitedHrefs(webPage)
 
     def _saveTaskResults(self, webPage):
         url, pageSource = webPage.getDatas()
         try:
-            if
-        #     if self.keyword:
-        #         if re.search(self.keyword, pageSource, re.I):
-        #             self.database.saveData(url, pageSource, self.keyword)
-        #     else:
-        #         self.database.saveData(url, pageSource)
+            if self.__yield_filter(url):
+                self.database.saveData(url=url,db=self.db,collection=self.collection)
         except Exception, e:
             log.error(' URL: %s ' % url + traceback.format_exc())
 
@@ -153,7 +163,7 @@ class Crawler(object):
             print 'Please check your network and make sure it\'s connected.\n'
         #数据库测试
         elif not self._isDatabaseAvaliable():
-            print 'Please make sure you have the permission to save data: %s\n' % args.dbFile
+            print 'Please make sure you have the permission to save data\n'
         #保存数据
         else:
             self._saveTaskResults(url, pageSource)

@@ -22,18 +22,19 @@ class WebPage(object):
         self.url = url
         self.pageSource = None
         self.customeHeaders()
-        # print "test"
 
     def fetch(self, retry=2, proxies=None):
         '''获取html源代码'''
-        # import pdb
-        # pdb.set_trace()
         try:
             #设置了prefetch=False，当访问response.text时才下载网页内容,避免下载非html文件
-            #BUG timeout range is too small
-            response = requests.get(self.url, headers=self.headers, timeout=100, proxies=proxies)
+            response = requests.head(self.url, headers=self.headers, timeout=100, proxies=proxies)
+
+            if self._isMediaUrl(response):
+                return True
 
             if self._isResponseAvaliable(response):
+                #else we get the whole page
+                response = requests.get(self.url, headers=self.headers, timeout=100, proxies=proxies)
                 self._handleEncoding(response)
                 self.pageSource = response.text
                 return True
@@ -58,7 +59,8 @@ class WebPage(object):
             'Connection': 'keep-alive',
             #设置Host会导致TooManyRedirects, 因为hostname不会随着原url跳转而更改,可不设置
             #'Host':urlparse(self.url).hostname
-            'User-Agent' : 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4',
+            # 'User-Agent' : 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4',
+            'User-Agent': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/5.0)',
             'Referer' : self.url,
         }
         self.headers.update(kargs)
@@ -67,10 +69,16 @@ class WebPage(object):
         return self.url, self.pageSource
 
     def _isResponseAvaliable(self, response):
-        #网页为200时再获取源码, 只选取html页面。
-        # print response.statuts_code
+        #网页为200时再获取源码
         if response.status_code == requests.codes.ok:
             if 'html' in response.headers['Content-Type']:
+                return True
+        return False
+
+    def _isMediaUrl(self, response):
+        #
+        if response.status_code == requests.codes.ok:
+            if [i for i in ['video','audio'] if i in response.headers['Content-Type']]:
                 return True
         return False
 

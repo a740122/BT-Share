@@ -15,6 +15,8 @@ _default = dict(
     loglevel = 3,
     threadNum = 10,
     keyword = '',
+    entryFilter = [],
+    yieldFilter = [],
     )
 
 def positiveInt(rawValue):
@@ -60,10 +62,11 @@ parser.add_argument('--key', type=str, metavar='KEYWORD', default=_default['keyw
 parser.add_argument('--testself',action='store_true',dest='testSelf',
                    help='Crawler self test')
 
+parser.add_argument('--entryFilter', type=list, help="url to crawl", default=_default['entryFilter'])
 
 
-#spider.py -u url -d deep -f logfile -l loglevel(1-5)  --testself -thread number --dbfile  filepath  --key=”HTML5”
-#Namespace(dbFile='data.sql', depth=3, keyword=None, logFile='spider.log', logLevel=3, testSelf=False, threadNum=10, url='baidu.com')
+parser.add_argument('--yieldFilter', type=list, help="url to store", default=_default['yieldFilter'])
+
 
 def main():
     args = parser.parse_args()

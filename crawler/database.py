@@ -1,24 +1,20 @@
-#coding:utf8
+# #coding:utf8
 
-"""
-database.py
-~~~~~~~~~~~~~
+# """
+# database.py
+# ~~~~~~~~~~~~~
 
-该模块提供爬虫所需的sqlite数据库的创建、连接、断开，以及数据的存储功能。
-"""
+# 该模块提供爬虫所需的mongo数据库的创建、连接、断开，以及数据的存储功能。
+# """
 
-import sqlite3
+from pymongo import Connection
+from pymongo.errors import ConnectionFailure
 
 class Database(object):
-    def __init__(self, dbFile):
+    def __init__(self):
         try:
-            self.conn = sqlite3.connect(dbFile, isolation_level=None, check_same_thread = False) #让它自动commit，效率也有所提升. 多线程共用
-            self.conn.execute('''CREATE TABLE IF NOT EXISTS
-                            Webpage (id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                            url TEXT, 
-                            pageSource TEXT,
-                            keyword TEXT)''')
-        except Exception, e:
+            self.conn = Connection(host='localhost', port=27017)
+        except ConnectionFailure, e:
             self.conn = None
 
     def isConn(self):
@@ -27,15 +23,28 @@ class Database(object):
         else:
             return False
 
-    def saveData(self, url, pageSource, keyword=''):
+    def saveData(self, url='', db='', collection=''):
         if self.conn:
-            sql='''INSERT INTO Webpage (url, pageSource, keyword) VALUES (?, ?, ?);'''
-            self.conn.execute(sql, (url, pageSource, keyword) )
-        else :
-            raise sqlite3.OperationalError,'Database is not connected. Can not save Data!'
+            dbh = self.conn[db]
+            urldoc = {
+                "url": url
+            }
+            dbh[collection].insert(urldoc, safe=True)
+        else:
+            # do log
+            pass
+
+    def getAllData(self, db='', collection=''):
+        if self.conn and db and collection:
+            return self.conn[db][collection].find()
+        else:
+            return []
 
     def close(self):
         if self.conn:
-            self.conn.close()
+            pass
         else :
-            raise sqlite3.OperationalError, 'Database is not connected.'
+            pass
+
+    def saveMedia(self, ):
+        pass

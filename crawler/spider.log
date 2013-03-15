@@ -1,11 +1,23 @@
-2013-03-14 18:30:05,312 Thread-11 CRITICAL Traceback (most recent call last):
+2013-03-15 19:05:17,845 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=effdb7c9974a1fa59e194e89d8dd9162  
+
+2013-03-15 19:05:18,121 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:19:33,288 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=7c7793f16d5a82b47110c329ab53b046  
+
+2013-03-15 19:19:36,565 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:20:56,949 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=08ec8df1b6b5bdf34bd29ebbbfef7ca5  
+
+2013-03-15 19:20:57,426 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:23:25,840 Thread-2 CRITICAL Traceback (most recent call last):
   File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
     result = func(*args, **kargs)
-  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 96, in _taskHandler
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 105, in _taskHandler
     self._addUnvisitedHrefs(webPage)
-  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 114, in _addUnvisitedHrefs
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 120, in _addUnvisitedHrefs
     hrefs = self._getAllHrefsFromPage(url, pageSource)
-  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 123, in _getAllHrefsFromPage
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 130, in _getAllHrefsFromPage
     soup = BeautifulSoup(pageSource)
   File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
     self.builder.prepare_markup(markup, from_encoding))
@@ -17,5 +29,161 @@
     xml_encoding_match = xml_encoding_re.match(xml_data)
 TypeError: expected string or buffer
 
-2013-03-14 20:23:50,201 Thread-8 WARNING Page not avaliable. Status code:404 URL: http://music.baidu.com/artist/44428508 
+2013-03-15 19:23:36,025 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 105, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 120, in _addUnvisitedHrefs
+    hrefs = self._getAllHrefsFromPage(url, pageSource)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 130, in _getAllHrefsFromPage
+    soup = BeautifulSoup(pageSource)
+  File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
+    self.builder.prepare_markup(markup, from_encoding))
+  File "/usr/local/lib/python2.7/site-packages/bs4/builder/_lxml.py", line 68, in prepare_markup
+    dammit = UnicodeDammit(markup, try_encodings, is_html=True)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 203, in __init__
+    self._detectEncoding(markup, is_html)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 373, in _detectEncoding
+    xml_encoding_match = xml_encoding_re.match(xml_data)
+TypeError: expected string or buffer
+
+2013-03-15 19:24:54,883 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 105, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 120, in _addUnvisitedHrefs
+    hrefs = self._getAllHrefsFromPage(url, pageSource)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 130, in _getAllHrefsFromPage
+    soup = BeautifulSoup(pageSource)
+  File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
+    self.builder.prepare_markup(markup, from_encoding))
+  File "/usr/local/lib/python2.7/site-packages/bs4/builder/_lxml.py", line 68, in prepare_markup
+    dammit = UnicodeDammit(markup, try_encodings, is_html=True)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 203, in __init__
+    self._detectEncoding(markup, is_html)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 373, in _detectEncoding
+    xml_encoding_match = xml_encoding_re.match(xml_data)
+TypeError: expected string or buffer
+
+2013-03-15 19:27:18,049 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 105, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 120, in _addUnvisitedHrefs
+    hrefs = self._getAllHrefsFromPage(url, pageSource)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 130, in _getAllHrefsFromPage
+    soup = BeautifulSoup(pageSource)
+  File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
+    self.builder.prepare_markup(markup, from_encoding))
+  File "/usr/local/lib/python2.7/site-packages/bs4/builder/_lxml.py", line 68, in prepare_markup
+    dammit = UnicodeDammit(markup, try_encodings, is_html=True)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 203, in __init__
+    self._detectEncoding(markup, is_html)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 373, in _detectEncoding
+    xml_encoding_match = xml_encoding_re.match(xml_data)
+TypeError: expected string or buffer
+
+2013-03-15 19:28:57,521 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=6b2e6025035fb53b145034a7b217121b  
+
+2013-03-15 19:28:57,799 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:30:06,084 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 105, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 121, in _addUnvisitedHrefs
+    print hrefs.length
+AttributeError: 'list' object has no attribute 'length'
+
+2013-03-15 19:30:52,027 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 105, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 121, in _addUnvisitedHrefs
+    print hrefs.length
+AttributeError: 'list' object has no attribute 'length'
+
+2013-03-15 19:31:31,941 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=416442836e054274a0a1ff4303999d85  
+
+2013-03-15 19:31:32,217 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:37:41,207 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=f9c500a2db3f120fa79c7fd72cefb648  
+
+2013-03-15 19:37:41,496 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:41:39,890 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=562872a6251201fa3c350b4e1ff22833  
+
+2013-03-15 19:41:40,166 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:42:42,778 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/35420495/7333126252000128.mp3?xcode=3c8704d0f805d37a407096a9766ced16  
+
+2013-03-15 19:42:46,052 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:44:24,239 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 107, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 122, in _addUnvisitedHrefs
+    hrefs = self._getAllHrefsFromPage(url, pageSource)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 131, in _getAllHrefsFromPage
+    soup = BeautifulSoup(pageSource)
+  File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
+    self.builder.prepare_markup(markup, from_encoding))
+  File "/usr/local/lib/python2.7/site-packages/bs4/builder/_lxml.py", line 68, in prepare_markup
+    dammit = UnicodeDammit(markup, try_encodings, is_html=True)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 203, in __init__
+    self._detectEncoding(markup, is_html)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 373, in _detectEncoding
+    xml_encoding_match = xml_encoding_re.match(xml_data)
+TypeError: expected string or buffer
+
+2013-03-15 19:44:24,518 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:47:14,510 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 107, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 121, in _addUnvisitedHrefs
+    hrefs = self._getAllHrefsFromPage(url, pageSource)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 130, in _getAllHrefsFromPage
+    soup = BeautifulSoup(pageSource)
+  File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
+    self.builder.prepare_markup(markup, from_encoding))
+  File "/usr/local/lib/python2.7/site-packages/bs4/builder/_lxml.py", line 68, in prepare_markup
+    dammit = UnicodeDammit(markup, try_encodings, is_html=True)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 203, in __init__
+    self._detectEncoding(markup, is_html)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 373, in _detectEncoding
+    xml_encoding_match = xml_encoding_re.match(xml_data)
+TypeError: expected string or buffer
+
+2013-03-15 19:47:14,797 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
+
+2013-03-15 19:48:43,043 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 107, in _taskHandler
+    self._addUnvisitedHrefs(webPage)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 121, in _addUnvisitedHrefs
+    hrefs = self._getAllHrefsFromPage(url, pageSource)
+  File "/home/zhkzyth/codeRep/spider-demo/crawler/crawler.py", line 130, in _getAllHrefsFromPage
+    soup = BeautifulSoup(pageSource)
+  File "/usr/local/lib/python2.7/site-packages/bs4/__init__.py", line 169, in __init__
+    self.builder.prepare_markup(markup, from_encoding))
+  File "/usr/local/lib/python2.7/site-packages/bs4/builder/_lxml.py", line 68, in prepare_markup
+    dammit = UnicodeDammit(markup, try_encodings, is_html=True)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 203, in __init__
+    self._detectEncoding(markup, is_html)
+  File "/usr/local/lib/python2.7/site-packages/bs4/dammit.py", line 373, in _detectEncoding
+    xml_encoding_match = xml_encoding_re.match(xml_data)
+TypeError: expected string or buffer
+
+2013-03-15 19:48:43,342 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
 

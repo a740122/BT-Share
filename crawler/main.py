@@ -8,12 +8,14 @@ from threading import Thread
 from crawler import Crawler
 from options import parser
 
+from downloader import Downloader
+
 
 def congifLogger(logFile, logLevel):
     '''配置logging的日志文件以及日志的记录等级'''
     logger = logging.getLogger('Main')
     LEVELS={
-        1:logging.CRITICAL, 
+        1:logging.CRITICAL,
         2:logging.ERROR,
         3:logging.WARNING,
         4:logging.INFO,
@@ -49,7 +51,7 @@ class PrintProgress(Thread):
                 print 'Crawling in depth %d' % self.crawler.currentDepth
                 print 'Already visited %d Links' % self.crawler.getAlreadyVisitedNum()
                 print '%d tasks remaining in thread pool.' % self.crawler.threadPool.getTaskLeft()
-                print '-------------------------------------------\n'   
+                print '-------------------------------------------\n'
                 time.sleep(10)
 
     def printSpendingTime(self):
@@ -61,11 +63,34 @@ class PrintProgress(Thread):
 
 
 def main():
-    args = parser.parse_args()
-    if not congifLogger(args.logFile, args.logLevel):
-        print '\nPermission denied: %s' % args.logFile
+    # args = parser.parse_args()
+
+    # init.
+    entryFilter = dict()
+    entryFilter['Type'] = 'allow'
+    entryFilter['List'] = [r'music\.baidu\.com$', ]
+
+    yieldFilter = dict()
+    yieldFilter['Type'] = 'allow'
+    yieldFilter['List'] = [r'.*/song/\d+$']
+
+    args = dict(
+        url = 'http://music.baidu.com',
+        depth = 2,
+        logFile = 'spider.log',
+        logLevel = 3,
+        threadNum = 1,
+        keyword = '',
+        testSelf = False,
+        entryFilter = [],
+        yieldFilter = yieldFilter,
+    )
+
+
+    if not congifLogger(args['logFile'], args['logLevel']):
+        print '\nPermission denied: %s' % args['logFile']
         print 'Please make sure you have the permission to save the log file!\n'
-    elif args.testSelf:
+    elif args['testSelf']:
         Crawler(args).selfTesting(args)
     else:
         crawler = Crawler(args)
