@@ -1,0 +1,114 @@
+{% extends add_task.html %}
+
+{% block head %}
+<link rel="stylesheet" href="{{static_url('css/add_task.css')}}" type="text/css" media="screen" />
+<style>
+#addtask_head {
+	width:100%;
+	font-size:13px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #ffc4c4;
+}
+#addtask_head #message {
+}
+#addtask_main {
+    margin-top: 20px;
+}
+.addtask_form {
+
+}
+.l {
+	width: 120px;
+}
+.r {
+	width:560px;
+}
+</style>
+{% end %}
+
+{% block body %}
+<div id="addtask_head">
+  <span id="message">{{ message }}</span>
+</div>
+<div id="addtask_main">
+<form class="addtask_form" method="post" enctype="multipart/form-data" onsubmit="return on_submit();">
+	<div class="addtask_up">
+	<div class="l">任务下载地址</div>
+	<div class="r">
+		<input type="text" name="url" id="task_url" value="" placeholder="HTTP, ED2K or Magnet" style="width:330px;border-right:none;" onkeyup="on_url_change();" onPaste="on_url_change();" /><div class="bt_file">
+          <input type="file" name="btfile" class="file" onchange="on_file_change();" />
+          <div class="fake_button">
+            <button class="button file_button">种子上传</button>
+          </div>
+        </div>
+        {% if options.using_xsrf %}{% raw handler.xsrf_form_html() %}{% end %}
+        <input type="hidden" name="anonymous" value="1" />
+        <input class="button" name="b" type="submit" style="height:29px;" value="提交" />
+	</div>
+	</div>
+
+	<div class="addtask_button">
+	</div>
+</form>
+</div>
+
+<div id="addtask_foot">
+	<!-- 后续说明？ -->
+</div>
+{% end %}
+
+{% block foot %}
+<script>
+function on_submit() {
+  var form = document.forms[0];
+  if (form.url.value == "" && from.btfile.value == "") {
+    document.getElementById("message").innerText = "任务下载地址不能为空";
+    return false;
+  }
+  form.b.value = "提交中...";
+  form.b.disabled = true;
+  form.tags.readOnly = true;
+  form.url.readOnly = true;
+  form.title.readOnly = true;
+  return true;
+}
+
+function on_url_change() {
+  var form = document.forms[0];
+  var url = form.url;
+  if (url.value != "" && (url.class == "" || url.class == undefined)) {
+    url.class = "changed";
+    url.style.cssText = "width: 400px; -moz-border-radius: 5px; border-radius: 5px; -webkit-border-radius: 5px;";
+    document.getElementsByClassName("bt_file")[0].style.cssText = "width:0;";
+  } else if (url.value == "") {
+    url.class = "";
+    url.style.cssText = "width: 330px;border-right:none;";
+    document.getElementsByClassName("bt_file")[0].style.cssText = "";
+  }
+}
+
+function on_file_change() {
+  var form = document.forms[0];
+  var url = form.url;
+  var file = form.btfile.files[0];
+  console.log(file);
+  if (file) {
+    if (file.size > 500*1024) {
+      form.btfile.value = "";
+      document.getElementById("message").innerText = "文件过大";
+      return false;
+    }
+    if (!file.name.match(/.torrent$/i)) {
+      form.btfile.value = "";
+      document.getElementById("message").innerText = "需要种子文件";
+      return false;
+    }
+  }
+  document.getElementById("message").innerText = "";
+  url.value = form.btfile.value;
+  url.disabled = true;
+  url.readOnly = true;
+}
+</script>
+{% end %}

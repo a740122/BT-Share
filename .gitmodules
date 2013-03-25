@@ -1,3 +1,6 @@
 [submodule "PyCrawler"]
 	path = PyCrawler
 	url = https://github.com/theanti9/PyCrawler.git
+[submodule "xunlei"]
+	path = xunlei
+	url = https://github.com/adieu/xunlei.git
