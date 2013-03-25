@@ -12,7 +12,7 @@ from threading import Lock
 from time import time
 from libs.tools import url_unmask
 from libs.lixian_api import LiXianAPI, determin_url_type
-from libs.cache import mem_cache
+# from libs.cache import mem_cache
 from tornado.options import options
 from requests import RequestException
 
@@ -98,37 +98,38 @@ class DBTaskManager(object):
 
     # @sqlalchemy_rollback
     def _update_tasks(self, tasks):
-        session = Session()
+        # session = Session()
         while tasks:
             nm_list = []
             bt_list = []
             for task in tasks[:100]:
-                if task.task_type in ("bt", "magnet"):
-                    bt_list.append(task.id)
+                if task['task_type'] in ("bt", "magnet"):
+                    bt_list.append(task['id'])
                 else:
-                    nm_list.append(task.id)
+                    nm_list.append(task['id'])
 
             for res in self.xunlei.get_task_process(nm_list, bt_list):
                 task = self.get_task(res['task_id'])
                 if not task: continue
-                task.status = res['status']
-                task.process = res['process']
-                if task.status == "failed":
-                    task.invalid = True
+                task['status'] = res['status']
+                task['process'] = res['process']
+                if task['status'] == "failed":
+                    task['invalid'] = True
                 if res['cid'] and res['lixian_url']:
-                    task.cid = res['cid']
-                    task.lixian_url = res['lixian_url']
+                    task['cid'] = res['cid']
+                    task['lixian_url'] = res['lixian_url']
 
-                if task.status in ("downloading", "finished"):
+                if task['status'] in ("downloading", "finished"):
                     if not self._update_file_list(task):
-                        task.status = "downloading"
-                session.add(task)
+                        task['status'] = "downloading"
+                # session.add(task)
+                database['task'].update({'id': task['id']})
 
             tasks = tasks[100:]
-        session.commit()
-        session.close()
+        # session.commit()
+        # session.close()
 
-    @sqlalchemy_rollback
+    # @sqlalchemy_rollback
     def _update_task_list(self, limit=10, st=0, ignore=False):
         now = self.time()
         with self._last_update_task_lock:
@@ -137,97 +138,105 @@ class DBTaskManager(object):
             self._last_update_task = self.time()
             self._last_update_task_size = limit
 
-            session = Session()
+            # session = Session()
             tasks = self.xunlei.get_task_list(limit, st)
             for task in tasks[::-1]:
-                db_task_status = session.query(db.Task.status).filter(
-                        db.Task.id == task['task_id']).first()
+                # db_task_status = session.query(db.Task.status).filter(
+                        # db.Task.id == task['task_id']).first()
+                db_task_status = database['task'].find_one({"task_id": task['task_id']})
+
                 if db_task_status and db_task_status[0] == "finished":
                     continue
-
+                # update local db
                 db_task = self.get_task(int(task['task_id']))
                 changed = False
+                #not exit before in local store,so create one
                 if not db_task:
                     changed = True
-                    db_task = db.Task()
-                    db_task.id = task['task_id']
-                    db_task.create_uid = self.uid
-                    db_task.cid = task['cid']
-                    db_task.url = task['url']
-                    db_task.lixian_url = task['lixian_url']
-                    db_task.taskname = task['taskname'] or "NULL"
-                    db_task.task_type = task['task_type']
-                    db_task.status = task['status']
-                    db_task.invalid = True
-                    db_task.process = task['process']
-                    db_task.size = task['size']
-                    db_task.format = task['format']
+                    db_task = {
+                        'id': task['task_id'],
+                        'create_uid': self.uid,
+                        'cid': task['cid'],
+                        'url': task['url'],
+                        'lixian_url': task['lixian_url'],
+                        'taskname': task['taskname'] or "NULL",
+                        'task_type': task['task_type'],
+                        'status': task['status'],
+                        'invalid': True,
+                        'process': task['process'],
+                        'size': task['size'],
+                        'format': task['format'],
+                    }
                 else:
-                    db_task.lixian_url = task['lixian_url']
-                    if db_task.status != task['status']:
+                    db_task['lixian_url'] = task['lixian_url']
+                    if db_task['status'] != task['status']:
+                        changed = Truel
+                        db_task['status'] = task['status']
+                    if db_task['status'] == "failed":
+                        db_task['invalid'] = True
+                    if db_task['process'] != task['process']:
                         changed = True
-                        db_task.status = task['status']
-                    if db_task.status == "failed":
-                        db_task.invalid = True
-                    if db_task.process != task['process']:
-                        changed = True
-                        db_task.process = task['process']
+                        db_task['process'] = task['process']
 
-                session.add(db_task)
-                if changed and not self._update_file_list(db_task, session):
-                    db_task.status = "failed"
-                    db_task.invalid = True
-                    session.add(db_task)
+                # session.add(db_task)
+                if changed and not self._update_file_list(db_task):
+                    db_task['status'] = "failed"
+                    db_task['invalid'] = True
+                    # session.add(db_task)
+                database['task'].save(db_task)
+            # session.commit()
+            # session.close()
 
-            session.commit()
-            session.close()
-
-    @sqlalchemy_rollback
-    def _update_file_list(self, task, session=None):
-        if session is None:
-            session = Session()
-        if task.task_type == "normal":
+    # @sqlalchemy_rollback
+    def _update_file_list(self, task):
+        # if session is None:
+        #     session = Session()
+        if task['task_type'] == "normal":
             tmp_file = dict(
-                    task_id = task.id,
-                    cid = task.cid,
-                    url = task.url,
-                    lixian_url = task.lixian_url,
-                    title = task.taskname,
-                    status = task.status,
-                    dirtitle = task.taskname,
-                    process = task.process,
-                    size = task.size,
-                    format = task.format
+                    task_id = task['id'],
+                    cid = task['cid'],
+                    url = task['url'],
+                    lixian_url = task['lixian_url'],
+                    title = task['taskname'],
+                    status = task['status'],
+                    dirtitle = task['taskname'],
+                    process = task['process'],
+                    size = task['size'],
+                    format = task['format']
                     )
             files = [tmp_file, ]
-        elif task.task_type in ("bt", "magnet"):
+        elif task['task_type'] in ("bt", "magnet"):
             try:
-                files = self.xunlei.get_bt_list(task.id, task.cid)
+                files = self.xunlei.get_bt_list(task['id'], task['cid'])
             except Exception, e:
                 logging.error(repr(e))
                 return False
 
         for file in files:
-            db_file = session.query(db.File).get(int(file['task_id']))
+            # db_file = session.query(db.File).get(int(file['task_id']))
+            db_file = database['file'].find_one({'id': file['task_id']})
             if not db_file:
-                db_file = db.File()
-                db_file.id = file['task_id']
-                db_file.task_id = task.id
-                db_file.cid = file['cid']
-                db_file.url = file['url']
-                db_file._lixian_url = file['lixian_url'] #fix_lixian_url(file['lixian_url'])
-                db_file.title = file['title']
-                db_file.dirtitle = file['dirtitle']
-                db_file.status = file['status']
-                db_file.process = file['process']
-                db_file.size = file['size']
-                db_file.format = file['format']
+                new_file = {
+                    'id': file['task_id'],
+                    'task_id': task['id'],
+                    'cid': file['cid'],
+                    'url': file['url'],
+                    '_lixian_url': file['lixian_url'],
+                    'title': file['title'],
+                    'dirtitle': file['dirtitle'],
+                    'status': file['status'],
+                    'process': file['process'],
+                    'size': file['size'],
+                    'format': file['format']
+                }
+                database['file'].save(new_file)
             else:
-                db_file._lixian_url = file['lixian_url'] #fix_lixian_url(file['lixian_url'])
-                db_file.status = file['status']
-                db_file.process = file['process']
-
-            session.add(db_file)
+                update_file = {
+                  '_lixian_url' : file['lixian_url'],
+                  'status' : file['status'],
+                  'process' : file['process']
+                }
+                database['file'].update({'task_id':file['task_id']}, update_file)
         return True
 
     def _restart_all_paused_task(self):
@@ -253,13 +262,14 @@ class DBTaskManager(object):
             elif task['status'] == "paused":
                 paused_tasks.append(task)
         if downloading_tasks:
-            self.xunlei.task_pause([x['task_id'] for x in downloading_tasks])
+            self.xunlei.task_paue([x['task_id'] for x in downloading_tasks])
         if not waiting_tasks:
             self.xunlei.redownload([x['task_id'] for x in paused_tasks])
 
     # @sqlalchemy_rollback
     def get_task(self, task_id):
-        return Session().query(db.Task).get(task_id)
+        # return Session().query(db.Task).get(task_id)
+        return database['task'].find_one({"task_id": task_id})
 
     # @sqlalchemy_rollback
     def merge_task(self, task):
@@ -284,35 +294,49 @@ class DBTaskManager(object):
 
 
     # @sqlalchemy_rollback
-    def get_task_list(self, start_task_id=0, offset=0, limit=30, q="", t="", a="", order=db.Task.createtime, dis=db.desc, all=False):
-        session = Session()
+    def get_task_list(self, start_task_id=0, offset=0, limit=30, q="", t="", a="", order='createtime', dis=0, all=False):
+        # session = Session()
         self._last_get_task_list = self.time()
         # base query
-        query = session.query(db.Task)
+        # query = session.query(db.Task)
         # query or tags
         if q:
-            query = query.filter(db.or_(db.Task.taskname.like("%%%s%%" % q),
-                db.Task.tags.like("%%%s%%" % q)))
+            # query = query.filter(db.or_(db.Task.taskname.like("%%%s%%" % q),
+            #     db.Task.tags.like("%%%s%%" % q)))
+            query_param = {'$or': [{'taskname':"/.*"+q+".*/"},{'tags':"/.*"+q+".*/"}]}
         elif t:
-            query = query.filter(db.Task.tags.like("%%|%s|%%" % t));
+            # query = query.filter(db.Task.tags.like("%%|%s|%%" % t));
+            query_param = {'taskname':"/.*"+q+".*/"}
         # author query
         if a:
-            query = query.filter(db.Task.creator == a)
+            # query = query.filter(db.Task.creator == a)
+            query_param = {'creator': a}
         # next page offset
         if start_task_id:
-            value = session.query(order).filter(db.Task.id == start_task_id).first()
+            # value = session.query(order).filter(db.Task.id == start_task_id).first()
+            value = database['task'].find_one({"id":start_task_id})
             if not value:
                 return []
-            if dis == db.desc:
-                query = query.filter(order < value[0])
+        #     if dis == db.desc:
+        #         query = query.filter(order < value[0]
+        #     else:
+        #         query = query.filter(order > value[0])
+            if dis:
+                query_param_1 = {'order': {'$lt': value}}
             else:
-                query = query.filter(order > value[0])
+                query_param_1 = {'order': {'$gt': value}}
+
         # order or limit
         if not all:
-            query = query.filter(db.Task.invalid == False)
-        query = query.order_by(dis(order), dis(db.Task.id)).offset(offset).limit(limit)
+            # query = query.filter(db.Task.invalid == False)
+            query_param_2 = {'invalid': False}
 
-        result = query.all()
+        # query = query.order_by(dis(order), dis(db.Task.id)).offset(offset).limit(limit)
+        query_param_3 = {{'$orderby': [{'createtime': dis},{'id':dis}]},{'$skip': offset},{'$limit':limit}}
+        #TODO
+        query = {"$and": [query_param,query_param_1,query_param_2,query_param_3]}
+        # result = query.all()
+        result = database['task'].find(query)
         if result and start_task_id:
             for i, each in enumerate(result):
                 if each.id == start_task_id:
@@ -321,10 +345,10 @@ class DBTaskManager(object):
                         return self.get_task_list(start_task_id=start_task_id, offset=offset+i+1, limit=limit, q=q, t=t, a=a, order=order, dis=dis, all=all)
                     else:
                         return result
-        session.close()
+        # session.close()
         return result
 
-    @sqlalchemy_rollback
+    # @sqlalchemy_rollback
     def get_file_list(self, task_id, vip_info=None):
         task = self.get_task(task_id)
         if not task: return []
@@ -336,12 +360,12 @@ class DBTaskManager(object):
         if not vip_info["tid"]:
             return []
         for file in task.files:
-            file.lixian_url = file._lixian_url
+            file['lixian_url'] = file['_lixian_url']
             #file.lixian_url = fix_lixian_co(file.lixian_url)
-        return task.files
+        return task['files']
 
-    @mem_cache(2*60*60)
-    @sqlalchemy_rollback
+    # @mem_cache(2*60*60)
+    # @sqlalchemy_rollback
     def get_tag_list(self):
         from collections import defaultdict
         tags_count = defaultdict(lambda: defaultdict(int))
@@ -355,8 +379,8 @@ class DBTaskManager(object):
             result[key] = sum([x[1] for x in items])
         return sorted(result.iteritems(), key=lambda x: x[1], reverse=True)
 
-    @mem_cache(expire=5*60*60)
-    @sqlalchemy_rollback
+    # @mem_cache(expire=5*60*60)
+    # @sqlalchemy_rollback
     def get_task_ids(self):
         result = []
         for taskid, in Session().query(db.Task.id):
@@ -449,7 +473,8 @@ class DBTaskManager(object):
         if info.get('cid'):
             #TODO
             task = self.get_task_by_cid(info['cid'])
-            if task.count() > 0:
+            # if task.count() > 0:
+            if task:
                 return (1, update_task(task[0]))
 
         # check title
@@ -465,7 +490,7 @@ class DBTaskManager(object):
         result = add_task_with_info(url, info)
         if not result:
             return (0, "error")
-        #TODO
+
         self._update_task_list(5)
 
         # step 5: checkout task&fix
@@ -516,10 +541,14 @@ class DBTaskManager(object):
            self._last_update_downloading_task + \
                 options.finished_task_check_interval < time():
             self._last_update_downloading_task = time()
-            need_update = Session().query(db.Task).filter(db.or_(db.Task.status == "waiting", db.Task.status == "downloading", db.Task.status == "paused")).all()
-                                                  #.order_by(desc(db.Task.id)).limit(100).all()
+            # need_update = Session().query(db.Task).filter(db.or_(db.Task.status == "waiting", db.Task.status == "downloading", db.Task.status == "paused")).all()
+            need_update = database['task'].find({'$or': [{'status':'waiting'},{'status':'downloadig'},{'status':'paused'}]})
             if need_update:
-                self._update_tasks(need_update)
+                # tmp hack!
+                tasks = []
+                for value in need_update:
+                    tasks.append(value)
+                self._update_tasks(tasks)
 
             self._task_scheduling()
 

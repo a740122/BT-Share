@@ -1,8 +1,9 @@
 # -*- encoding: utf8 -*-
 
-import db
-from db.util import *
-from libs.cache import mem_cache
+# import db
+# from db.util import *
+# from libs.cache import mem_cache
+from db import database
 
 default_group_permission = {
         "add_task": True,
@@ -63,59 +64,64 @@ for group, permission_dict in group_permission.iteritems():
 
 class UserManager(object):
     def __init__(self):
-        self.session = db.Session()
+        # self.session = db.Session()
+        self.database = database['user'] #should build a connection pool
         self.add_task_limit_used = {}
         self.reload_limit = {}
 
-    @sqlalchemy_rollback
+    # @sqlalchemy_rollback
     def get_user_by_id(self, _id):
-        return self.session.query(db.User).get(_id)
+        # return self.session.query(db.User).get(_id)
+        return self.database.find_one({'id':_id})
 
-    @sqlalchemy_rollback
+    # @sqlalchemy_rollback
     def get_user_email_by_id(self, _id):
         if _id == 0:
             return "bot@localhost"
-        return self.session.query(db.User.email).filter(db.User.id==_id).scalar()
+        # return self.session.query(db.User.email).filter(db.User.id==_id).scalar()
+        return self.database.find_one({'id':_id},{'email':1})
 
-    @sqlalchemy_rollback
+    # @sqlalchemy_rollback
     def get_user(self, email):
         if not email: return None
-        return self.session.query(db.User).filter(db.User.email==email).scalar()
+        # return self.session.query(db.User).filter(db.User.email==email).scalar()
+        return self.database.find_one({'email': email})
 
-    @sqlalchemy_rollback
+    # @sqlalchemy_rollback
     def update_user(self, email, name):
         self.reset_add_task_limit(email)
-        user = self.get_user(email) or db.User()
-        user.email = email
-        user.name = name
-        self.session.add(user)
-        self.session.commit()
+        user = self.get_user(email) or {}
+        user['email'] = email
+        user['name'] = name
+        database.save(user)
+        # self.session.add(user)
+        # self.session.commit()
 
-    @mem_cache(expire=60*60)
+    # @mem_cache(expire=60*60)
     def get_id(self, email):
         if email == "bot@localhost":
             return 0
         user = self.get_user(email)
         if user:
-            return user.id
+            return user['id']
         return None
 
-    @mem_cache(expire=60*60)
+    # @mem_cache(expire=60*60)
     def get_name(self, email):
         if email == "bot@localhost":
             return "bot"
         user = self.get_user(email)
         if user:
-            return user.name
+            return user['name']
         return None
 
-    @mem_cache(expire=30*60)
+    # @mem_cache(expire=30*60)
     def get_group(self, email):
         if email == "bot@localhost":
             return "admin"
         user = self.get_user(email)
         if user:
-            return user.group
+            return user['group']
         return None
 
     def get_add_task_limit(self, email):
@@ -138,14 +144,14 @@ class UserManager(object):
         self.add_task_limit_used = {}
         self.reload_limit = {}
 
-    @mem_cache(expire=30*60)
+    # @mem_cache(expire=30*60)
     def get_permission(self, email):
         user = self.get_user(email)
         if user:
             return user.permission or 0
         return 0
 
-    @mem_cache(expire=60)
+    # @mem_cache(expire=60)
     def check_permission(self, email, permission):
         if email is None:
             return not_login_permission[permission]

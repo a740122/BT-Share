@@ -488,6 +488,7 @@ class LiXianAPI(object):
     REDOWNLOAD_URL = "http://dynamic.cloud.vip.xunlei.com/interface/redownload?callback=jsonp1234567890"
     def redownload(self, task_ids):
         r = self.session.post(self.REDOWNLOAD_URL, data = {
+            #hmm......
                                          "id[]": task_ids,
                                          "cid[]": ["",]*len(task_ids),
                                          "url[]": ["",]*len(task_ids),
