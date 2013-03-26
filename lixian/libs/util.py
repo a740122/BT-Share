@@ -5,6 +5,8 @@ import logging
 import traceback
 import thread
 import tornado
+from time import time
+from datetime import datetime
 from multiprocessing import Pipe
 
 units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
@@ -31,11 +33,19 @@ def email2name(request, email):
 def email2id(request, email):
     return request.user_manager.get_id(email)
 
+def format_time(request,num):
+    try:
+        result = datetime.fromtimestamp(num).date()
+    except:
+        result = ""
+    return result
+
 ui_methods = {
         "format_size": format_size,
         "format_status": format_download_status,
         "email2name": email2name,
         "email2id": email2id,
+        "format_time":format_time
 }
 
 class AsyncProcessMixin(object):
@@ -49,7 +59,7 @@ class AsyncProcessMixin(object):
             except Exception, e:
                 logging.error(traceback.format_exc())
                 pipe.send(e)
-        
+
         self.ioloop.add_handler(self.pipe.fileno(),
                   self.async_callback(self.on_pipe_result, callback),
                   self.ioloop.READ)

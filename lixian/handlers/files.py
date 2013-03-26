@@ -21,14 +21,15 @@ class GetLiXianURLHandler(BaseHandler):
         if referer and not self.request.host in referer[4:10+len(self.request.host)]:
             self.redirect("/share/"+str(task_id))
             return
-        
+
         task = self.task_manager.get_task(task_id)
         if task is None:
             raise HTTPError(404, "task is not exists.")
 
         vip_info = self.get_vip()
         files = self.task_manager.get_file_list(task_id, vip_info)
-        if files is None:
+
+        if not files:
             raise HTTPError(500, "Error when getting file list.")
 
         cookie = options.cookie_str % vip_info["gdriveid"]
