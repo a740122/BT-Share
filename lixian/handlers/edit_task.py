@@ -14,7 +14,7 @@ class EditTaskHandler(BaseHandler):
     def get(self, message=""):
         task_id = self.get_argument("task_id")
         task = self.task_manager.get_task(int(task_id))
-        if self.current_user['email'] != task.creator and\
+        if self.current_user['email'] != task['creator'] and\
            not self.has_permission("admin"):
                raise HTTPError(403, "You might not have permission")
         if not self.has_permission("mod_task"):
@@ -32,17 +32,19 @@ class EditTaskHandler(BaseHandler):
         if not title:
             return self.get(u"标题不能为空")
 
-        tags = set([x.strip() for x in _split_re.split(tags)])
-        if self.current_user['email'] != task.creator and\
+        tags = list([x.strip() for x in _split_re.split(tags)])
+        if self.current_user['email'] != task['creator'] and\
            not self.has_permission("admin"):
                raise HTTPError(403, "You might not have permission")
         if not self.has_permission("mod_task"):
             raise HTTPError(403, "You might not have permission")
-
-        task.taskname = title
-        task.tags = tags
-        task.invalid = not public
-        self.task_manager.merge_task(task)
+        param = {}
+        param['taskname'] = title
+        param['tags'] = tags
+        param['invalid'] = not public
+        # import pdb
+        # pdb.set_trace()
+        self.task_manager.update_task(task_id,param)
 
         return self.get("修改成功")
 

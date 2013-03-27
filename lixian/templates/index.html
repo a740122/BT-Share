@@ -56,7 +56,8 @@
       // load next page
       next_page_sent = true;
       $.get("/next", {
-          s: $(".task-item:last").attr("data-task-id"),
+          <!-- s: $(".task-item:last").attr("data-task-id"), -->
+          s: $(".js-task-item:last").attr("data-task-id"),
           q: {% raw json_encode(query.get('q', '')) %},
           t: {% raw json_encode(query.get('t', '')) %},
           a: {% raw json_encode(query.get('a', '')) %},

@@ -1,7 +1,7 @@
 {% set current_user_id = current_user and email2id(current_user['email']) %}
 {% set isadmin = handler.has_permission("admin") %}
 {% for task in tasks %}
-<li class="task-item" data-task-id="{{ task['id'] }}">
+<li class="task-item js-task-item" data-task-id="{{ task['_id'] }}">
   <div class="process-bar {{ task['status'] }}" style="width: {{ 100-task['process'] }}%"></div>
   <a class="get-lixian-url iframe" href="/get_lixian_url?task_id={{ task['id'] }}" target="_blank" title="{{ task['taskname'] }}">
       <div class="tname"><span class="p1">{% if task['invalid'] %}* {% end %}{{ len(task['taskname']) > 15 and task['taskname'][:-15] or task['taskname'] }}</span><span class="p2">{{ len(task['taskname']) > 15 and task['taskname'][-15:] or "" }}</span></div>

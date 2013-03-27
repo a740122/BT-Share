@@ -6,7 +6,7 @@ from tornado.options import options
 from .base import BaseHandler
 from libs.cache import mem_cache
 
-TASK_LIMIT = 30
+TASK_LIMIT = 10
 
 class IndexHandler(BaseHandler):
     def get(self):
@@ -77,7 +77,7 @@ class GetNextTasks(BaseHandler):
         if not self.has_permission("view_tasklist"):
             raise HTTPError(403)
 
-        start_task_id = int(self.get_argument("s"))
+        s = self.get_argument("s", "")
         q = self.get_argument("q", "")
         t = self.get_argument("t", "")
         a = self.get_argument("a", "")
@@ -90,7 +90,7 @@ class GetNextTasks(BaseHandler):
             all = True
         else:
             all = False
-        tasks = self.task_manager.get_task_list(start_task_id,
+        tasks = self.task_manager.get_task_list(start_id=s,
                 q=q, t=t, a=creator, limit = TASK_LIMIT, all=all)
         self.render("task_list.html", tasks=tasks)
 
@@ -112,7 +112,7 @@ class TagsModule(UIModule):
         return u", ".join(result)
 
 class TagListModule(UIModule):
-    @mem_cache(60*60)
+    # @mem_cache(60*60)
     def render(self):
         def size_type(count):
             if count < 10:

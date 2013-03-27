@@ -21,15 +21,15 @@
 	<div class="addtask_up">
 	<div class="l">任务标题</div>
 	<div class="r">
-        <input type="text" name="title" id="task_title" maxlength="256" value="{{ task.taskname }}" style="width:300px;" />
+        <input type="text" name="title" id="task_title" maxlength="256" value="{{ task['taskname'] }}" style="width:300px;" />
 		<span>(选填，默认任务文件名)</span>
 	</div>
 	</div>
-	
+
 	<div class="addtask_up">
 	<div class="l">标签TAG</div>
 	<div class="r">
-        <input type="text" name="tags" id="task_tags" maxlength="1024" value="{{ ",".join(task.tags) }}" style="width:300px;" />
+        <input type="text" name="tags" id="task_tags" maxlength="1024" value="{{ ",".join(task['tags']) }}" style="width:300px;" />
 		<span>(必填，多个请用逗号分开)</span>
 	</div>
 	</div>
@@ -38,12 +38,12 @@
     <label>
     <div class="l">是否公开</div>
 	<div class="r">
-        <input type="checkbox" name="public" {% if not task.invalid %}checked{% end %} />
+        <input type="checkbox" name="public" {% if not task['invalid'] %}checked{% end %} />
 		<span> 公开的资源可被搜索/查看，并且会显示您的昵称。 </span>
 	</div>
     </label>
 	</div>
-	
+
 	<div class="addtask_button">
         <input class="button" name="b" type="submit" value="提交" />
 		<button class="button" type="reset" onclick="location.reload();">重置</button>

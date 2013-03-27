@@ -6,6 +6,7 @@ import thread
 import random
 import socket
 import re
+import pymongo
 
 from StringIO import StringIO
 from threading import Lock
@@ -15,6 +16,7 @@ from libs.lixian_api import LiXianAPI, determin_url_type
 # from libs.cache import mem_cache
 from tornado.options import options
 from requests import RequestException
+from bson.objectid import ObjectId
 
 from db import database
 
@@ -122,7 +124,7 @@ class DBTaskManager(object):
                 if task['status'] in ("downloading", "finished"):
                     if not self._update_file_list(task):
                         task['status'] = "downloading"
-                database['task'].update({'id': task['id']})
+                database['task'].update({'id': task['task_id']})
 
             tasks = tasks[100:]
 
@@ -158,14 +160,14 @@ class DBTaskManager(object):
                         'taskname': task['taskname'] or "NULL",
                         'task_type': task['task_type'],
                         'status': task['status'],
-                        'invalid': True,
+                        'invalid': False,
                         'process': task['process'],
                         'size': task['size'],
                         'format': task['format'],
                     }
                     if not self._update_file_list(new_task):
-                        newtask['status'] = "failed"
-                        newtask['invalid'] = True
+                        new_task['status'] = "failed"
+                        new_task['invalid'] = True
                     database['task'].save(new_task)
                 else:
                     update_task = {}
@@ -267,17 +269,12 @@ class DBTaskManager(object):
         return database['task'].find_one({"id": task_id})
 
     # @sqlalchemy_rollback
-    def merge_task(self, task):
-        session = Session()
-        ret = session.merge(task)
-        session.commit()
-        session.close()
-        return ret
+    def update_task(self, task_id, param):
+        return database['task'].update({"id":int(task_id)},{"$set":param },safe=True)
 
     # @sqlalchemy_rollback
     def get_task_by_cid(self, cid):
         return database['task'].find_one({"cid":cid, "status": {"$ne": "failed"}})
-        # return Session().query(db.Task).filter(db.Task.cid == cid).filter(db.Task.status != "failed")
 
     # @sqlalchemy_rollback
     def get_task_by_title(self, title):
@@ -288,42 +285,30 @@ class DBTaskManager(object):
 
 
     # @sqlalchemy_rollback
-    def get_task_list(self, start_task_id=0, offset=0, limit=30, q="", t="", a="", order='createtime', dis=0, all=False):
+    def get_task_list(self, offset=0, start_id=0, limit=30, q="", t="", a="", order='createtime', dir=pymongo.DESCENDING, all=False):
         self._last_get_task_list = self.time()
-        query_param = {"$and":[{}]}
+        query_param = {"$and":[]}
         # query or tags
         if q:
-            query_param['$and'].append({'$or': [{'taskname':"/.*"+q+".*/"},{'tags':"/.*"+q+".*/"}]})
-        elif t:
-            query_param['$and'].append({'taskname':"/.*"+q+".*/"})
+            query_param['$and'].append({'$or': [{'taskname':{"$regex":q}},{'tags':{"$regex":q}}]})
+        if t:
+            query_param['$and'].append({'tags':{"$regex":t}})
         # author query
         if a:
             query_param['$and'].append({'creator': a})
+
         # next page offset
-        if start_task_id:
-            value = database['task'].find_one({"id":start_task_id})
-            if not value:
-                return []
-            if dis:
-                query_param['$and'].append({'order': {'$lt': value}})
-            else:
-                query_param['$and'].append({'order': {'$gt': value}})
+        if start_id:
+            query_param['$and'].append({'_id':{"$lt":ObjectId(start_id)}})
 
         # order or limit
         if not all:
             query_param['$and'].append({'invalid': False})
         #TODO
-        # query_param['$and'].append({'$orderby': [{'createtime': dis},{'id':dis}]})
-        result = database['task'].find(query_param).skip(offset).limit(limit)
-        if result and start_task_id:
-            for i, each in enumerate(result):
-                if each.id == start_task_id:
-                    result = result[i+1:]
-                    if not result:
-                        return self.get_task_list(start_task_id=start_task_id, offset=offset+i+1, limit=limit, q=q, t=t, a=a, order=order, dis=dis, all=all)
-                    else:
-                        return result
-        # session.close()
+        query_param['$and'] = query_param['$and'] or [{}]
+        result_iter = database['task'].find(query_param).sort([(order,dir)]).skip(offset).limit(limit)
+        result = [value for value in result_iter]
+
         return result
 
     # @sqlalchemy_rollback
@@ -333,7 +318,6 @@ class DBTaskManager(object):
 
         if vip_info is None:
             vip_info = self.get_vip()
-
         #fix lixian url
         if not vip_info["tid"]:
             return []
@@ -345,12 +329,12 @@ class DBTaskManager(object):
         return result
 
     # @mem_cache(2*60*60)
-    # @sqlalchemy_rollback
     def get_tag_list(self):
         from collections import defaultdict
         tags_count = defaultdict(lambda: defaultdict(int))
-        for tags, in Session().query(db.Task.tags).filter(db.Task.invalid == False):
-            for tag in tags:
+        result_set = database['task'].find({"invalid":{"$ne":False}},{"tags":1})
+        for result in result_set:
+            for tag in result['tags']:
                 tags_count[tag.lower()][tag] += 1
         result = dict()
         for key, value in tags_count.iteritems():
@@ -368,8 +352,8 @@ class DBTaskManager(object):
         return result
 
     @catch_connect_error((-99, "connection error"))
-    def add_task(self, url, title=None, tags=set(), creator="", anonymous=False, need_miaoxia=True):
-        def update_task(task, title=title, tags=tags, creator=creator, anonymous=anonymous):
+    def add_task(self, url, title=None, tags=[], creator="", anonymous=False, need_miaoxia=True):
+        def _update_task(task, title=title, tags=tags, creator=creator, anonymous=anonymous):
             if not task:
                 return task
             if task.invalid and not anonymous:
@@ -380,7 +364,7 @@ class DBTaskManager(object):
                     new_task['tags'] = tags
                 new_task['creator'] = creator
                 new_task['invalid'] = False
-                database['task'].update({"id":task['id']}, {"$set": new_task}, safe=True)
+                database['task'].update({"id":task['task_id']}, {"$set": new_task}, safe=True)
             return task
 
         def _random():
@@ -399,7 +383,7 @@ class DBTaskManager(object):
             task = database['task'].find_one({"url":url})
 
             if task:
-                return (1, update_task(task))
+                return (1, _update_task(task))
 
             url_type = determin_url_type(url)
             if url_type in ("bt", "magnet"):
