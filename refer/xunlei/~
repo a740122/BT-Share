@@ -1,0 +1,5 @@
+#LWP-Cookies-2.0
+Set-Cookie3: in_xl=0; path="/"; domain=".vip.xunlei.com"; path_spec; domain_dot; discard; version=0
+Set-Cookie3: VERIFY_KEY=F1892F8B087BCCC4B65CAA60056F1867; path="/"; domain=".xunlei.com"; path_spec; discard; version=0
+Set-Cookie3: blogresult=2; path="/"; domain=".xunlei.com"; path_spec; discard; version=0
+Set-Cookie3: check_result="0:!Twc"; path="/"; domain=".xunlei.com"; path_spec; discard; version=0

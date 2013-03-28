@@ -8,11 +8,11 @@
   <language>zh-CN</language>
   {% for task in tasks %}
   <item>
-   <title>{{ task.taskname }}</title>
-   <link>{{ request.protocol }}://{{ request.host }}/share/{{ task.id }}</link>
-   <description>{% if task.tags %} TAGS:{{ ", ".join(task.tags) }}{% end %} UP主:{{ email2name(task.creator) or task.creator or "unknow" }} 上传时间:{{ task.createtime.strftime("%Y-%m-%d %H:%M:%S") }}</description>
-   <pubDate>{{ task.createtime.strftime("%a, %d %b %Y %T +0800") }}</pubDate>
-   <guid>{{ request.protocol }}://{{ request.host }}/share/{{ task.id }}</guid>
+   <title>{{ task['taskname'] }}</title>
+   <link>{{ request.protocol }}://{{ request.host }}/share/{{ task['id'] }}</link>
+   <description>{% if task['tags'] %} TAGS:{{ ", ".join(task['tags']) }}{% end %} UP主:{{ email2name(task['creator']) or task['creator'] or "unknow" }} 上传时间:{{ task['createtime'].strftime("%Y-%m-%d %H:%M:%S") }}</description>
+   <pubDate>{{ format_time(task['createtime'])}}</pubDate>
+   <guid>{{ request.protocol }}://{{ request.host }}/share/{{ task['id'] }}</guid>
   </item>
   {% end %}
  </channel>

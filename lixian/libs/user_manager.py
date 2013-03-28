@@ -1,9 +1,7 @@
 # -*- encoding: utf8 -*-
 
-# import db
-# from db.util import *
-# from libs.cache import mem_cache
 from db import database
+from bson.objectid import ObjectId
 
 default_group_permission = {
         "add_task": True,
@@ -64,38 +62,32 @@ for group, permission_dict in group_permission.iteritems():
 
 class UserManager(object):
     def __init__(self):
-        # self.session = db.Session()
-        self.database = database['user'] #should build a connection pool
+        #TODO should build a connection pool
+        self.database = database['user']
         self.add_task_limit_used = {}
         self.reload_limit = {}
 
-    # @sqlalchemy_rollback
     def get_user_by_id(self, _id):
-        # return self.session.query(db.User).get(_id)
-        return self.database.find_one({'id':_id})
+        return self.database.find_one({'_id':ObjectId(_id)})
 
-    # @sqlalchemy_rollback
     def get_user_email_by_id(self, _id):
-        if _id == 0:
+        if not _id:
             return "bot@localhost"
-        # return self.session.query(db.User.email).filter(db.User.id==_id).scalar()
-        return self.database.find_one({'id':_id},{'email':1})
+        return self.database.find_one({'id':ObjectId(_id)},{'email':1})
 
-    # @sqlalchemy_rollback
     def get_user(self, email):
         if not email: return None
-        # return self.session.query(db.User).filter(db.User.email==email).scalar()
         return self.database.find_one({'email': email})
 
-    # @sqlalchemy_rollback
     def update_user(self, email, name):
         self.reset_add_task_limit(email)
         user = self.get_user(email) or {}
-        user['email'] = email
-        user['name'] = name
-        database.save(user)
-        # self.session.add(user)
-        # self.session.commit()
+        if user:
+            self.database.update({"_id":user['_id']},{"$set":user},safe=True)
+        else:
+            user['email'] = email
+            user['name'] = name
+            self.database.save(user)
 
     # @mem_cache(expire=60*60)
     def get_id(self, email):

@@ -66,7 +66,7 @@ class AddTaskHandler(BaseHandler, AsyncProcessMixin):
             return
 
         if tags:
-            tags = set([x.strip() for x in _split_re.split(tags)])
+            tags = list([x.strip() for x in _split_re.split(tags)])
         result, task = yield gen.Task(self.call_subprocess,
                 partial(self.task_manager.add_task, btfile or url, title, tags, email, anonymous,
                                                     self.has_permission("need_miaoxia")))
@@ -75,9 +75,9 @@ class AddTaskHandler(BaseHandler, AsyncProcessMixin):
             if task:
                 self.write("""<script>
     parent.$('#fancybox-content').css({height: "350px"});
-	parent.$.fancybox.resize();
+    parent.$.fancybox.resize();
     location='/get_lixian_url?task_id=%d'
-</script>""" % task.id)
+</script>""" % task['id'])
             else:
                 self.write("<script>top.location='/'</script>")
             self.user_manager.incr_add_task_limit(self.current_user["email"])

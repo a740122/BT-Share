@@ -99,8 +99,6 @@ class DBTaskManager(object):
                }
 
     def _update_tasks(self, tasks):
-        # import pdb
-        # pdb.set_trace()
         while tasks:
             nm_list = []
             bt_list = []
@@ -182,7 +180,7 @@ class DBTaskManager(object):
                     if not self._update_file_list(db_task):
                         update_task['status'] = "failed"
                         update_task['invalid'] = True
-                        database['task'].update({'id':task['task_id']}, {"$set": update_task}, safe=True)
+                    database['task'].update({'id':task['task_id']}, {"$set": update_task}, safe=True)
 
     def _update_file_list(self, task):
         if task['task_type'] == "normal":
@@ -351,12 +349,12 @@ class DBTaskManager(object):
             result.append(taskid)
         return result
 
-    @catch_connect_error((-99, "connection error"))
+    # @catch_connect_error((-99, "connection error"))
     def add_task(self, url, title=None, tags=[], creator="", anonymous=False, need_miaoxia=True):
         def _update_task(task, title=title, tags=tags, creator=creator, anonymous=anonymous):
             if not task:
                 return task
-            if task.invalid and not anonymous:
+            if task['invalid'] and not anonymous:
                 new_task = {}
                 if title:
                     new_task['title'] = title or "NULL"
@@ -426,11 +424,9 @@ class DBTaskManager(object):
                 each['valid'] = 1
         # check cid
         if info.get('cid'):
-            #TODO
             task = self.get_task_by_cid(info['cid'])
-            # if task.count() > 0:
             if task:
-                return (1, update_task(task[0]))
+                return (1, _update_task(task))
 
         # check title
         if title:
@@ -438,26 +434,23 @@ class DBTaskManager(object):
         else:
             title = info.get('title', 'None')
         if not info['cid'] and \
-                self.get_task_by_title(info['title']).count() > 0:
+                self.get_task_by_title(info['title']):
             info['title'] = "%s#%s@%s %s" % (options.site_name, _random(), self.time(), info['title'])
 
         # step 4: commit & fetch result
         result = add_task_with_info(url, info)
         if not result:
             return (0, "error")
-
+        #update local db
         self._update_task_list(5)
 
         # step 5: checkout task&fix
         task = None
         if info.get('cid') and not task:
-            # task = self.get_task_by_cid(info['cid']).first()
             task = self.get_task_by_cid(info['cid'])
         if info.get('title') and not task:
-            # task = self.get_task_by_title(info['title']).first()
             task = self.get_task_by_title(info['title'])
         if url and isinstance(url, basestring) and not task:
-            # task = session.query(db.Task).filter(db.Task.url == url).first()
             task = self.get_task_by_url(url)
         if not task:
             return (-5, "match task error")
@@ -470,9 +463,9 @@ class DBTaskManager(object):
                 custom_dic['tags'] = tags
             custom_dic['creator'] = creator
             custom_dic['invalid'] = anonymous
-            if task.taskname is None:
-                task.taskname = "None"
-            database.save(task)
+            if task['taskname'] is None:
+                custom_dic['taskname'] = "None"
+            database['task'].update({"id":task["id"]},{"$set":custom_dic},safe=True)
         return (1, task)
 
     # @sqlalchemy_rollback

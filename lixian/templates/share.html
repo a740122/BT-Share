@@ -1,13 +1,13 @@
 {% extends front.html %}
 
-{% block title %}{{ options.site_name }} - {{ task.taskname }} - 迅雷离线下载分享{% end %}
-{% block desc %}{% if task.tags %}TAGS:{{ ", ".join(task.tags) }}{% end %} UP主:{{ not task.invalid and email2name(task.creator) or "unknow" }}{% end %}
+{% block title %}{{ options.site_name }} - {{ task['taskname'] }} - 迅雷离线下载分享{% end %}
+{% block desc %}{% if task['tags'] %}TAGS:{{ ", ".join(task['tags']) }}{% end %} UP主:{{ not task['invalid'] and email2name(task['creator']) or "unknow" }}{% end %}
 
 {% block more_head %}
 <script src="http://pstatic.xunlei.com/js/base64.js"></script>
 <script type="text/javascript" src="{{static_url('js/common.js')}}"></script>
 <script type="text/javascript">
-  LE.taskname = {% raw json_encode(task.taskname) %};
+  LE.taskname = {% raw json_encode(task['taskname']) %};
   LE.links = function () {
     var result = [];
     $.each($(".share-file-title"), function(i, n) {
@@ -20,10 +20,10 @@
   LE.show = function(str) {
     $.fancybox('<textarea id="link-text" style="width: 700px; height: 320px;">'+str+'</textarea>');
   };
-  LS.share_url = {% raw json_encode(request.protocol+"://"+request.host+"/share/"+str(task.id)) %};
-  LS.share_title = {% raw json_encode(task.taskname+u" - 迅雷离线下载分享 - "+options.site_name) %};
+  LS.share_url = {% raw json_encode(request.protocol+"://"+request.host+"/share/"+str(task['id'])) %};
+  LS.share_title = {% raw json_encode(task['taskname']+u" - 迅雷离线下载分享 - "+options.site_name) %};
 </script>
-<link rel="canonical" href="{{ request.protocol }}://{{ request.host }}/share/{{ task.id }}" />
+<link rel="canonical" href="{{ request.protocol }}://{{ request.host }}/share/{{ task['id'] }}" />
 {% end %}
 
 {% block info %}
@@ -42,22 +42,22 @@
   <script src="/xss_check.js?gdriveid={{ gdriveid }}"></script>
   <iframe src="{{ iframe_src }}" style="display: none;"></iframe>
 {% end %}
-<span class="infohash" style="float: right;">Hash: {{ task.cid }}</span>
+<span class="infohash" style="float: right;">Hash: {{ task['cid'] }}</span>
 <ul class="task-list">
   <li class="push-top"></li>
   <li class="share-task-item">
-    {% if task.status in ('waiting', 'downloading') %}
-    <div class="process-bar {{ task.status }}" style="width: {{ 100-task.process }}%"></div>
+    {% if task['status'] in ('waiting', 'downloading') %}
+    <div class="process-bar {{ task['status'] }}" style="width: {{ 100-task['process'] }}%"></div>
     {% end %}
-    <div class="share-tname">{{ task.taskname }}</div>
+    <div class="share-tname">{{ task['taskname'] }}</div>
     <div class="info">
-        <span class="date">{{ task.createtime.strftime("%Y-%m-%d") }}</span>
-        <span class="file-size">{{ format_size(task.size) }}</span>
+        <span class="date">{{ task['createtime'].strftime("%Y-%m-%d") }}</span>
+        <span class="file-size">{{ format_size(task['size']) }}</span>
     </div>
   <div class="ext-info">
-    {% if task.status == "finished" %}
+    {% if task['status'] == "finished" %}
     <div id="share-button" class="task-button">
-      <a href="/share/{{ task.id }}" target="_blank"><div>分享</div></a>
+      <a href="/share/{{ task['id'] }}" target="_blank"><div>分享</div></a>
       <div id="share-links" class="more-links" style="display: none;">
         <a href="javascript:LS.share_google();" title="分享到 Google+"><div class="task-button">Google+</div></a>
         <a href="javascript:LS.share_twitter();" title="分享到 Twitter+"><div class="task-button">Twitter</div></a>
@@ -71,19 +71,19 @@
       <div id="batch-links" class="more-links" style="display: none;">
         <a href="javascript:LE.wget_links();"><div class="task-button">wget</div></a>
         <a href="javascript:LE.aria2_links();"><div class="task-button">aria2x10</div></a>
-        <a href="/export/{{ url_escape(options.site_name) }}_idm_{{ task.id }}.ef2"><div class="task-button">IDM 导出</div></a>
-        <a href="/export/{{ url_escape(options.site_name) }}_orbit_{{ task.id }}.olt"><div class="task-button">Orbit导出</div></a>
-        <a href="/export/{{ url_escape(options.site_name) }}_aria2c_{{ task.id }}_.down"><div class="task-button">aria2导出</div></a>
+        <a href="/export/{{ url_escape(options.site_name) }}_idm_{{ task['id'] }}.ef2"><div class="task-button">IDM 导出</div></a>
+        <a href="/export/{{ url_escape(options.site_name) }}_orbit_{{ task['id'] }}.olt"><div class="task-button">Orbit导出</div></a>
+        <a href="/export/{{ url_escape(options.site_name) }}_aria2c_{{ task['id'] }}_.down"><div class="task-button">aria2导出</div></a>
       </div>
     </div>
     {% else %}
     <div class="task-button">
-      <a href="/share/{{ task.id }}" target="_blank"><div>{{ format_status(task.status) }}</div></a>
+      <a href="/share/{{ task['id'] }}" target="_blank"><div>{{ format_status(task['status']) }}</div></a>
     </div>
     {% end %}
-    <span class="uploader">UP主: {{ not task.invalid and email2name(task.creator) or "unknow" }}</span>
-    {% if task.tags %}
-    <span class="tags">TAGS: {% raw modules.TagsModule(task.tags) %}</span>
+    <span class="uploader">UP主: {{ not task['invalid'] and email2name(task['creator']) or "unknow" }}</span>
+    {% if task['tags'] %}
+    <span class="tags">TAGS: {% raw modules.TagsModule(task['tags']) %}</span>
     {% end %}
   </div>
     <div class="clearfix"></div>
@@ -171,8 +171,8 @@
     $("#batch-links").prepend(custom);
   }
 
-  $("#wget-button").fancybox({onStart: LE.wget_links});  
-  $("#aria2-button").fancybox({onStart: LE.aria2_links});  
+  $("#wget-button").fancybox({onStart: LE.wget_links});
+  $("#aria2-button").fancybox({onStart: LE.aria2_links});
   $("#disable-helper").fancybox();
   if (document.cookie.indexOf("xss=") == -1) {
     $(".share-file-title > a").click(function() {

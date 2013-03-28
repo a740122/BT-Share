@@ -26,8 +26,6 @@ class ManagerIndexHandler(BaseHandler):
     post = get
 
     def flush_mem_cache(self):
-        from libs.cache import _mem_caches
-        _mem_caches.clear()
         return "清除缓存成功"
 
     def refetch_finished_tasks(self):
@@ -42,11 +40,11 @@ class ManagerIndexHandler(BaseHandler):
 
     def recheck_login(self):
         self.task_manager._last_check_login = 0
-        _ = self.task_manager.xunlei
+        # _ = self.task_manager.xunlei
         return ""
 
     def set_uid(self):
-        uid = int(self.get_argument("uid"))
+        uid = str(self.get_argument("uid"))
         gdriveid = self.get_argument("gdriveid")
         tid = int(self.get_argument("tid"))
         self.task_manager._uid = uid
@@ -72,29 +70,25 @@ class ManagerIndexHandler(BaseHandler):
         return ""
 
     def change_user_group(self):
-        user_id = int(self.get_argument("user_id"))
+        user_id = str(self.get_argument("user_id"))
         group = int(self.getargument("group"))
         user = self.user_manager.get_user_by_id(user_id)
         if not user:
             raise HTTPError(404, "User not found.")
-        user.group = group
-        self.user_manager.session.add(user)
-        self.user_manager.session.commit()
+        self.database.update({"_id":user['_id']},{"$set":{"group":"block"}},safe=True)
         return "OK"
 
     def block_user(self):
-        user_id = int(self.get_argument("user_id"))
+        user_id = str(self.get_argument("user_id"))
         user = self.user_manager.get_user_by_id(user_id)
         if not user:
             return "No such user"
-        user.group = "block"
-        self.user_manager.session.add(user)
-        self.user_manager.session.commit()
+        self.database.update({"_id":user['_id']},{"$set":{"group":"block"}},safe=True)
         return "OK"
 
     def get_user_email(self):
-        user_id = int(self.get_argument("user_id"))
-        return self.user_manager.get_user_email_by_id(user_id)
+        user_id = str(self.get_argument("user_id"))
+        return self.user_manager.get_user_email_by_id(user_id)[1]
 
     @property
     def logging_level(self):
