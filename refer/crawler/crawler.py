@@ -54,6 +54,7 @@ class Crawler(object):
         self.collection = args['collection']
         #
         self.db = args['db']
+        self.callbackFilter = args['callbackFilter']
 
     def start(self):
         print '\nStart Crawling\n'
@@ -97,12 +98,18 @@ class Crawler(object):
             #标注该链接已被访问,或即将被访问,防止重复访问相同链接
             self.visitedHrefs.add(url)
 
+    def __callback_filter(self, webPage):
+        #parse the web page to do sth
+        url , pageSource = webPage.getDatas()
+        if re.compile(self.callbackFilter,re.I|re.U).search(url):
+            self.callback(pageSource)
+
     def _taskHandler(self, url):
         #先拿网页源码，再保存,两个都是高阻塞的操作，交给线程处理
         webPage = WebPage(url)
         tmp = webPage.fetch()
-        # print tmp
         if tmp:
+            self.__callback_filter(webPage)
             self._saveTaskResults(webPage)
             self._addUnvisitedHrefs(webPage)
 

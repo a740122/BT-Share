@@ -7,6 +7,7 @@ from threading import Thread
 
 from crawler import Crawler
 from options import parser
+from bs4 import BeautifulSoup
 
 from downloader import Downloader
 
@@ -68,24 +69,41 @@ def main():
     # init.
     entryFilter = dict()
     entryFilter['Type'] = 'allow'
-    entryFilter['List'] = [r'music\.baidu\.com$', ]
+    entryFilter['List'] = [r'/tor/\d+', ]
 
-    yieldFilter = dict()
-    yieldFilter['Type'] = 'allow'
-    yieldFilter['List'] = [r'.*/song/\d+$']
+    #yieldFilter = dict()
+    #yieldFilter['Type'] = 'allow'
+    #yieldFilter['List'] = [r'$']
+
+
+    def callback(webPage):
+        url , pageSource = webPage.getDatas()
+        soup = BeautifulSoup(pageSource)
+        param ={
+                url:md5(document['url']).hexdigest(),
+                name:soup.find(id="content").h1.string,
+                size:int(soup.find(id='specifications').p[3].string),
+                description:soup.find(id='description').get_text(),
+                magnet_link:soup.find(id='download').a[2].href,
+        }
+
+    callbackFilter = dict()
+    callbackFilter['List'] = [r'/tor/\d+']
+    callbackFilter['func'] = callback
 
     args = dict(
-        url = 'http://music.baidu.com',
-        depth = 2,
+        url = 'http://www.mininova.org/yesterday',
+        depth = 3,
         logFile = 'spider.log',
         logLevel = 3,
         threadNum = 1,
         keyword = '',
         testSelf = False,
-        entryFilter = [],
+        debug = False,
+        entryFilter = entryFilter,
         yieldFilter = yieldFilter,
+        callbackFilter = callbackFilter,
     )
-
 
     if not congifLogger(args['logFile'], args['logLevel']):
         print '\nPermission denied: %s' % args['logFile']
@@ -94,10 +112,13 @@ def main():
         Crawler(args).selfTesting(args)
     else:
         crawler = Crawler(args)
-        printProgress = PrintProgress(crawler)
-        printProgress.start()
-        crawler.start()
-        printProgress.printSpendingTime()
+        if args['debug']:
+            printProgress = PrintProgress(crawler)
+            printProgress.start()
+            crawler.start()
+            printProgress.printSpendingTime()
+        else:
+            crawler.start()
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #TODO keyboardInterrupt 的处理？
