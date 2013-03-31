@@ -9,7 +9,6 @@
 
 from pymongo import Connection
 from pymongo.errors import ConnectionFailure
-from hashlib import md5
 
 class Database(object):
     def __init__(self):
@@ -27,10 +26,10 @@ class Database(object):
     def saveData(self, url='', db='', collection='',document=''):
         if self.conn:
             dbh = self.conn[db]
-            if bdh[collection].find_one({"id":document['url']}):
-                dbh[collection].update({"id":document['url']},{"$set":document})
+            if dbh[collection].find_one({"id":document['id']}):
+                dbh[collection].update({"id":document['id']},{"$set":document})
             else:
-                dbh[collection].save(urldoc, safe=True)
+                dbh[collection].save(document, safe=True)
         else:
             # do log
             pass

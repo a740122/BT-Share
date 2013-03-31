@@ -2,15 +2,18 @@
 
 import logging
 import time
+import re
+
 from datetime import datetime
 from threading import Thread
 
 from crawler import Crawler
 from options import parser
 from bs4 import BeautifulSoup
+from hashlib import md5
 
 from downloader import Downloader
-
+from database import Database
 
 def congifLogger(logFile, logLevel):
     '''配置logging的日志文件以及日志的记录等级'''
@@ -69,30 +72,33 @@ def main():
     # init.
     entryFilter = dict()
     entryFilter['Type'] = 'allow'
-    entryFilter['List'] = [r'/tor/\d+', ]
+    entryFilter['List'] = [r'/tor/\d+', r'/yesterday']
 
-    #yieldFilter = dict()
-    #yieldFilter['Type'] = 'allow'
-    #yieldFilter['List'] = [r'$']
+    yieldFilter = dict()
+    # yieldFilter['Type'] = 'allow'
+    # yieldFilter['List'] = [r'$']
 
 
     def callback(webPage):
         url , pageSource = webPage.getDatas()
         soup = BeautifulSoup(pageSource)
         param ={
-                url:md5(document['url']).hexdigest(),
-                name:soup.find(id="content").h1.string,
-                size:int(soup.find(id='specifications').p[3].string),
-                description:soup.find(id='description').get_text(),
-                magnet_link:soup.find(id='download').a[2].href,
+                'id':md5(url).hexdigest() or "",
+                'url': url or "",
+                'name':soup.find(id="content").h1.string or "unknown",
+                'size':soup.find(id='specifications').find_all("p")[2].get_text().strip().split('\n')[1].replace(u'\xa0',u' '),
+                'description':re.compile(r'[\n\r\t]').sub(" ",soup.find(id='description').get_text()),
+                'magnet_link':soup.find(id='download').find_all("a")[2]['href'],
         }
+        database = Database()
+        database.saveData(db='bt_tornado',collection='seed',document=param)
 
     callbackFilter = dict()
-    callbackFilter['List'] = [r'/tor/\d+']
+    callbackFilter['List'] = [r'/tor/\d+',]
     callbackFilter['func'] = callback
 
     args = dict(
-        url = 'http://www.mininova.org/yesterday',
+        url = ['http://www.mininova.org/yesterday',],
         depth = 3,
         logFile = 'spider.log',
         logLevel = 3,
@@ -103,6 +109,8 @@ def main():
         entryFilter = entryFilter,
         yieldFilter = yieldFilter,
         callbackFilter = callbackFilter,
+        db = 'bt_tornado',
+        collection = 'seed',
     )
 
     if not congifLogger(args['logFile'], args['logLevel']):
@@ -112,7 +120,7 @@ def main():
         Crawler(args).selfTesting(args)
     else:
         crawler = Crawler(args)
-        if args['debug']:
+        if not args['debug']:
             printProgress = PrintProgress(crawler)
             printProgress.start()
             crawler.start()

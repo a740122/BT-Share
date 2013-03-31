@@ -187,3 +187,2136 @@ TypeError: expected string or buffer
 
 2013-03-15 19:48:43,342 Thread-2 WARNING Page not avaliable. Status code:200 URL: http://music.baidu.com/cms/mobile/static/apk/BaiduMusic_gpz320.apk 
 
+2013-03-30 18:18:20,691 Thread-1 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:24,294 Thread-1 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:35,805 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:39,790 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:42,353 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:45,158 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:47,992 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:50,466 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:53,373 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:56,394 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:20:59,778 Thread-1 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:21:03,866 Thread-1 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:21:14,215 Thread-1 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:21:20,409 Thread-1 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:21:27,350 Thread-1 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:21:38,119 Thread-1 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:21:44,588 Thread-1 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:22:07,336 Thread-1 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 83, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:22:40,442 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:22:58,363 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:23:05,520 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:23:27,510 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:23:43,116 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:23:54,341 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:24:01,275 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:24:08,155 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:24:32,471 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:24:38,891 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:24:45,207 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:24:51,977 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:24:59,471 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:25:08,018 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:25:18,638 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:25:31,614 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:25:39,272 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:25:51,193 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:26:08,413 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:26:16,635 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:26:31,734 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:26:38,727 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:26:47,015 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:26:49,495 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:26:51,474 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 83, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:26:53,926 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 83, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:26:55,970 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 83, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:29:56,098 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:04,358 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:10,005 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:11,699 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:13,121 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:14,737 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:16,360 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:23,057 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:24,999 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:26,623 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:28,376 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:32,092 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:34,414 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:35,984 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:37,571 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:39,069 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:30:41,608 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 83, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:30:44,163 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 83, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:30:46,272 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 83, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:33:04,274 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:11,475 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:13,754 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:15,814 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:17,860 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:19,818 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:22,431 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:27,229 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:31,044 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:33,868 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:41,618 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:44,050 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:46,660 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:49,314 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:51,973 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:54,557 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:33:57,661 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 84, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:34:00,822 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 84, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:34:03,873 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 84, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'md5' is not defined
+
+2013-03-30 18:36:45,227 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:36:54,404 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:36:57,291 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:00,989 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:02,368 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:04,267 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:05,770 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:07,736 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:10,062 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:11,443 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:13,380 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:15,326 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:16,924 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:18,877 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:20,934 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:37:22,454 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 30, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:39:49,792 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:39:57,854 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:01,600 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:16,682 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:21,868 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:29,134 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:37,077 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:42,158 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:43,900 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:45,761 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:47,600 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:49,674 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:51,584 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:53,496 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:55,742 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:40:58,562 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:41:00,766 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 86, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'document' is not defined
+
+2013-03-30 18:41:04,064 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 86, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'document' is not defined
+
+2013-03-30 18:41:20,103 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 86, in callback
+    url:md5(document['url']).hexdigest(),
+NameError: global name 'document' is not defined
+
+2013-03-30 18:42:47,125 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:42:54,995 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:42:56,613 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:42:58,373 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:42:59,750 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:01,375 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:06,670 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:09,036 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:11,198 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:14,123 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:19,522 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:24,159 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:26,799 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:35,106 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:37,118 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:43:38,632 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:46:56,619 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:47:06,023 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:47:14,039 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:47:18,829 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:47:28,719 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:47:37,169 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:47:49,931 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:11,044 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:27,459 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:31,266 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:32,894 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:38,986 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:43,695 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:48,538 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:53,387 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:48:56,757 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:09,439 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:15,305 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:19,533 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:21,816 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:23,560 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:25,449 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:27,483 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:29,556 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:52:32,126 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:53:40,655 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:53:43,172 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:53:45,495 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:53:48,145 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:53:50,903 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:53:53,301 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:53:55,828 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 18:56:01,854 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 88, in callback
+    'size':int(soup.find(id='specifications').p[3].string),
+  File "/usr/local/lib/python2.7/dist-packages/bs4/element.py", line 879, in __getitem__
+    return self.attrs[key]
+KeyError: 3
+
+2013-03-30 18:57:11,635 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 88, in callback
+    'size':int(soup.find(id='specifications').p[3].string),
+  File "/usr/local/lib/python2.7/dist-packages/bs4/element.py", line 879, in __getitem__
+    return self.attrs[key]
+KeyError: 3
+
+2013-03-30 19:14:11,386 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:19,318 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:20,802 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:22,425 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:24,046 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:25,513 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:27,158 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:28,658 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:30,242 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:31,791 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:33,304 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:35,233 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:36,778 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:38,610 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:45,674 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:14:53,227 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if bdh[collection].find_one({"id":document['url']}):
+NameError: global name 'bdh' is not defined
+
+2013-03-30 19:17:14,614 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:17:26,098 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:17:32,505 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:17:43,965 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:17:51,432 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:01,128 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:03,528 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:05,591 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:07,360 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:09,282 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:11,894 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:13,654 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:15,467 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:17,318 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:19,342 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:18:22,032 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:14,477 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:22,260 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:24,063 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:25,684 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:27,745 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:29,437 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:31,065 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:32,453 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:34,295 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:35,936 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:37,845 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:43,301 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:51,822 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:55,935 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:57,603 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:19:59,805 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:22:22,252 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209523 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:22:35,368 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209522 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:22:48,033 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209521 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 19:22:52,453 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:01:24,508 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:01:38,365 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:01:42,776 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:01:48,136 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:01:51,353 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:01:55,333 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:00,757 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:03,023 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:05,535 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:07,993 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:10,796 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:19,986 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:24,441 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:28,765 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:31,302 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:02:34,100 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:09:48,175 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 113, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 106, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 84, in callback
+    soup = BeautifulSoup(pageSource)
+NameError: global name 're' is not defined
+
+2013-03-30 20:10:38,013 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:10:45,702 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:10:50,929 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:10:54,904 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:04,585 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:15,137 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:19,181 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:23,057 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:27,412 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:31,242 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:35,121 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:38,780 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:48,279 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:52,866 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:11:57,295 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:12:00,903 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:12:25,709 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209523 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:12:38,655 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209522 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:16:15,023 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:16:22,591 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:16:38,760 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:16:43,050 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:16:50,113 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:17:04,053 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:17:13,241 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:17:17,479 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:17:25,274 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:17:37,346 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:17:51,701 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:18:01,228 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:18:08,300 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:18:12,600 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:18:16,600 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:18:20,660 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:21:48,284 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209523 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:21:55,809 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209522 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:22:03,180 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209521 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:22:15,260 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"url":document['url']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:24:35,867 Thread-2 ERROR  URL: http://www.mininova.org/yesterday Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:24:48,910 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:24:53,123 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:02,281 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:11,327 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:15,324 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:31,249 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:43,407 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:50,293 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:54,341 Thread-2 ERROR  URL: http://www.mininova.org/yesterday#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:25:57,642 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:26:01,507 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:26:05,628 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:26:09,287 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:26:13,263 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:26:22,585 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:28:15,160 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209523 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:28:21,276 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209522 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:28:27,885 Thread-2 ERROR  URL: http://www.mininova.org/tor/13209521 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-03-30 20:28:40,102 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/refer/crawler/database.py", line 29, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+

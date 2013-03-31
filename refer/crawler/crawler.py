@@ -51,10 +51,10 @@ class Crawler(object):
         # allow to output back url
         self.yieldFilter = args['yieldFilter']
         #
-        self.collection = args['collection']
+        self.callbackFilter = args['callbackFilter']
         #
         self.db = args['db']
-        self.callbackFilter = args['callbackFilter']
+        self.collection = args['collection']
 
     def start(self):
         print '\nStart Crawling\n'
@@ -98,18 +98,19 @@ class Crawler(object):
             #标注该链接已被访问,或即将被访问,防止重复访问相同链接
             self.visitedHrefs.add(url)
 
-    def __callback_filter(self, webPage):
+    def _callback_filter(self, webPage):
         #parse the web page to do sth
         url , pageSource = webPage.getDatas()
-        if re.compile(self.callbackFilter,re.I|re.U).search(url):
-            self.callback(pageSource)
+        for tmp  in self.callbackFilter['List']:
+            if re.compile(tmp,re.I|re.U).search(url):
+                self.callbackFilter['func'](webPage)
 
     def _taskHandler(self, url):
         #先拿网页源码，再保存,两个都是高阻塞的操作，交给线程处理
         webPage = WebPage(url)
         tmp = webPage.fetch()
         if tmp:
-            self.__callback_filter(webPage)
+            self._callback_filter(webPage)
             self._saveTaskResults(webPage)
             self._addUnvisitedHrefs(webPage)
 
@@ -193,6 +194,8 @@ class Crawler(object):
         if self.entryFilter:
             if self.entryFilter['Type'] == 'allow':        # 允许模式，只要满足一个就允许，否则不允许
                 result = False
+                # import pdb
+                # pdb.set_trace()
                 for rule in self.entryFilter['List']:
                     pattern = re.compile(rule, re.I | re.U)
                     if pattern.search(checkURL):
