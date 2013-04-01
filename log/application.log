@@ -1,0 +1,99 @@
+2013-04-01 15:20:02,549 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:22:58,010 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:23:09,913 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:26:36,144 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:29:31,993 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:30:46,701 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:31:23,442 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:32:51,546 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:33:40,426 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:34:21,077 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:34:59,059 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:35:24,620 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:35:54,328 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:38:33,092 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 15:53:07,310 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 17:24:50,993 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 17:43:26,423 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 17:45:04,993 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 17:57:05,009 MainThread INFO the spider has been running!
+2013-04-01 17:57:21,026 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 17:58:01,200 Thread-2 INFO going to insert or update our local
+2013-04-01 17:58:07,704 Thread-2 INFO going to insert or update our local
+2013-04-01 17:58:13,923 Thread-2 INFO going to insert or update our local
+2013-04-01 17:58:17,083 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 17:58:57,123 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 18:06:06,349 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 18:07:07,163 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 18:19:07,170 MainThread INFO the spider has been running!
+2013-04-01 18:19:15,182 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 18:19:41,758 Thread-2 INFO going to insert or update our local
+2013-04-01 18:19:43,398 Thread-2 INFO going to insert or update our local
+2013-04-01 18:19:46,612 Thread-2 INFO going to insert or update our local
+2013-04-01 18:19:47,215 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 18:20:03,231 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 18:31:07,170 MainThread INFO the spider has been running!
+2013-04-01 18:31:15,179 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 18:31:41,656 Thread-3 INFO going to insert or update our local
+2013-04-01 18:31:43,248 Thread-3 INFO going to insert or update our local
+2013-04-01 18:31:46,399 Thread-3 INFO going to insert or update our local
+2013-04-01 18:31:47,211 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 18:32:03,228 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 18:43:07,170 MainThread INFO the spider has been running!
+2013-04-01 18:43:23,189 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 18:43:54,021 Thread-4 INFO going to insert or update our local
+2013-04-01 18:43:55,612 Thread-4 INFO going to insert or update our local
+2013-04-01 18:43:58,797 Thread-4 INFO going to insert or update our local
+2013-04-01 18:44:03,228 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 18:44:19,245 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 18:54:22,659 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 18:54:40,490 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 18:57:15,196 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 18:57:52,334 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 19:16:21,222 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 19:18:47,412 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 19:21:19,668 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 19:23:51,123 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 19:27:17,058 MainThread INFO load finished! listening on 0.0.0.0:8880
+2013-04-01 19:39:17,069 MainThread INFO the spider has been running!
+2013-04-01 19:39:25,079 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 19:39:56,307 Thread-2 INFO going to insert or update our local
+2013-04-01 19:39:57,911 Thread-2 INFO going to insert or update our local
+2013-04-01 19:40:01,106 Thread-2 INFO going to insert or update our local
+2013-04-01 19:40:05,119 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 19:40:21,135 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 19:51:17,060 MainThread INFO the spider has been running!
+2013-04-01 19:51:25,069 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 19:51:51,546 Thread-3 INFO going to insert or update our local
+2013-04-01 19:51:53,139 Thread-3 INFO going to insert or update our local
+2013-04-01 19:51:56,294 Thread-3 INFO going to insert or update our local
+2013-04-01 19:51:57,102 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 19:52:13,119 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 20:03:17,060 MainThread INFO the spider has been running!
+2013-04-01 20:03:25,069 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 20:04:11,662 Thread-4 INFO going to insert or update our local
+2013-04-01 20:04:20,911 Thread-4 INFO going to insert or update our local
+2013-04-01 20:04:24,097 Thread-4 INFO going to insert or update our local
+2013-04-01 20:04:29,132 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 20:04:45,145 MainThread INFO Depth 3 Finish. Total visited Links: 102
+

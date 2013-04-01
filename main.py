@@ -1,10 +1,9 @@
-#/usr/bin/env python
-# -*- encoding: utf8 -*-
-# author: binux<17175297.hk@gmail.com>
-
+#encoding:utf8
 import os
 import tornado
 import logging
+import sys
+sys.path.insert(0,os.getcwd())
 
 from time import time
 from tornado import web
@@ -12,7 +11,7 @@ from tornado.ioloop import IOLoop, PeriodicCallback
 from tornado.options import define, options
 from tornado.httpserver import HTTPServer
 
-define("f", default="", help="config file path")
+define("f", default="tornado_config.cfg", help="config file path")
 define("debug", default=True, help="debug mode")
 define("port", default=8880, help="the port tornado listen to")
 define("bind_ip", default="0.0.0.0", help="the bind ip")
@@ -40,6 +39,8 @@ define("finished_task_check_interval", default=60*60,
         help="the interval of getting the task list")
 define("downloading_task_check_interval", default=5*60,
         help="the interval of getting the downloading task list")
+define("spider_task_check_interval", default=12*60,
+        help="the interval of running spider task")
 define("task_list_limit", default=500,
         help="the max limit of get task list each time")
 define("always_update_lixian_url", default=False,
@@ -65,6 +66,9 @@ class Application(web.Application):
         from libs.db_task_manager import DBTaskManager
         from libs.user_manager import UserManager
         from libs.vip_pool import VIPool
+        from libs.spider_manager import SpiderManager
+        from libs.log_manager import LogManager
+
         settings = dict(
             debug=options.debug,
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
@@ -81,7 +85,10 @@ class Application(web.Application):
         self.task_manager = DBTaskManager(
                     username = options.username,
                     password = options.password
-                )
+        )
+        self.spider_manager = SpiderManager()
+        self.log_manager = LogManager(logFile="application.log", logLevel=5, logTree="Main")
+
         self.vip_pool = VIPool()
         if not self.task_manager.islogin:
             raise Exception, "xunlei login error"
@@ -89,9 +96,10 @@ class Application(web.Application):
         PeriodicCallback(self.task_manager.async_update,
                 options.downloading_task_check_interval * 1000).start()
         PeriodicCallback(self.user_manager.reset_all_add_task_limit, 86400 * 1000).start()
-        #todo timer
-
-        logging.info("load finished! listening on %s:%s" % (options.bind_ip, options.port))
+        #spider timer
+        PeriodicCallback(self.spider_manager.run,
+                         options.spider_task_check_interval * 1000).start()
+        self.log_manager.logger.info("load finished! listening on %s:%s" % (options.bind_ip, options.port))
 
 def main():
     tornado.options.parse_command_line()

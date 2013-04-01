@@ -1,0 +1,1262 @@
+2013-04-01 16:04:46,304 MainThread INFO the spider has been running!
+2013-04-01 16:04:46,306 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:04:46,306 MainThread INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-01 16:04:46,306 MainThread INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-01 16:05:03,554 MainThread INFO the spider has been running!
+2013-04-01 16:05:03,555 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:05:03,556 MainThread INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-01 16:05:03,556 MainThread INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-01 16:06:19,461 MainThread INFO the spider has been running!
+2013-04-01 16:06:19,463 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:06:19,463 MainThread INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-01 16:06:19,463 MainThread INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-01 16:07:17,500 MainThread INFO the spider has been running!
+2013-04-01 16:07:17,504 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:07:17,505 MainThread INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-01 16:07:17,505 MainThread INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-01 16:11:48,540 MainThread INFO the spider has been running!
+2013-04-01 16:11:48,544 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:11:48,545 MainThread INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-01 16:11:48,545 MainThread INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-01 16:12:39,219 MainThread INFO the spider has been running!
+2013-04-01 16:12:39,228 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:12:39,228 MainThread INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-01 16:12:39,229 MainThread INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-01 16:12:56,694 MainThread INFO the spider has been running!
+2013-04-01 16:12:56,696 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:12:56,696 MainThread INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-01 16:12:56,696 MainThread INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-01 16:13:44,601 MainThread INFO the spider has been running!
+2013-04-01 16:13:46,159 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:13:52,611 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:13:54,143 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:13:55,693 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:13:58,268 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:01,985 Thread-1 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:03,545 Thread-1 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:05,119 Thread-1 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:09,692 Thread-1 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:11,255 Thread-1 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:12,811 Thread-1 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:14,382 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:15,945 Thread-1 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:17,504 Thread-1 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:19,064 Thread-1 ERROR  URL: http://www.mininova.org/today/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:20,621 Thread-1 ERROR  URL: http://www.mininova.org/today/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:22,180 Thread-1 ERROR  URL: http://www.mininova.org/today/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:23,730 Thread-1 ERROR  URL: http://www.mininova.org/today/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:25,290 Thread-1 INFO going to insert or update our local
+2013-04-01 16:14:25,364 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209641 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:26,931 Thread-1 INFO going to insert or update our local
+2013-04-01 16:14:26,971 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209640 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:28,534 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:30,087 Thread-1 INFO going to insert or update our local
+2013-04-01 16:14:30,121 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209639 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:32,651 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 16:14:34,200 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:35,758 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:37,335 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:39,469 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:41,028 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:42,587 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:44,136 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:45,702 Thread-1 ERROR  URL: http://www.mininova.org/today/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 33, in saveData
+    if dbh[collection].find_one({"id":document['id']}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:14:48,667 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 16:22:08,221 MainThread INFO the spider has been running!
+2013-04-01 16:22:10,296 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:16,231 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:22:18,096 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:19,658 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:21,219 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:22,775 Thread-1 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:24,347 Thread-1 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:25,902 Thread-1 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:27,455 Thread-1 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:29,017 Thread-1 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:30,556 Thread-1 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:32,106 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:33,666 Thread-1 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:35,207 Thread-1 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:36,767 Thread-1 ERROR  URL: http://www.mininova.org/today/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:38,325 Thread-1 ERROR  URL: http://www.mininova.org/today/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:39,888 Thread-1 ERROR  URL: http://www.mininova.org/today/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:41,441 Thread-1 ERROR  URL: http://www.mininova.org/today/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:43,006 Thread-1 INFO going to insert or update our local
+2013-04-01 16:22:43,042 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209641 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:44,596 Thread-1 INFO going to insert or update our local
+2013-04-01 16:22:44,650 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209640 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:46,237 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:47,797 Thread-1 INFO going to insert or update our local
+2013-04-01 16:22:47,828 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209639 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:48,263 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 16:22:49,796 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:51,357 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:52,918 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:54,469 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:56,031 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:57,584 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:22:59,158 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:23:00,715 Thread-1 ERROR  URL: http://www.mininova.org/today/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 121, in _saveTaskResults
+    self.database.saveData(url=url,db=self.db,collection=self.collection)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one({"id":str(document['id'])}):
+TypeError: string indices must be integers, not str
+
+2013-04-01 16:23:04,279 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 16:43:45,140 MainThread INFO the spider has been running!
+2013-04-01 16:43:46,707 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+NameError: global name 'datetime' is not defined
+
+2013-04-01 16:43:53,150 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:43:54,726 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+NameError: global name 'datetime' is not defined
+
+2013-04-01 16:43:56,292 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+NameError: global name 'datetime' is not defined
+
+2013-04-01 16:43:57,843 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+NameError: global name 'datetime' is not defined
+
+2013-04-01 16:43:58,820 MainThread ERROR spider cannot run.
+2013-04-01 16:44:46,393 MainThread INFO the spider has been running!
+2013-04-01 16:44:48,844 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:44:54,403 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:44:55,966 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:44:57,535 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:44:59,092 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:45:00,655 Thread-1 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url),"url":url, "saveTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:45:01,470 MainThread ERROR spider cannot run.
+2013-04-01 16:47:21,494 MainThread INFO the spider has been running!
+2013-04-01 16:47:23,041 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:29,504 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:47:32,106 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:33,723 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:35,282 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:36,839 Thread-1 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:38,409 Thread-1 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:39,957 Thread-1 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:41,512 Thread-1 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:43,194 Thread-1 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:45,502 Thread-1 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:47,068 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:48,637 Thread-1 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:50,194 Thread-1 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:51,760 Thread-1 ERROR  URL: http://www.mininova.org/today/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:53,329 Thread-1 ERROR  URL: http://www.mininova.org/today/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:54,894 Thread-1 ERROR  URL: http://www.mininova.org/today/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:56,452 Thread-1 ERROR  URL: http://www.mininova.org/today/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:58,015 Thread-1 INFO going to insert or update our local
+2013-04-01 16:47:58,050 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209641 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:47:59,594 Thread-1 INFO going to insert or update our local
+2013-04-01 16:47:59,634 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209640 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:01,199 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:02,761 Thread-1 INFO going to insert or update our local
+2013-04-01 16:48:02,795 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209639 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:09,543 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 16:48:11,707 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:14,186 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:16,182 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:17,973 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:19,535 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:21,132 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:22,765 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:24,626 Thread-1 ERROR  URL: http://www.mininova.org/today/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 123, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime":datetime.datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:48:25,559 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 16:49:38,049 MainThread INFO the spider has been running!
+2013-04-01 16:49:39,593 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:46,059 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:49:47,622 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:49,171 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:50,725 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:52,281 Thread-1 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:53,848 Thread-1 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:55,407 Thread-1 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:56,957 Thread-1 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:49:58,518 Thread-1 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:00,080 Thread-1 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:01,645 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:03,209 Thread-1 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:04,756 Thread-1 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:07,690 MainThread ERROR spider cannot run.
+2013-04-01 16:50:08,525 MainThread INFO the spider has been running!
+2013-04-01 16:50:10,068 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:16,534 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:50:18,089 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:19,658 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:21,209 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:22,763 Thread-1 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 124, in _saveTaskResults
+    document = {"id":md5(url), "url":url, "createTime": datetime.now()}
+TypeError: Required argument 'year' (pos 1) not found
+
+2013-04-01 16:50:23,960 MainThread ERROR spider cannot run.
+2013-04-01 16:50:24,749 MainThread INFO the spider has been running!
+2013-04-01 16:50:26,310 Thread-1 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x7f34dc3201f0>
+
+2013-04-01 16:50:32,759 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:50:34,334 Thread-1 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x127feb0>
+
+2013-04-01 16:50:35,882 Thread-1 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x131fd70>
+
+2013-04-01 16:50:37,451 Thread-1 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x133eab0>
+
+2013-04-01 16:50:39,001 Thread-1 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x144bfb0>
+
+2013-04-01 16:50:40,568 Thread-1 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x144b9f0>
+
+2013-04-01 16:50:42,120 Thread-1 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x143b370>
+
+2013-04-01 16:50:43,674 Thread-1 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1461ab0>
+
+2013-04-01 16:50:45,230 Thread-1 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1461cb0>
+
+2013-04-01 16:50:46,788 Thread-1 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1311db0>
+
+2013-04-01 16:50:48,359 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1276d70>
+
+2013-04-01 16:50:49,923 Thread-1 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1276f70>
+
+2013-04-01 16:50:51,473 Thread-1 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x133eb70>
+
+2013-04-01 16:50:53,026 Thread-1 ERROR  URL: http://www.mininova.org/today/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x142f230>
+
+2013-04-01 16:50:54,951 Thread-1 ERROR  URL: http://www.mininova.org/today/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x142f170>
+
+2013-04-01 16:50:56,511 Thread-1 ERROR  URL: http://www.mininova.org/today/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1570f30>
+
+2013-04-01 16:50:58,067 Thread-1 ERROR  URL: http://www.mininova.org/today/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x142fcf0>
+
+2013-04-01 16:50:59,632 Thread-1 INFO going to insert or update our local
+2013-04-01 16:50:59,666 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209641 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x146cf70>
+
+2013-04-01 16:51:01,232 Thread-1 INFO going to insert or update our local
+2013-04-01 16:51:01,271 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209640 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x14691f0>
+
+2013-04-01 16:51:02,830 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1593ab0>
+
+2013-04-01 16:51:04,390 Thread-1 INFO going to insert or update our local
+2013-04-01 16:51:04,422 Thread-1 ERROR  URL: http://www.mininova.org/tor/13209639 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x13280b0>
+
+2013-04-01 16:51:04,791 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 16:51:06,346 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x13285f0>
+
+2013-04-01 16:51:07,913 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x1328d70>
+
+2013-04-01 16:51:09,473 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x13286b0>
+
+2013-04-01 16:51:11,037 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x146a3b0>
+
+2013-04-01 16:51:12,599 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x146a1b0>
+
+2013-04-01 16:51:14,168 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x16d7f70>
+
+2013-04-01 16:51:15,740 Thread-1 ERROR  URL: http://www.mininova.org/today/cat#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x16d7970>
+
+2013-04-01 16:51:17,289 Thread-1 ERROR  URL: http://www.mininova.org/today/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/crawler.py", line 125, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+  File "/home/zhkzyth/codeRep/spider/libs/../crawler/database.py", line 32, in saveData
+    if dbh[collection].find_one(query):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/collection.py", line 598, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 814, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/site-packages/pymongo/cursor.py", line 763, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <md5 HASH object @ 0x16ddcf0>
+
+2013-04-01 16:51:20,807 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 16:54:16,024 MainThread INFO the spider has been running!
+2013-04-01 16:54:24,033 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:54:52,268 Thread-1 INFO going to insert or update our local
+2013-04-01 16:54:54,778 Thread-1 INFO going to insert or update our local
+2013-04-01 16:54:57,922 Thread-1 INFO going to insert or update our local
+2013-04-01 16:55:04,076 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 16:55:20,092 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 16:58:24,060 MainThread INFO the spider has been running!
+2013-04-01 16:58:32,070 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 16:58:58,567 Thread-1 INFO going to insert or update our local
+2013-04-01 16:59:00,152 Thread-1 INFO going to insert or update our local
+2013-04-01 16:59:03,321 Thread-1 INFO going to insert or update our local
+2013-04-01 16:59:04,102 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 16:59:20,118 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 17:11:21,236 MainThread INFO the spider has been running!
+2013-04-01 17:11:29,249 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 17:11:29,420 MainThread ERROR spider cannot run.
+2013-04-01 17:57:05,009 MainThread INFO the spider has been running!
+2013-04-01 17:57:21,026 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 17:58:01,200 Thread-2 INFO going to insert or update our local
+2013-04-01 17:58:07,704 Thread-2 INFO going to insert or update our local
+2013-04-01 17:58:13,923 Thread-2 INFO going to insert or update our local
+2013-04-01 17:58:17,083 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 17:58:57,123 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 18:19:07,170 MainThread INFO the spider has been running!
+2013-04-01 18:19:15,182 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 18:19:41,758 Thread-2 INFO going to insert or update our local
+2013-04-01 18:19:43,398 Thread-2 INFO going to insert or update our local
+2013-04-01 18:19:46,612 Thread-2 INFO going to insert or update our local
+2013-04-01 18:19:47,215 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 18:20:03,231 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 18:31:07,170 MainThread INFO the spider has been running!
+2013-04-01 18:31:15,179 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 18:31:41,656 Thread-3 INFO going to insert or update our local
+2013-04-01 18:31:43,248 Thread-3 INFO going to insert or update our local
+2013-04-01 18:31:46,399 Thread-3 INFO going to insert or update our local
+2013-04-01 18:31:47,211 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 18:32:03,228 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 18:43:07,170 MainThread INFO the spider has been running!
+2013-04-01 18:43:23,189 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 18:43:54,021 Thread-4 INFO going to insert or update our local
+2013-04-01 18:43:55,612 Thread-4 INFO going to insert or update our local
+2013-04-01 18:43:58,797 Thread-4 INFO going to insert or update our local
+2013-04-01 18:44:03,228 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 18:44:19,245 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 19:39:17,069 MainThread INFO the spider has been running!
+2013-04-01 19:39:25,079 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 19:39:56,307 Thread-2 INFO going to insert or update our local
+2013-04-01 19:39:57,911 Thread-2 INFO going to insert or update our local
+2013-04-01 19:40:01,106 Thread-2 INFO going to insert or update our local
+2013-04-01 19:40:05,119 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 19:40:21,135 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 19:51:17,060 MainThread INFO the spider has been running!
+2013-04-01 19:51:25,069 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 19:51:51,546 Thread-3 INFO going to insert or update our local
+2013-04-01 19:51:53,139 Thread-3 INFO going to insert or update our local
+2013-04-01 19:51:56,294 Thread-3 INFO going to insert or update our local
+2013-04-01 19:51:57,102 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 19:52:13,119 MainThread INFO Depth 3 Finish. Total visited Links: 102
+
+2013-04-01 20:03:17,060 MainThread INFO the spider has been running!
+2013-04-01 20:03:25,069 MainThread INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-01 20:04:11,662 Thread-4 INFO going to insert or update our local
+2013-04-01 20:04:20,911 Thread-4 INFO going to insert or update our local
+2013-04-01 20:04:24,097 Thread-4 INFO going to insert or update our local
+2013-04-01 20:04:29,132 MainThread INFO Depth 2 Finish. Total visited Links: 66
+
+2013-04-01 20:04:45,145 MainThread INFO Depth 3 Finish. Total visited Links: 102
+

@@ -1,5 +1,4 @@
-# -*- encoding: utf-8 -*-
-# author: binux<17175297.hk@gmail.com>
+#encoding:utf-8
 
 import logging
 import random

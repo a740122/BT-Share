@@ -1,6 +1,4 @@
-# -*- encoding: utf-8 -*-
-# author: binux<17175297.hk@gmail.com>
-
+#encoding:utf-8
 from tornado.web import HTTPError, UIModule
 from tornado.options import options
 from .base import BaseHandler

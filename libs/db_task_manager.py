@@ -1,6 +1,4 @@
-# -*- encoding: utf-8 -*-
-# author: binux<17175297.hk@gmail.com>
-
+#encoding:utf-8
 import logging
 import thread
 import random
@@ -122,7 +120,7 @@ class DBTaskManager(object):
                 if task['status'] in ("downloading", "finished"):
                     if not self._update_file_list(task):
                         task['status'] = "downloading"
-                database['task'].update({'id': task['task_id']})
+                database['task'].update({'id': task['task_id']},{"$set":task})
 
             tasks = tasks[100:]
 

@@ -1,6 +1,4 @@
-# -*- encoding: utf-8 -*-
-# author: binux<17175297.hk@gmail.com>
-
+#encoding:utf-8
 from tornado.web import HTTPError, asynchronous
 from tornado.auth import GoogleMixin
 from tornado.options import options

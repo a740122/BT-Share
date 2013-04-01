@@ -1,4 +1,4 @@
-# -*- encoding: utf8 -*-
+#encoding:utf8
 
 from db import database
 from bson.objectid import ObjectId
@@ -72,8 +72,8 @@ class UserManager(object):
 
     def get_user_email_by_id(self, _id):
         if not _id:
-            return "bot@localhost"
-        return self.database.find_one({'id':ObjectId(_id)},{'email':1})
+            return "zhkzyth@localhost"
+        return self.database.find_one({'id':ObjectId(_id)},{'email': 1})
 
     def get_user(self, email):
         if not email: return None
@@ -87,6 +87,8 @@ class UserManager(object):
         else:
             user['email'] = email
             user['name'] = name
+            user['group'] = None
+            user['permission'] = 0
             self.database.save(user)
 
     # @mem_cache(expire=60*60)
@@ -95,7 +97,7 @@ class UserManager(object):
             return 0
         user = self.get_user(email)
         if user:
-            return user['id']
+            return user['_id']
         return None
 
     # @mem_cache(expire=60*60)
@@ -113,7 +115,7 @@ class UserManager(object):
             return "admin"
         user = self.get_user(email)
         if user:
-            return user['group']
+            return user.get('group')
         return None
 
     def get_add_task_limit(self, email):
@@ -140,7 +142,7 @@ class UserManager(object):
     def get_permission(self, email):
         user = self.get_user(email)
         if user:
-            return user.permission or 0
+            return user['permission'] or 0
         return 0
 
     # @mem_cache(expire=60)
