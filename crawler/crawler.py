@@ -15,6 +15,7 @@ from locale import getdefaultlocale
 from hashlib import md5
 import logging
 import time
+import threading
 from datetime import datetime
 
 from bs4 import BeautifulSoup
@@ -26,9 +27,10 @@ from threadPool import ThreadPool
 log = logging.getLogger('Main.spider')
 
 
-class Crawler(object):
+class Crawler(threading.Thread):
 
     def __init__(self, args):
+        threading.Thread.__init__(self)
         #指定网页深度
         self.depth = args['depth']
         #标注初始爬虫深度，从1开始
@@ -83,6 +85,7 @@ class Crawler(object):
         self.isCrawling = False
         self.threadPool.stopThreads()
         self.database.close()
+        self.queue.taskdone()
 
     def getAlreadyVisitedNum(self):
         #visitedHrefs保存已经分配给taskQueue的链接，有可能链接还在处理中。

@@ -1,11 +1,9 @@
 #encoding:utf8
 import os
 import tornado
-import logging
 import sys
-sys.path.insert(0,os.getcwd())
+sys.path.insert(0, os.getcwd())
 
-from time import time
 from tornado import web
 from tornado.ioloop import IOLoop, PeriodicCallback
 from tornado.options import define, options
@@ -18,46 +16,50 @@ define("bind_ip", default="0.0.0.0", help="the bind ip")
 define("username", help="xunlei vip login name")
 define("password", help="xunlei vip password")
 define("ga_account", default="", help="account of google analytics")
-define("site_name", default="LOLI.LU", help="site name used in description")
+define("site_name", default="BT_Share", help="site name used in description")
 define("cookie_secret", default="61oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2XdTP1o",
-        help="key for HMAC")
+       help="key for HMAC")
 define("check_interval", default=60*60,
-        help="the interval of checking login status")
+       help="the interval of checking login status")
 define("cache_enabled", default=True,
-        help="enable mem cache")
-define("cross_userscript", default="http://userscripts.org/scripts/show/117745",
-        help="the web url of cross cookie userscirpt")
+       help="enable mem cache")
+define("cross_userscript",
+       default="http://userscripts.org/scripts/show/117745",
+       help="the web url of cross cookie userscirpt")
 define("cross_cookie_version", default="0.35",
-        help="cross cookie user script version")
-define("cross_userscript_local", default="/static/cross-cookie.user.js",
-        help="the local path of cross cookie userscirpt")
-define("cross_cookie_url", default="http://vip.xunlei.com/gen/yuanxun/gennew/newyx.html",
-        help="the url to insert to")
+       help="cross cookie user script version")
+define("cross_userscript_local", default="/static/js/cross-cookie.user.js",
+       help="the local path of cross cookie userscirpt")
+define("cross_cookie_url",
+       default="http://vip.xunlei.com/gen/yuanxun/gennew/newyx.html",
+       help="the url to insert to")
 define("cookie_str", default="gdriveid=%s; path=/; domain=.vip.xunlei.com",
-        help="the cookie insert to cross path")
+       help="the cookie insert to cross path")
 define("finished_task_check_interval", default=60*60,
-        help="the interval of getting the task list")
+       help="the interval of getting the task list")
 define("downloading_task_check_interval", default=5*60,
-        help="the interval of getting the downloading task list")
+       help="the interval of getting the downloading task list")
 define("spider_task_check_interval", default=12*60,
-        help="the interval of running spider task")
+       help="the interval of running spider task")
 define("task_list_limit", default=500,
-        help="the max limit of get task list each time")
+       help="the max limit of get task list each time")
 define("always_update_lixian_url", default=False,
-        help="always update lixian url")
+       help="always update lixian url")
 define("database_echo", default=False,
-        help="sqlalchemy database engine echo switch")
+       help="sqlalchemy database engine echo switch")
 define("database_engine", default="sqlite:///task_files.db",
-        help="the database connect string for sqlalchemy")
+       help="the database connect string for sqlalchemy")
 define("task_title_prefix", default="[loli.lu] ",
-        help="prefix of task")
+       help="prefix of task")
 define("using_xss", default=False,
-        help="use xss or cross-cookie")
+       help="use xss or cross-cookie")
 define("using_xsrf", default=False,
-        help="using xsrf to prevent cross-site request forgery")
+       help="using xsrf to prevent cross-site request forgery")
 define("reg_key", default=None,
-        help="if setted new user is not allowed except login with '/login?key=<reg_key>'.")
+       help="if setted new user is not allowed \
+       except login with '/login?key=<reg_key>'.")
 define("enable_share", default=True, help="enable share task")
+
 
 class Application(web.Application):
     def __init__(self):
@@ -65,7 +67,6 @@ class Application(web.Application):
         from libs.util import ui_methods
         from libs.db_task_manager import DBTaskManager
         from libs.user_manager import UserManager
-        from libs.vip_pool import VIPool
         from libs.spider_manager import SpiderManager
         from libs.log_manager import LogManager
 
@@ -83,23 +84,28 @@ class Application(web.Application):
 
         self.user_manager = UserManager()
         self.task_manager = DBTaskManager(
-                    username = options.username,
-                    password = options.password
+            username=options.username,
+            password=options.password,
         )
         self.spider_manager = SpiderManager()
-        self.log_manager = LogManager(logFile="application.log", logLevel=5, logTree="Main")
-
-        self.vip_pool = VIPool()
+        self.log_manager = LogManager(logFile="application.log",
+                                      logLevel=5, logTree="Main")
         if not self.task_manager.islogin:
             raise Exception, "xunlei login error"
         self.task_manager.async_update()
-        PeriodicCallback(self.task_manager.async_update,
-                options.downloading_task_check_interval * 1000).start()
-        PeriodicCallback(self.user_manager.reset_all_add_task_limit, 86400 * 1000).start()
+        PeriodicCallback(
+            self.task_manager.async_update,
+            options.downloading_task_check_interval * 1000).start()
+        PeriodicCallback(
+            self.user_manager.reset_all_add_task_limit,
+            86400 * 1000).start()
         #spider timer
         PeriodicCallback(self.spider_manager.run,
                          options.spider_task_check_interval * 1000).start()
-        self.log_manager.logger.info("load finished! listening on %s:%s" % (options.bind_ip, options.port))
+        self.log_manager.logger.info(
+            "load finished! listening on %s:%s"
+            % (options.bind_ip, options.port))
+
 
 def main():
     tornado.options.parse_command_line()

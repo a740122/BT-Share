@@ -14,7 +14,7 @@ log = logging.getLogger('Main.spider')
 
 
 class Database(object):
-    def __init__(self):
+    def __init__(self, host='localhost', port=27017):
         try:
             self.conn = Connection(host='localhost', port=27017)
         except ConnectionFailure, e:
@@ -27,7 +27,7 @@ class Database(object):
         else:
             return False
 
-    def saveData(self, url='', query='', db='', collection='',document=''):
+    def saveData(self, db='', collection='', query='', document=''):
         dbh = self.conn[db]
         if dbh[collection].find_one(query):
             dbh[collection].update(query ,{"$set":document})

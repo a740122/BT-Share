@@ -15,10 +15,9 @@ from libs.lixian_api import LiXianAPI, determin_url_type
 from tornado.options import options
 from requests import RequestException
 from bson.objectid import ObjectId
+from db.database import Database
 
-from db import database
-
-TASK_ID_SAMPLE_SIZE = 10
+cus_logger = logging.getLogger("Main.db")
 
 ui_re = re.compile(r"ui=\d+")
 ti_re = re.compile(r"ti=\d+")
@@ -37,13 +36,13 @@ def catch_connect_error(default_return):
             try:
                 return func(*args, **kwargs)
             except RequestException, e:
-                logging.error(repr(e))
+                cus_logger.error(repr(e))
                 return default_return
             except socket.timeout, e:
-                logging.error(repr(e))
+                cus_logger.error(repr(e))
                 return default_return
             except AssertionError, e:
-                logging.error(repr(e))
+                cus_logger.error(repr(e))
                 return default_return
         new_func.__name__ = func.__name__
         return new_func
@@ -59,6 +58,7 @@ class DBTaskManager(object):
         self._last_get_task_list = 0
         #fix for _last_get_task_list
         self.time = time
+        self.database = Database()
 
         self._last_update_task = 0
         self._last_update_task_size = 0
@@ -201,7 +201,7 @@ class DBTaskManager(object):
             try:
                 files = self.xunlei.get_bt_list(task['id'], task['cid'])
             except Exception, e:
-                logging.error(repr(e))
+                cus_logger.error(repr(e))
                 return False
 
         for file in files:
@@ -343,11 +343,11 @@ class DBTaskManager(object):
     # @sqlalchemy_rollback
     def get_task_ids(self):
         result = []
-        for taskid, in Session().query(db.Task.id):
-            result.append(taskid)
+        for task in self.database['task'].find({}):
+            result.append(task['id'])
         return result
 
-    # @catch_connect_error((-99, "connection error"))
+    @catch_connect_error((-99, "connection error"))
     def add_task(self, url, title=None, tags=[], creator="", anonymous=False, need_miaoxia=True):
         def _update_task(task, title=title, tags=tags, creator=creator, anonymous=anonymous):
             if not task:

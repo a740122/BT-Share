@@ -1,6 +1,4 @@
-# -*- encoding: utf-8 -*-
-# author: binux<17175297.hk@gmail.com>
-
+#encoding:utf-8
 import re
 
 from tornado import gen
@@ -25,13 +23,13 @@ class AddTaskHandler(BaseHandler, AsyncProcessMixin):
     def get(self, anonymous):
         render_path = "add_task_anonymous.html" if anonymous else "add_task.html"
         if not self.current_user:
-            message = u"please login first"
+           message = u"please login first"
         elif anonymous and not self.has_permission("add_anonymous_task"):
             message = u"您没有添加任务的权限"
         elif not anonymous and not self.has_permission("add_task"):
             message = u"您没有发布资源的权限"
         elif self.user_manager.get_add_task_limit(self.current_user["email"]) <= 0:
-            message = u"您今天添加的任务太多了！请重新登录以激活配额或联系足兆叉虫。"
+            message = u"您今天添加的任务太多了！请重新登录以激活配额。"
         else:
             message = u""
         self.render(render_path, message=message)

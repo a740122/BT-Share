@@ -1,8 +1,8 @@
 #encoding:utf8
-
 from db import database
 from bson.objectid import ObjectId
 
+#hard code group permission
 default_group_permission = {
         "add_task": True,
         "add_anonymous_task": True,
@@ -82,9 +82,7 @@ class UserManager(object):
     def update_user(self, email, name):
         self.reset_add_task_limit(email)
         user = self.get_user(email) or {}
-        if user:
-            self.database.update({"_id":user['_id']},{"$set":user},safe=True)
-        else:
+        if not user:
             user['email'] = email
             user['name'] = name
             user['group'] = None

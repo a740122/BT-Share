@@ -1,10 +1,10 @@
 {% extends front.html %}
 
 {% block title %}
-{% if query.get("q") %}{{ options.site_name }} - {{ query.get("q") }} - 迅雷离线下载分享
-{% elif query.get("t") %}{{ options.site_name }} - {{ query.get("t") }} - 迅雷离线下载分享
-{% elif query.get("creator") %}{{ options.site_name }} - {{ email2name(query.get("creator")) }} - 迅雷离线下载分享
-{% else %}{{ options.site_name }} - 迅雷离线下载分享{% end %}
+{% if query.get("q") %}{{ options.site_name }} - {{ query.get("q") }} - BT_Share
+{% elif query.get("t") %}{{ options.site_name }} - {{ query.get("t") }} - BT_Share
+{% elif query.get("creator") %}{{ options.site_name }} - {{ email2name(query.get("creator")) }} - BT_Share
+{% else %}{{ options.site_name }} - BT_Share{% end %}
 {% end %}
 
 {% block more_head %}
@@ -17,7 +17,6 @@
 {% else %}
 {% include info.html %}
 {% end %}
-{% include author_info.html %}
 {% end %}
 
 {% block list %}
@@ -56,7 +55,6 @@
       // load next page
       next_page_sent = true;
       $.get("/next", {
-          <!-- s: $(".task-item:last").attr("data-task-id"), -->
           s: $(".js-task-item:last").attr("data-task-id"),
           q: {% raw json_encode(query.get('q', '')) %},
           t: {% raw json_encode(query.get('t', '')) %},

@@ -1,7 +1,4 @@
-#/bin/usr/env python
 #encoding: utf8
-#author: binux<17175297.hk@gmail.com>
-
 import re
 import time
 import json
