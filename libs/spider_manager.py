@@ -11,8 +11,8 @@ from Queue import Queue
 sys.path.insert(0,os.path.join(os.getcwd(), os.pardir))
 
 from crawler.crawler import Crawler
-from crawler.database import Database
 from libs.log_manager import LogManager
+from db.database import Database
 
 def mininova_spider(object):
     def callback(webPage):
@@ -62,9 +62,8 @@ def mininova_spider(object):
     return args
 
 
-
 class SpiderManager(object):
-    def __init__(self):
+    def __init__(self, db_task_manager):
         try:
             self.logger = LogManager(logFile='spider.log', logLevel=5, logTree="Main.spider").logger
         except:
@@ -73,14 +72,22 @@ class SpiderManager(object):
 
         self.spider_configs = [mininova_spider(),]
         self.queue = Queue()
+        self.database = Database()
+        self.db_task_manager = db_task_manager
 
     def run(self, args):
 
         self.logger.info("the spider has been running!")
+        #create a global thread num
+        # global thread_num = len(spider_configs) + lock
+        # or use the queue
+        for num in len(spider_configs):
+            self.put(num)
+        last_insert_id = self.database.get_last_insert()
         try:
             for spider_config in self.spider_configs:
                 crawler = Crawler(args, self.queue)
-                crawler.start()#if task done
+                crawler.start()
             self.queue.join()
             #spiders have been walked,now we turn
             self.grap_seed_file()
@@ -89,9 +96,9 @@ class SpiderManager(object):
         finally:
             pass
 
-    def grap_seed_file(self):
+    def grap_seed_file(self, last_insert_id):
         #update the task list
-
+        self.db_task_manager.add_seed_task(last_insert_id=last_insert_id)
 
 
 def main():

@@ -60,7 +60,7 @@ class Crawler(threading.Thread):
         self.db = args['db']
         self.collection = args['collection']
 
-    def start(self):
+    def run(self):
         print '\nStart Crawling\n'
         if not self._isDatabaseAvaliable():
             print 'Error: Unable to open database file.\n'
@@ -85,6 +85,8 @@ class Crawler(threading.Thread):
         self.isCrawling = False
         self.threadPool.stopThreads()
         self.database.close()
+        #use queue to communicate between threads
+        self.queue.get()
         self.queue.taskdone()
 
     def getAlreadyVisitedNum(self):
