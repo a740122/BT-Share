@@ -11,8 +11,9 @@ from Queue import Queue
 sys.path.insert(0,os.path.join(os.getcwd(), os.pardir))
 
 from crawler.crawler import Crawler
-from libs.log_manager import LogManager
 from db.database import Database
+from log_manager import LogManager
+
 
 def mininova_spider(object):
     def callback(webPage):
@@ -72,7 +73,7 @@ class SpiderManager(object):
 
         self.spider_configs = [mininova_spider(),]
         self.queue = Queue()
-        self.database = Database()
+        self.database = Database(db='bt_tornado')
         self.db_task_manager = db_task_manager
 
     def run(self, args):
@@ -83,7 +84,7 @@ class SpiderManager(object):
         # or use the queue
         for num in len(spider_configs):
             self.put(num)
-        last_insert_id = self.database.get_last_insert()
+        last_insert_id = self.database.get_last_insert_id(db='bt_tornado', collection='seed')
         try:
             for spider_config in self.spider_configs:
                 crawler = Crawler(args, self.queue)
@@ -98,7 +99,14 @@ class SpiderManager(object):
 
     def grap_seed_file(self, last_insert_id):
         #update the task list
-        self.db_task_manager.add_seed_task(last_insert_id=last_insert_id)
+        grap_seed_set = self.database['seed'].find({"_id": {"$gt": last_insert_id}})
+        creator = self.database['user'].find_one({'group':'admin'})['email']
+        for seed in grap_seed_set:
+            try:
+                self.db_task_manager.add_task(seed['magnet_link'], creator=creator)
+            except:
+                self.error("")
+        self.logger.info("sync seeds with xunlei done!")
 
 
 def main():

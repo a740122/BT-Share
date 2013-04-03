@@ -10,13 +10,14 @@
 from pymongo import Connection
 from pymongo.errors import ConnectionFailure
 import logging
-log = logging.getLogger('Main.spider')
+log = logging.getLogger('Main.db')
 
 
 class Database(object):
-    def __init__(self, host='localhost', port=27017):
+    def __init__(self, host='localhost', port=27017, db=''):
         try:
             self.conn = Connection(host='localhost', port=27017)
+            self.db = self.conn['db']
         except ConnectionFailure, e:
             log.error("connection error")
             self.conn = None
@@ -27,16 +28,15 @@ class Database(object):
         else:
             return False
 
-    def saveData(self, db='', collection='', query='', document=''):
-        dbh = self.conn[db]
-        if dbh[collection].find_one(query):
-            dbh[collection].update(query ,{"$set":document})
+    def saveData(self, collection='', query={}, document=''):
+        if self.db[collection].find_one(query):
+            self.db[collection].update(query ,{"$set":document})
         else:
-            dbh[collection].save(document, safe=True)
+            self.db[collection].save(document, safe=True)
 
-    def getAllData(self, db='', collection=''):
-        if self.conn and db and collection:
-            return self.conn[db][collection].find()
+    def getAllData(self, collection=''):
+        if self.conn and collection:
+            return self.db[collection].find()
         else:
             return []
 
@@ -48,3 +48,6 @@ class Database(object):
 
     def saveMedia(self, ):
         pass
+
+    def get_last_insert_id(self, collection=''):
+        self.db[collection].find().sort({"_id":1}).limit(1)[0]['_id']
