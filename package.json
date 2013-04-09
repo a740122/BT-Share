@@ -1,0 +1,41 @@
+{
+  "name": "grunt-demo",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/zhkzyth/grunt-demo",
+  "author": {
+    "name": "zhkzyth",
+    "email": "zhkzyth@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zhkzyth/grunt-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhkzyth/grunt-demo/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/zhkzyth/grunt-demo/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/grunt-demo",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "~0.6.5",
+    "grunt-contrib-requirejs": "~0.4.0"
+  },
+  "keywords": []
+}

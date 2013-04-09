@@ -1,8 +1,0 @@
-[run]
-omit = spyda/crawler.py
-       spyda/extractor.py
-       spyda/matcher.py
-       tests/*
-
-[html]
-directory = coverage
