@@ -3,12 +3,17 @@
 <head>
 <meta charset=utf-8 />
 <title>{% block title %}{{ options.site_name }} - BT_Share{% end %}</title>
+<meta name="keywords" content="Bittorent magnet download free share" />
+<meta name="description" content="{% block desc %}{{ options.site_name }} - bt resource download {% end %}" />
 <!--[if lte IE 9]><script type="text/javascript">location = "/noie";</script><![endif]-->
 <link rel="stylesheet" href="{{static_url('css/reset.css')}}" type="text/css" />
 <link rel="stylesheet" href="{{static_url('css/base.css')}}" type="text/css" />
 {% block head %}{% end %}
-<meta name="keywords" content="迅雷 迅雷离线 ACG 资源分享 下载" />
-<meta name="description" content="{% block desc %}{{ options.site_name }} - 基于迅雷离线服务的ACG资源分享/下载网站{% end %}" />
+</head>
+<body>
+{% block body %}{% end %}
+</body>
+{% block foot %}{% end %}
 {% if options.ga_account %}
 <script type="text/javascript">
 
@@ -21,12 +26,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 {% end %}
-</head>
-<body>
-{% block body %}{% end %}
-</body>
-{% block foot %}{% end %}
 </html>

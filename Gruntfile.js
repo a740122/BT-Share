@@ -31,26 +31,26 @@ module.exports = function(grunt) {
         dest: 'pub/<%= pkg.name %>.min.js'
       },
     },
-   requirejs: {
-     // global config
-     options: {
-       baseUrl: "pub/js/",
-       mainConfigFile: "common/config.js"
-     },
-     production: {
-       // overwrites the default config above
-       options: {
-         out: "common/production.js"
-       }
-     },
-     development: {
-       // overwrites the default config above
-       options: {
-         out: "common/development.js",
-         optimize: '' // no minification
-       }
-     }
-   },
+   // requirejs: {
+   //   // global config
+   //   options: {
+   //     baseUrl: "pub/js/",
+   //     mainConfigFile: "common/config.js"
+   //   },
+   //   production: {
+   //     // overwrites the default config above
+   //     options: {
+   //       out: "common/production.js"
+   //     }
+   //   },
+   //   development: {
+   //     // overwrites the default config above
+   //     options: {
+   //       out: "common/development.js",
+   //       optimize: '' // no minification
+   //     }
+   //   }
+   // },
     //nodeunit: {
       //files: ['test/**/*_test.js']
     //},
@@ -117,11 +117,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
+  // grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   // Default task.
   //grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify', 'coffee']);
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'coffee']);
-  grunt.registerTask('test-requireJs-production', 'requirejs:production');
+  // grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'coffee']);
+  // grunt.registerTask('test-requireJs-production', 'requirejs:production');
+  grunt.registerTask('default', ['jshint']);
 
 };

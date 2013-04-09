@@ -17,7 +17,7 @@ class Database(object):
     def __init__(self, host='localhost', port=27017, db=''):
         try:
             self.conn = Connection(host='localhost', port=27017)
-            self.db = self.conn['db']
+            self.db = self.conn[db]
         except ConnectionFailure, e:
             log.error("connection error")
             self.conn = None
