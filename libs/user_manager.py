@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 class UserManager(object):
     def __init__(self, database):
         #TODO should build a connection pool
-        self.database = database['user']
+        self.database = database.db['user']
 
     def get_user_by_id(self, _id):
         return self.database.find_one({'_id':ObjectId(_id)})

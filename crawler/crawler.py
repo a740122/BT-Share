@@ -24,12 +24,12 @@ from database import Database
 from webPage import WebPage
 from threadPool import ThreadPool
 
-log = logging.getLogger('Main.spider')
+log = logging.getLogger('spider')
 
 
 class Crawler(threading.Thread):
 
-    def __init__(self, args):
+    def __init__(self, args, queue):
         threading.Thread.__init__(self)
         #指定网页深度
         self.depth = args['depth']
@@ -38,7 +38,7 @@ class Crawler(threading.Thread):
         #指定关键词,使用console的默认编码来解码
         self.keyword = args['keyword'].decode(getdefaultlocale()[1])
         #数据库
-        self.database =  Database()
+        self.database =  Database(db="bt_tornado")
         #线程池,指定线程数
         self.threadPool = ThreadPool(args['threadNum'])
         #已访问的链接
@@ -59,6 +59,8 @@ class Crawler(threading.Thread):
         #
         self.db = args['db']
         self.collection = args['collection']
+        # communication queue
+        self.queue = queue
 
     def run(self):
         print '\nStart Crawling\n'
@@ -87,7 +89,7 @@ class Crawler(threading.Thread):
         self.database.close()
         #use queue to communicate between threads
         self.queue.get()
-        self.queue.taskdone()
+        self.queue.task_done()
 
     def getAlreadyVisitedNum(self):
         #visitedHrefs保存已经分配给taskQueue的链接，有可能链接还在处理中。
@@ -128,7 +130,7 @@ class Crawler(threading.Thread):
             if self.__yield_filter(url):
                 query = {"id": _id}
                 document = {"id": _id, "url":url, "createTime": datetime.now()}
-                self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+                self.database.saveData(query=query, collection=self.collection, document=document)
         except Exception, e:
             log.error(' URL: %s ' % url + traceback.format_exc())
 
@@ -187,8 +189,6 @@ class Crawler(threading.Thread):
         if self.entryFilter:
             if self.entryFilter['Type'] == 'allow':        # 允许模式，只要满足一个就允许，否则不允许
                 result = False
-                # import pdb
-                # pdb.set_trace()
                 for rule in self.entryFilter['List']:
                     pattern = re.compile(rule, re.I | re.U)
                     if pattern.search(checkURL):

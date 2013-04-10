@@ -1,4 +1,4 @@
-#coding:utf8
+# #coding:utf8
 
 # """
 # database.py
@@ -9,8 +9,6 @@
 
 from pymongo import Connection
 from pymongo.errors import ConnectionFailure
-import logging
-log = logging.getLogger('Main.db')
 
 
 class Database(object):

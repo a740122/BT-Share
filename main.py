@@ -34,7 +34,7 @@ class Application(web.Application):
         """"""
         from handlers import handlers, ui_modules
         from libs.util import ui_methods
-        from db import Database
+        from db.Database import Database
         from libs.user_manager import UserManager
         from libs.log_manager import LogManager
 
@@ -50,7 +50,10 @@ class Application(web.Application):
         )
         super(Application, self).__init__(handlers, **settings)
 
-        self.database = Database('bt_tornado')
+        import pdb
+        pdb.set_trace()
+
+        self.database = Database(db='bt_tornado')
         self.user_manager = UserManager(self.database)
         self.log_manager = LogManager(logFile="application.log",
                                       logLevel=5, logTree="Main")

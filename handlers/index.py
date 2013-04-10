@@ -4,24 +4,18 @@ from tornado.options import options
 from .base import BaseHandler
 from libs.cache import mem_cache
 
-TASK_LIMIT = 10
+ITEM_LIMIT = 10
 
 class IndexHandler(BaseHandler):
     def get(self):
-        if not self.has_permission("view_tasklist"):
-            self.set_status(403)
-            self.render("view_tasklist.html")
-            return
-
         q = self.get_argument("q", "")
         feed = self.get_argument("feed", None)
-        view_all = self.has_permission("view_invalid")
-        tasks = self.task_manager.get_task_list(q=q, limit=TASK_LIMIT, all=view_all)
-        if feed:
-            self.set_header("Content-Type", "application/atom+xml")
-            self.render("feed.xml", tasks=tasks)
-        else:
-            self.render("index.html", tasks=tasks, query={"q": q})
+        seeds = self.database.db['seeds'].find({"name":q},limit=ITEM_LIMIT)
+
+        import pdb
+        pdb.set_trace()
+
+        self.render("index.html", seeds=seeds, query={"q": q})
 
 class FeedHandler(BaseHandler):
     def get(self):

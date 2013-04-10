@@ -12,8 +12,7 @@ from threading import Thread, Lock
 from Queue import Queue,Empty
 import logging
 
-# log = logging.getLogger('Main.threadPool')
-log = logging.getLogger('Main.spider')
+log = logging.getLogger('spider.threadpool')
 
 
 class Worker(Thread):
@@ -40,9 +39,9 @@ class Worker(Thread):
                 self.threadPool.increaseRunsNum()
                 result = func(*args, **kargs)
                 self.threadPool.decreaseRunsNum()
-                # no need for the result queue at all
-                if result:
-                    self.threadPool.putTaskResult(*result)
+                # TODO no need for the result queue at all
+                # if result:
+                #     self.threadPool.putTaskResult(*result)
                 self.threadPool.taskDone()
             except Exception, e:
                 log.critical(traceback.format_exc())

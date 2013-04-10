@@ -1,0 +1,486 @@
+2013-04-10 16:29:26,456 MainThread INFO the spider has been running!
+2013-04-10 16:30:00,973 MainThread INFO the spider has been running!
+2013-04-10 16:31:08,481 MainThread INFO the spider has been running!
+2013-04-10 16:34:09,013 MainThread INFO the spider has been running!
+2013-04-10 16:34:09,013 MainThread ERROR spider cannot run.
+2013-04-10 16:35:43,872 MainThread INFO the spider has been running!
+2013-04-10 16:48:42,141 MainThread ERROR spider cannot run.
+2013-04-10 16:48:44,258 MainThread INFO the spider has been running!
+2013-04-10 16:51:39,612 MainThread INFO the spider has been running!
+2013-04-10 16:51:41,355 Thread-2 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:51:47,621 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 16:51:49,304 Thread-2 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:51:50,956 Thread-2 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:51:52,626 Thread-2 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:51:54,300 Thread-2 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:51:55,974 Thread-2 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:51:57,614 Thread-2 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:51:59,257 Thread-2 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:00,912 Thread-2 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:02,568 Thread-2 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:04,204 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:05,883 Thread-2 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:07,525 Thread-2 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:09,179 Thread-2 ERROR  URL: http://www.mininova.org/today/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:10,853 Thread-2 ERROR  URL: http://www.mininova.org/today/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:12,487 Thread-2 ERROR  URL: http://www.mininova.org/today/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:14,159 Thread-2 ERROR  URL: http://www.mininova.org/today/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:16,104 Thread-2 ERROR  URL: http://www.mininova.org/tor/13210143 Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:19,653 Thread-1 INFO Depth 2 Finish. Total visited Links: 58
+
+2013-04-10 16:52:21,320 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:22,981 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:24,644 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:26,312 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:27,987 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:29,633 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:31,283 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:32,927 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:34,623 Thread-2 ERROR  URL: http://www.mininova.org/today/cat Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, db=self.db, collection=self.collection, document=document)
+TypeError: saveData() got an unexpected keyword argument 'db'
+
+2013-04-10 16:52:35,669 Thread-1 INFO Depth 3 Finish. Total visited Links: 78
+
+2013-04-10 16:58:05,715 MainThread INFO the spider has been running!
+2013-04-10 16:58:05,716 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 16:58:05,716 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 16:58:05,716 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 16:58:06,716 MainThread INFO spider tasks done!
+2013-04-10 17:03:54,259 MainThread INFO the spider has been running!
+2013-04-10 17:03:54,260 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:03:54,260 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 17:03:54,261 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 17:03:55,260 MainThread INFO spider tasks done!
+2013-04-10 17:08:36,383 MainThread INFO the spider has been running!
+2013-04-10 17:08:36,384 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:08:36,384 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 17:08:36,384 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 17:08:37,384 MainThread INFO spider tasks done!
+2013-04-10 17:09:06,686 MainThread INFO the spider has been running!
+2013-04-10 17:09:06,694 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:09:06,694 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 17:09:06,694 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 17:09:07,694 MainThread INFO spider tasks done!
+2013-04-10 17:09:53,555 MainThread INFO the spider has been running!
+2013-04-10 17:09:53,556 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:09:53,556 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 17:09:53,556 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 17:09:54,556 MainThread INFO spider tasks done!
+2013-04-10 17:09:57,447 MainThread INFO the spider has been running!
+2013-04-10 17:09:57,449 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:09:57,449 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 17:09:57,449 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 17:09:58,449 MainThread INFO spider tasks done!
+2013-04-10 17:20:59,516 MainThread INFO the spider has been running!
+2013-04-10 17:20:59,517 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:20:59,517 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 17:20:59,517 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 17:21:00,517 MainThread INFO spider tasks done!
+2013-04-10 17:22:48,912 MainThread INFO the spider has been running!
+2013-04-10 17:22:48,913 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:22:48,913 Thread-1 INFO Depth 2 Finish. Total visited Links: 1
+
+2013-04-10 17:22:48,913 Thread-1 INFO Depth 3 Finish. Total visited Links: 1
+
+2013-04-10 17:22:49,913 MainThread INFO spider tasks done!
+2013-04-10 17:24:44,036 MainThread INFO the spider has been running!
+2013-04-10 17:24:45,996 Thread-2 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:24:52,045 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:24:56,059 Thread-2 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:24:57,991 Thread-2 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:24:59,915 Thread-2 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:01,870 Thread-2 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:03,821 Thread-2 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:06,171 Thread-2 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:08,149 Thread-2 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:11,262 Thread-2 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:14,688 Thread-2 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:18,577 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:21,663 Thread-2 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:24,488 Thread-2 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:26,486 Thread-2 ERROR  URL: http://www.mininova.org/today/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:28,509 Thread-2 ERROR  URL: http://www.mininova.org/today/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:30,514 Thread-2 ERROR  URL: http://www.mininova.org/today/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:32,545 Thread-2 ERROR  URL: http://www.mininova.org/today/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:25:34,579 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 122, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 115, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 33, in callback
+    database.saveData(collection='seed', query=query, document=param)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:27:54,391 MainThread INFO the spider has been running!
+2013-04-10 17:27:59,027 Thread-2 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:02,401 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:28:04,344 Thread-2 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:06,217 Thread-2 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:10,530 Thread-2 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:12,447 Thread-2 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:15,150 Thread-2 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:20,904 Thread-2 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:23,273 Thread-2 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:27,629 Thread-2 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:33,645 Thread-2 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:37,477 Thread-2 ERROR  URL: http://www.mininova.org/today/cat#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:41,583 Thread-2 ERROR  URL: http://www.mininova.org/today/added Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:43,749 Thread-2 ERROR  URL: http://www.mininova.org/today/comments Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:45,521 Thread-2 ERROR  URL: http://www.mininova.org/today/name Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:47,315 Thread-2 ERROR  URL: http://www.mininova.org/today/size Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:49,791 Thread-2 ERROR  URL: http://www.mininova.org/today/seeds Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:51,917 Thread-2 ERROR  URL: http://www.mininova.org/today/leech Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:28:55,535 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 122, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 115, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 33, in callback
+    database.saveData(collection='seed', query=query, document=param)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:30:31,224 MainThread INFO the spider has been running!
+2013-04-10 17:30:33,023 Thread-2 ERROR  URL: http://www.mininova.org/today Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:30:39,234 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:30:43,220 Thread-2 ERROR  URL: http://www.mininova.org/yesterday/ Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:30:45,112 Thread-2 ERROR  URL: http://www.mininova.org/today#anime Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:30:51,082 Thread-2 ERROR  URL: http://www.mininova.org/today#books Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:30:56,194 Thread-2 ERROR  URL: http://www.mininova.org/today#games Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:30:58,078 Thread-2 ERROR  URL: http://www.mininova.org/today#movies Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:30:59,962 Thread-2 ERROR  URL: http://www.mininova.org/today#music Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:31:03,353 Thread-2 ERROR  URL: http://www.mininova.org/today#pictures Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:31:05,286 Thread-2 ERROR  URL: http://www.mininova.org/today#software Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:31:08,695 Thread-2 ERROR  URL: http://www.mininova.org/today#tvshows Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:31:12,161 Thread-2 ERROR  URL: http://www.mininova.org/today#other Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 133, in _saveTaskResults
+    self.database.saveData(query=query, collection=self.collection, document=document)
+AttributeError: 'Database' object has no attribute 'saveData'
+
+2013-04-10 17:39:36,004 MainThread INFO the spider has been running!
+2013-04-10 17:39:44,014 Thread-1 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-10 17:40:16,047 Thread-1 INFO Depth 2 Finish. Total visited Links: 58
+
+2013-04-10 17:41:28,119 Thread-1 INFO Depth 3 Finish. Total visited Links: 122
+
+2013-04-10 17:41:29,528 MainThread INFO spider tasks done!
+2013-04-10 17:42:20,551 MainThread INFO the spider has been running!
+2013-04-10 17:42:36,568 Thread-1 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-04-10 17:44:28,678 Thread-1 INFO Depth 2 Finish. Total visited Links: 105
+
+2013-04-10 17:45:24,734 Thread-1 INFO Depth 3 Finish. Total visited Links: 208
+
+2013-04-10 17:45:25,734 MainThread INFO spider tasks done!

@@ -13,7 +13,7 @@ import logging
 
 import requests
 
-log = logging.getLogger('Main.WebPage')
+log = logging.getLogger('spider.WebPage')
 
 
 class WebPage(object):
