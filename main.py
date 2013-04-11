@@ -41,17 +41,16 @@ class Application(web.Application):
         settings = dict(
             debug=options.debug,
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
-            static_path=os.path.join(os.path.dirname(__file__), "static"),
+            static_path=os.path.join(os.path.dirname(__file__), "pub"),
             cookie_secret=options.cookie_secret,
             login_url="/login",
 
             ui_modules=ui_modules,
             ui_methods=ui_methods,
         )
-        super(Application, self).__init__(handlers, **settings)
-
         import pdb
         pdb.set_trace()
+        super(Application, self).__init__(handlers, **settings)
 
         self.database = Database(db='bt_tornado')
         self.user_manager = UserManager(self.database)
