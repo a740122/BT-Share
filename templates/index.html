@@ -18,6 +18,11 @@
 {% end %}
 
 {% block list %}
+<ul class="">
+  {% for seed in seeds %}
+    <li class=""><a href="{{ seed['url'] }}">{{ seed['name'] }}</a></li>
+  {% end %}
+</ul>
 {% end %}
 
 {% block foot %}

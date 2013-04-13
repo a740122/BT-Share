@@ -10,10 +10,8 @@ class IndexHandler(BaseHandler):
     def get(self):
         q = self.get_argument("q", "")
         feed = self.get_argument("feed", None)
-        seeds = self.database.db['seeds'].find({"name":q},limit=ITEM_LIMIT)
 
-        import pdb
-        pdb.set_trace()
+        seeds = self.database.db['seed'].find()
 
         self.render("index.html", seeds=seeds, query={"q": q})
 

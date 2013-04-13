@@ -48,8 +48,6 @@ class Application(web.Application):
             ui_modules=ui_modules,
             ui_methods=ui_methods,
         )
-        import pdb
-        pdb.set_trace()
         super(Application, self).__init__(handlers, **settings)
 
         self.database = Database(db='bt_tornado')
