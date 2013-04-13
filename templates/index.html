@@ -7,8 +7,9 @@
 {% else %}{{ options.site_name }} - BT_Share{% end %}
 {% end %}
 
-{% block more_head %}
+{% block head %}
 <link rel="alternate" type="application/atom+xml" href="?feed=rss" />
+<link rel="stylesheet" href="{{static_url('css/index.css')}}" type="text/css" />
 {% end %}
 
 {% block category %}

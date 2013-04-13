@@ -13,4 +13,4 @@ require.config
 
 # Start the main app logic.
 requirejs ['jquery', 'bootstrap'],($,bootstrap) ->
-   $ alert "hello,world!"
+   # $ alert "hello,world!"

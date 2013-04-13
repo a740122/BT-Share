@@ -1,6 +1,12 @@
 {% extends base.html %}
 
 {% block head %}
+{% end %}
+
+{% block body %}
+
+{% block body-top %}
+
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
@@ -13,19 +19,22 @@
       <div class="nav-collapse">
         <ul class="nav">
           <li class="active"><a href="#">首页</a></li>
-          <li><a href="#about">关于</a></li>
-          <li><a href="#contact">联系</a></li>
         </ul>
-        <p class="navbar-text pull-right">我代表<a href="#">人名</a></p>
+        <div class="navbar-text pull-right">
+          <form id="search-form" method="GET" action="/search">
+            <input type="text" class="input-medium search-query">
+            <button type="submit" class="btn">搜索</button>
+          </form>
+        </div>
       </div><!--/.nav-collapse -->
     </div>
   </div>
 </div>
-{% block more_head %}{% end %}
+
 {% end %}
 
-{% block body %}
-{% block body-top %}{% end %}
+{% block body-content %}
+
 <div class="container">
   <div class="row-fluid">
     <div class="span2">
@@ -36,4 +45,7 @@
     </div>
   </div>
 </div>
+
+{% end %}
+
 {% end %}

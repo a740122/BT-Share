@@ -13,8 +13,6 @@
     }
   });
 
-  requirejs(['jquery', 'bootstrap'], function($, bootstrap) {
-    return $(alert("hello,world!"));
-  });
+  requirejs(['jquery', 'bootstrap'], function($, bootstrap) {});
 
 }).call(this);
