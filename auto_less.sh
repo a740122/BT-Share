@@ -1,2 +1,2 @@
-autoless static/less pub/css
+autoless static/less/tmp/ pub/css
 

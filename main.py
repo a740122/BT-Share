@@ -26,8 +26,6 @@ define("using_xsrf", default=False,
 define("reg_key", default=None,
        help="if setted new user is not allowed \
        except login with '/login?key=<reg_key>'.")
-define("enable_share", default=True, help="enable share task")
-
 
 class Application(web.Application):
     def __init__(self):
@@ -43,7 +41,7 @@ class Application(web.Application):
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
             static_path=os.path.join(os.path.dirname(__file__), "pub"),
             cookie_secret=options.cookie_secret,
-            login_url="/login",
+            login_url="/auth/login",
 
             ui_modules=ui_modules,
             ui_methods=ui_methods,

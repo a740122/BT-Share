@@ -4,16 +4,11 @@ from tornado.auth import GoogleMixin
 from tornado.options import options
 from .base import BaseHandler
 
-class LoginHandler(BaseHandler, GoogleMixin):
+class AuthLoginHandler(BaseHandler, GoogleMixin):
     @asynchronous
     def get(self):
        if self.get_argument("openid.mode", None):
            self.get_authenticated_user(self.async_callback(self._on_auth))
-           return
-       if self.get_argument("logout", None):
-           self.clear_cookie("name")
-           self.clear_cookie("email")
-           self.redirect("/")
            return
        reg_key = self.get_argument("key", None)
        if reg_key:
@@ -45,8 +40,15 @@ class LoginHandler(BaseHandler, GoogleMixin):
         self.set_secure_cookie("email", user["email"])
         self.redirect("/")
 
+class AuthLogoutHandler(BaseHandler):
+    def get(self):
+        self.clear_cookie("name")
+        self.clear_cookie("email")
+        self.redirect(self.get_argument("next", "/"))
+
 handlers = [
-        (r"/login", LoginHandler),
+        (r"/auth/login", AuthLoginHandler),
+        (r"/auth/logout", AuthLogoutHandler),
 ]
 ui_modules = {
 }

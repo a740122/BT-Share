@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+#encoding:utf-8
 
 from time import time
 from tornado.web import RequestHandler
@@ -29,11 +29,3 @@ class BaseHandler(RequestHandler):
                     "email": email,
                     "name": name,
                    }
-        elif self.request.remote_ip in ("localhost", "127.0.0.1"):
-            return {
-                    "id": 0,
-                    "email": "bot@localhost",
-                    "name": "bot",
-                    }
-        else:
-            return None

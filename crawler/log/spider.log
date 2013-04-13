@@ -484,3 +484,11 @@ AttributeError: 'Database' object has no attribute 'saveData'
 2013-04-10 17:45:24,734 Thread-1 INFO Depth 3 Finish. Total visited Links: 208
 
 2013-04-10 17:45:25,734 MainThread INFO spider tasks done!
+2013-04-14 01:01:58,461 MainThread INFO the spider has been running!
+2013-04-14 01:02:06,466 Thread-1 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-04-14 01:07:02,702 Thread-1 INFO Depth 2 Finish. Total visited Links: 298
+
+2013-04-14 01:07:34,744 Thread-1 INFO Depth 3 Finish. Total visited Links: 883
+
+2013-04-14 01:07:35,797 MainThread INFO spider tasks done!
