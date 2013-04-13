@@ -3,3 +3,4 @@ node_modules
 #.*py#
 #static/js/.*/\#.*coffee\#
 static/less/*.less#
+log/
