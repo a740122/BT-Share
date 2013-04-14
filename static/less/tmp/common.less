@@ -1,13 +1,33 @@
 @import url("../bootstrap/variables.less");
 
+body {
+    background-color: #FFFFFF;
+    background-image: url("../../img/grid-18px-masked.png");
+    background-position: 0 40px;
+    background-repeat: repeat-x;
+    background-attachment:fixed;
+    padding-top: 90px;
+    position: relative;
+}
+
 #search-form {
-  margin:0;
+  margin-top:5px;
+  margin-bottom:0px;
+  float:left;
   button{
    margin:0;
   }
 }
 
 #codesign {
-  padding-top: 50px;
-  .container;
+  padding-top: 70px;
+}
+
+.footer {
+    border-top: 1px solid #E5E5E5;
+    margin-top: 30px;
+    padding: 20px 10px 20px 0px;
+    p {
+      color:@grayLight;
+    }
 }

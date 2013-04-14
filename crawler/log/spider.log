@@ -492,3 +492,36 @@ AttributeError: 'Database' object has no attribute 'saveData'
 2013-04-14 01:07:34,744 Thread-1 INFO Depth 3 Finish. Total visited Links: 883
 
 2013-04-14 01:07:35,797 MainThread INFO spider tasks done!
+2013-04-14 13:28:59,456 MainThread INFO the spider has been running!
+2013-04-14 13:29:07,466 Thread-1 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-04-14 13:29:39,482 Thread-1 INFO Depth 2 Finish. Total visited Links: 83
+
+2013-04-14 13:30:03,498 Thread-1 INFO Depth 3 Finish. Total visited Links: 146
+
+2013-04-14 13:30:04,917 MainThread INFO spider tasks done!
+2013-04-14 13:49:10,499 MainThread INFO the spider has been running!
+2013-04-14 13:49:18,507 Thread-1 INFO Depth 1 Finish. Total visited Links: 3
+
+2013-04-14 13:51:15,417 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 122, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 115, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 28, in callback
+    " ", soup.find(id='description').get_text()),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+
+2013-04-14 13:51:45,303 Thread-2 CRITICAL Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/threadPool.py", line 40, in run
+    result = func(*args, **kargs)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 122, in _taskHandler
+    self._callback_filter(webPage)
+  File "/home/zhkzyth/codeRep/courage-demo/crawler/crawler.py", line 115, in _callback_filter
+    self.callbackFilter['func'](webPage)
+  File "main.py", line 28, in callback
+    " ", soup.find(id='description').get_text()),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+

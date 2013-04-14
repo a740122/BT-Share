@@ -35,7 +35,7 @@ def mininova_spider():
     #args to init spider
     entryFilter = dict()
     entryFilter['Type'] = 'allow'
-    entryFilter['List'] = [r'/tor/\d+', r'/today', r'/yesterday']
+    entryFilter['List'] = [r'/tor/\d+', r'/today', r'/yesterday',r'/sub/\d+']
 
     yieldFilter = dict()
     # yieldFilter['Type'] = 'allow'
@@ -45,7 +45,7 @@ def mininova_spider():
     callbackFilter['func'] = callback
 
     args = dict(
-        url=['http://www.mininova.org/today','http://www.mininova.org/yesterday'],
+        url=['http://www.mininova.org/today','http://www.mininova.org/yesterday','http://www.mininova.org/sub/35'],
         depth=3,
         threadNum=2,
         keyword='',

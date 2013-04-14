@@ -1,31 +1,194 @@
 {% extends front.html %}
 
 {% block title %}
-{% if query.get("q") %}{{ options.site_name }} - {{ query.get("q") }} - BT_Share
-{% elif query.get("t") %}{{ options.site_name }} - {{ query.get("t") }} - BT_Share
-{% elif query.get("creator") %}{{ options.site_name }} - {{ email2name(query.get("creator")) }} - BT_Share
-{% else %}{{ options.site_name }} - BT_Share{% end %}
+{% if query.get("q") %}{{ options.site_name }} - {{ query.get("q") }} - Your Web
+{% else %}{{ options.site_name }} - Your Web{% end %}
 {% end %}
 
 {% block head %}
 <link rel="alternate" type="application/atom+xml" href="?feed=rss" />
-<link rel="stylesheet" href="{{static_url('css/index.css')}}" type="text/css" />
+<link rel="stylesheet" href="{{static_url('css/tmp/index.less.css')}}" type="text/css" />
 {% end %}
 
+
+{% block body-content %}
+<div class="container">
+  <div class="row-fluid">
+    <div class="span3">
+      {% block category %}{% end %}
+    </div>
+    <div class="span9 result-list">
+      {% block list %}{% end %}
+    </div>
+  </div>
+  <div class="pagination">
+    <ul class="pull-right">
+      <li class="disabled"><a href="#">«</a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+{% end %}
+
+
 {% block category %}
-<ul class="">
-  <li class="" data-category=""><a href=""> 艺术</a></li>
-  <li class=""><a href="">音乐</a></li>
-  <li class=""><a href="">代码</a></li>
-  <li class=""><a href="">心爱的电子书</a></li>
-  <li class=""><a href="">女人</a></li>
+<ul class="subnav subnav-fixed nav nav-list">
+  <li><a tabindex="-1" href="#"><i class="icon-chevron-right"></i>全部</a></li>
+
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="#"><i class="icon-chevron-right"></i>年代</a>
+    <ul class="dropdown-menu">
+
+      <li><a href="/category/class_tv" tabindex="-1">不限</a></li>
+
+      <li><a href="/category/year_2013-class_tv" tabindex="-1">2013</a></li>
+
+      <li><a href="/category/year_2012-class_tv" tabindex="-1">2012</a></li>
+
+      <li><a href="/category/year_2011-class_tv" tabindex="-1">2011</a></li>
+
+      <li><a href="/category/year_2010-class_tv" tabindex="-1">2010</a></li>
+
+      <li><a href="/category/year_2009-class_tv" tabindex="-1">2009</a></li>
+
+      <li><a href="/category/year_2008-class_tv" tabindex="-1">2008</a></li>
+
+      <li><a href="/category/year_2007-class_tv" tabindex="-1">2007</a></li>
+
+      <li><a href="/category/year_2006-class_tv" tabindex="-1">2006</a></li>
+
+      <li><a href="/category/year_2005-class_tv" tabindex="-1">2005</a></li>
+
+      <li><a href="/category/year_2004-class_tv" tabindex="-1">2004</a></li>
+
+      <li><a href="/category/year_2003-class_tv" tabindex="-1">2003</a></li>
+
+      <li><a href="/category/year_2002-class_tv" tabindex="-1">2002</a></li>
+
+      <li><a href="/category/year_2001-class_tv" tabindex="-1">2001</a></li>
+
+      <li><a href="/category/year_2000-class_tv" tabindex="-1">2000</a></li>
+
+      <li><a href="/category/year_1999-class_tv" tabindex="-1">1999</a></li>
+
+      <li><a href="/category/year_1998-class_tv" tabindex="-1">1998</a></li>
+
+      <li><a href="/category/year_1997-class_tv" tabindex="-1">1997</a></li>
+
+      <li><a href="/category/year_1996-class_tv" tabindex="-1">1996</a></li>
+
+      <li><a href="/category/year_1995-class_tv" tabindex="-1">1995</a></li>
+
+      <li><a href="/category/year_1994-class_tv" tabindex="-1">1994</a></li>
+
+      <li><a href="/category/year_1993-class_tv" tabindex="-1">1993</a></li>
+
+      <li><a href="/category/year_1992-class_tv" tabindex="-1">1992</a></li>
+
+      <li><a href="/category/year_1991-class_tv" tabindex="-1">1991</a></li>
+
+      <li><a href="/category/year_1990-class_tv" tabindex="-1">1990</a></li>
+
+
+      <li><a href="/category/year_80s-class_tv" tabindex="-1">80年代</a></li>
+
+      <li><a href="/category/year_70s-class_tv" tabindex="-1">70年代</a></li>
+
+      <li><a href="/category/year_60s-class_tv" tabindex="-1">60年代</a></li>
+
+      <li><a href="/category/year_50s-class_tv" tabindex="-1">50年代</a></li>
+
+      <li><a href="/category/year_40s-class_tv" tabindex="-1">40年代</a></li>
+
+      <li><a href="/category/year_30s-class_tv" tabindex="-1">30年代</a></li>
+
+      <li><a href="/category/year_20s-class_tv" tabindex="-1">20年代</a></li>
+
+
+    </ul>
+  </li>
+
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="#"><i class="icon-chevron-right"></i>影片类别</a>
+    <ul class="dropdown-menu">
+
+      <li><a href="/category/class_tv" tabindex="-1">不限</a></li>
+
+      <li><a href="/category/genre_%E5%96%9C%E5%89%A7-class_tv" tabindex="-1">喜剧</a></li>
+
+      <li><a href="/category/genre_%E7%88%B1%E6%83%85-class_tv" tabindex="-1">爱情</a></li>
+
+      <li><a href="/category/genre_%E5%8A%A8%E4%BD%9C-class_tv" tabindex="-1">动作</a></li>
+
+      <li><a href="/category/genre_%E7%A7%91%E5%B9%BB-class_tv" tabindex="-1">科幻</a></li>
+
+      <li><a href="/category/genre_%E6%83%8A%E6%82%9A-class_tv" tabindex="-1">惊悚</a></li>
+
+      <li><a href="/category/genre_%E7%BA%AA%E5%BD%95%E7%89%87-class_tv" tabindex="-1">纪录</a></li>
+
+      <li><a href="/category/genre_%E6%81%90%E6%80%96-class_tv" tabindex="-1">恐怖</a></li>
+
+      <li><a href="/category/genre_%E7%9F%AD%E7%89%87-class_tv" tabindex="-1">短片</a></li>
+
+      <li><a href="/category/genre_%E5%89%A7%E6%83%85-class_tv" tabindex="-1">剧情</a></li>
+
+      <li><a href="/category/genre_%E5%8A%A8%E7%94%BB-class_tv" tabindex="-1">动画</a></li>
+
+      <li><a href="/category/genre_%E5%86%92%E9%99%A9-class_tv" tabindex="-1">冒险</a></li>
+
+      <li><a href="/category/genre_%E5%AE%B6%E5%BA%AD-class_tv" tabindex="-1">家庭</a></li>
+
+      <li><a href="/category/genre_%E6%82%AC%E7%96%91-class_tv" tabindex="-1">悬疑</a></li>
+
+      <li><a href="/category/genre_%E7%8A%AF%E7%BD%AA-class_tv" tabindex="-1">犯罪</a></li>
+
+      <li><a href="/category/genre_%E5%A5%87%E5%B9%BB-class_tv" tabindex="-1">奇幻</a></li>
+
+      <li><a href="/category/genre_%E6%88%98%E4%BA%89-class_tv" tabindex="-1">战争</a></li>
+
+      <li><a href="/category/genre_%E9%9F%B3%E4%B9%90-class_tv" tabindex="-1">音乐</a></li>
+
+      <li><a href="/category/genre_%E8%A5%BF%E9%83%A8-class_tv" tabindex="-1">西部</a></li>
+
+      <li><a href="/category/genre_%E5%8E%86%E5%8F%B2-class_tv" tabindex="-1">历史</a></li>
+
+      <li><a href="/category/genre_%E4%BC%A0%E8%AE%B0-class_tv" tabindex="-1">传记</a></li>
+
+      <li><a href="/category/genre_%E8%BF%90%E5%8A%A8-class_tv" tabindex="-1">运动</a></li>
+
+      <li><a href="/category/genre_%E5%84%BF%E7%AB%A5-class_tv" tabindex="-1">儿童</a></li>
+
+      <li><a href="/category/genre_%E5%90%8C%E6%80%A7-class_tv" tabindex="-1">同性</a></li>
+
+      <li><a href="/category/genre_%E9%BB%91%E8%89%B2%E7%94%B5%E5%BD%B1-class_tv" tabindex="-1">黑色</a></li>
+
+      <li><a href="/category/genre_%E5%8F%A4%E8%A3%85-class_tv" tabindex="-1">古装</a></li>
+
+      <li><a href="/category/genre_%E6%83%8A%E6%A0%97-class_tv" tabindex="-1">惊栗</a></li>
+
+      <li><a href="/category/genre_%E6%AD%A6%E4%BE%A0-class_tv" tabindex="-1">武侠</a></li>
+
+      <li><a href="/category/genre_%E8%88%9E%E5%8F%B0%E8%89%BA%E6%9C%AF-class_tv" tabindex="-1">舞台</a></li>
+
+      <li><a href="/category/genre_%E9%AC%BC%E6%80%AA-class_tv" tabindex="-1">鬼怪</a></li>
+
+      <li><a href="/category/genre_%E7%81%BE%E9%9A%BE-class_tv" tabindex="-1">灾难</a></li>
+
+      <li><a href="/category/genre_%E8%8D%92%E8%AF%9E-class_tv" tabindex="-1">荒诞</a></li>
+
+    </ul>
+  </li>
 </ul>
 {% end %}
 
 {% block list %}
-<ul class="">
+<ul class="unstyled">
   {% for seed in seeds %}
-    <li class=""><a href="{{ seed['url'] }}">{{ seed['name'] }}</a></li>
+  <li class=""><a href="{{ seed['url'] }}">{{ seed['name'] }}</a></li>
   {% end %}
 </ul>
 {% end %}
