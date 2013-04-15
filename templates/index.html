@@ -17,19 +17,17 @@
     <div class="span3">
       {% block category %}{% end %}
     </div>
+    {% if page['total'] == 0 %}
+    <div class="offset2">
+      <div class="alert mt20">{{ no_result }}</div>
+    </div>
+    {% else %}
     <div class="span9 result-list">
       {% block list %}{% end %}
     </div>
-  </div>
-  <div class="pagination">
-    <ul class="pull-right">
-      <li class="disabled"><a href="#">«</a></li>
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">»</a></li>
-    </ul>
+    <div class="pagination">{% raw modules.pagination(page,request.uri) %}</div>
+    {% end %}
+
   </div>
 </div>
 {% end %}
@@ -37,13 +35,13 @@
 
 {% block category %}
 <ul class="subnav subnav-fixed nav nav-list">
-  <li><a tabindex="-1" href="#"><i class="icon-chevron-right"></i>全部</a></li>
+  <li><a tabindex="-1" href="/"><i class="icon-chevron-right"></i>全部</a></li>
 
   <li class="dropdown-submenu">
     <a tabindex="-1" href="#"><i class="icon-chevron-right"></i>年代</a>
     <ul class="dropdown-menu">
 
-      <li><a href="/category/class_tv" tabindex="-1">不限</a></li>
+      <li><a href="/category/cat_age" tabindex="-1">不限</a></li>
 
       <li><a href="/category/year_2013-class_tv" tabindex="-1">2013</a></li>
 

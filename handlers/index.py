@@ -2,18 +2,19 @@
 from tornado.web import HTTPError, UIModule
 from tornado.options import options
 from .base import BaseHandler
+from libs import util
 from libs.cache import mem_cache
 
-ITEM_LIMIT = 10
-
 class IndexHandler(BaseHandler):
+
     def get(self):
-        q = self.get_argument("q", "")
         feed = self.get_argument("feed", None)
+        current_page = int(self.get_argument("p",1))
 
-        seeds = self.database.db['seed'].find()
+        result = util.pages(self.database,collection='seed',current_page=current_page)
 
-        self.render("index.html", seeds=seeds, query={"q": q})
+        self.render("index.html",**result)
+
 
 class FeedHandler(BaseHandler):
     def get(self):
@@ -88,10 +89,6 @@ class NoIEHandler(BaseHandler):
     def get(self):
         self.render("no-ie.html")
 
-class TaskItemsModule(UIModule):
-    def render(self, tasks):
-        return self.render_string("task_list.html", tasks=tasks)
-
 class TagsModule(UIModule):
     def render(self, tags):
         if not tags:
@@ -115,6 +112,7 @@ class TagListModule(UIModule):
         tags = self.handler.task_manager.get_tag_list()
         return self.render_string("tag_list.html", tags=tags, size_type=size_type)
 
+
 handlers = [
         (r"/", IndexHandler),
         (r"/noie", NoIEHandler),
@@ -124,8 +122,8 @@ handlers = [
         (r"/uploader/(\d+)", UploadHandler),
         (r"/next", GetNextTasks),
 ]
+
 ui_modules = {
-        "TaskItems": TaskItemsModule,
         "TagsModule": TagsModule,
         "TagList": TagListModule,
 }

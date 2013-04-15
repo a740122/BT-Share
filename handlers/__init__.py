@@ -3,7 +3,7 @@
 handlers = []
 ui_modules = {}
 
-modules = ['index', 'login', 'manager']
+modules = ['index', 'login', 'manager', 'common','search']
 
 for module in modules:
     module = __import__("handlers."+module, fromlist=["handlers"])

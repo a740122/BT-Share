@@ -1,0 +1,15 @@
+{% if page and not page['pages'] == 1 %}
+<ul class="pull-right">
+  <li {% if page['current'] == page['prev'] %}class="disabled"{% end %}><a href="{{ build_uri(uri, 'p', page['prev']) }}">«</a></li>
+  {% for p in gen_page_list(page['current'], page['pages'], list_rows) %}
+  <li {% if page['current'] == p %}class="active"{% end %}>
+    {% if not page['current'] == p %}
+    <a href="{{ build_uri(uri, 'p', p) }}">{{ p }}</a>
+    {% else %}
+    <a href="javascript:;">{{ p }}</a>
+    {% end %}
+  </li>
+  {% end %}
+  <li {% if page['current'] == page['next'] %}class="disabled"{% end %}><a href="{{ build_uri(uri, 'p', page['next']) }}">»</a></li>
+</ul>
+{% end %}
