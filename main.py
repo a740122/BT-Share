@@ -58,8 +58,8 @@ class Application(web.Application):
 
 def main():
     tornado.options.parse_command_line()
-    if options.f:
-        tornado.options.parse_config_file(options.f)
+    #if options.f:
+        #tornado.options.parse_config_file(options.f)
     tornado.options.parse_command_line()
 
     http_server = HTTPServer(Application(), xheaders=True)
