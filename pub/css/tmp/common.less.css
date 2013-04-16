@@ -18,6 +18,9 @@ body {
 #codesign {
   padding-top: 70px;
 }
+.container {
+  min-height: 730px;
+}
 .footer {
   border-top: 1px solid #E5E5E5;
   margin-top: 30px;
@@ -25,4 +28,7 @@ body {
 }
 .footer p {
   color: #999999;
+}
+.no_photo {
+  background-color: #d9edf7;
 }

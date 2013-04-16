@@ -1,0 +1,144 @@
+{% extends front.html %}
+
+{% block title %}
+{{ source_name }} - {{ options.site_name }} - Your Web
+{% end %}
+
+{% block head %}
+<link rel="stylesheet" href="{{static_url('css/tmp/detail.less.css')}}" type="text/css" />
+{% end %}
+
+
+{% block body-content %}
+<div class="container">
+  <div class="row-fluid">
+    <div class="span3">
+      {% block photo_info %}{% end %}
+    </div>
+    <div class="span9 source-info">
+      {% block content %}{% end %}
+    </div>
+  </div>
+</div>
+{% end %}
+
+
+{% block photo_info %}
+<div class="">
+  <img src="" alt="">
+</div>
+{% end %}
+
+{% block content %}
+<div class="span9">
+  <div class="">
+    <h1 class="source-title">
+      {{ source_info['name'] }}
+    </h1>
+  </div>
+  <table class="table table-condensed table-striped table-bordered">
+    <tbody>
+      <tr>
+        <td class="span2"><span class="">导演</span></td>
+        <td><a href="/category/key_{{ source_info['director'] }}">{{ source_info['director'] }}</a> </td>
+      </tr>
+
+      <tr>
+        <td class="span2"><span class="">主演</span></td>
+        <td>
+          {% for i,actor in enumerate(source_info['directors']) %}
+              <a href="/category/key_{{ actor['name'] }}">{{ actor['name'] }}</a>
+              {% if i != len(source_info['directors']) %}
+               /
+              {% end %}
+          {% end %}
+        </td>
+      </tr>
+
+      <tr>
+        <td class="span2"><span class="">类型</span></td>
+        <td>
+          {% for cat in source_info['cat'] %}
+          <a href="/category/genre_{{ cat }}">{{ cat }}</a>
+          {% if i != len(source_info['cat']) %}
+            /
+            {% end %}
+          {% end %}
+      </tr>
+
+      <tr>
+        <td class="span2"><span class="">地区</span></td>
+        <td><a href="/category/region_{{ source_info['area'] }}">{{ source_info['area'] }}</a></td>
+      </tr>
+
+      <tr>
+        <td class="span2"><span class="">上映时间</span></td>
+        <td>{{ source_info['show_time'] }}</td>
+      </tr>
+
+      <tr>
+        <td class="span2"><span class="">片长</span></td>
+        <td>{{ source_info['play_time'] }}</td>
+      </tr>
+
+      <tr>
+        <td class="span2"><span class="">别名</span></td>
+        {% for alt_name  in source_info['alt_name'] %}
+          <td>{{ alt_name }}</td>
+        {% end %}
+      </tr>
+  </tbody></table>
+
+  <div class="">
+    <p class="">资源介绍</p>
+    <div class="">
+      <p>
+        {{ source_info['intro'] }}
+      </p>
+    </div>
+    <br>
+  </div>
+
+  <div class="">
+    <div class="tabbable" id="">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#tab_0">
+            <i class="icon-magnet"></i> 磁力链接</a></li>
+        <li class=""><a data-toggle="tab" href="#tab_1">
+            <i class=""></i> BT种子</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="tab_0" class="tab-pane active">
+          <table class="table table-condensed table-striped table-hover">
+            <tbody><tr style="" class="">
+                <td>
+                  {{ source_info['name'] }}
+                </td>
+                <td class="span3">
+                  <a alt="" href="{{ source_info['magnet'] }}" rel="nofollow" class="btn btn-mini">
+                    <i class="icon-magnet"></i> 链接</a>
+                </td>
+              </tr>
+          </tbody></table>
+        </div>
+
+        <div id="tab_1" class="tab-pane">
+          <table class="table table-condensed table-striped table-hover">
+            <tbody><tr style="" class="">
+                <td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+{% end %}
+
+{% block foot %}
+<script type="text/javascript" src="{{ static_url('js/lib/require.js') }}" data-main="{{ static_url('js/detail') }}"></script>
+{% end %}

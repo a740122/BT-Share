@@ -40,6 +40,13 @@ def format_time(request,num):
         result = ""
     return result
 
+def safe_input(raw_input):
+    """
+       SAFE!
+    """
+    safe_input = raw_input
+    return safe_input
+
 class AsyncProcessMixin(object):
     def call_subprocess(self, func, callback=None, args=[], kwargs={}):
         self.ioloop = tornado.ioloop.IOLoop.instance()

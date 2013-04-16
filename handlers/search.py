@@ -9,6 +9,7 @@ from libs import util
 
 class SearchHandler(BaseHandler):
     def get(self,query):
+        query = util.safe_input(query)
         current_page = int(self.get_argument("p",1))
         query = re.compile(query,re.IGNORECASE)
         query = {"name":query} if query else {}
@@ -18,7 +19,7 @@ class SearchHandler(BaseHandler):
 
 
 handlers = [
-        (r"/search(?:/q_(\w+))?",SearchHandler),
+        (r"/search(?:/q_([^\s]*))?",SearchHandler),
 ]
 
 ui_modules = {

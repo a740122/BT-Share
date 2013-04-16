@@ -63,28 +63,6 @@ class UploadHandler(BaseHandler):
         else:
             self.render("index.html", tasks=tasks, query={"a": creator_id, "creator": creator})
 
-class GetNextTasks(BaseHandler):
-    def get(self):
-        if not self.has_permission("view_tasklist"):
-            raise HTTPError(403)
-
-        s = self.get_argument("s", "")
-        q = self.get_argument("q", "")
-        t = self.get_argument("t", "")
-        a = self.get_argument("a", "")
-        creator = ""
-        if a:
-            creator = self.user_manager.get_user_email_by_id(int(a)) or "no such user"
-        if self.current_user and self.current_user["email"] == creator:
-            all = True
-        elif self.has_permission("view_invalid"):
-            all = True
-        else:
-            all = False
-        tasks = self.task_manager.get_task_list(start_id=s,
-                q=q, t=t, a=creator, limit = TASK_LIMIT, all=all)
-        self.render("task_list.html", tasks=tasks)
-
 class NoIEHandler(BaseHandler):
     def get(self):
         self.render("no-ie.html")
@@ -120,7 +98,6 @@ handlers = [
         #(r"/sitemap\.xml", SitemapHandler),
         (r"/tag/(.+)", TagHandler),
         (r"/uploader/(\d+)", UploadHandler),
-        (r"/next", GetNextTasks),
 ]
 
 ui_modules = {

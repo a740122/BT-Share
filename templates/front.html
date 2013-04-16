@@ -1,18 +1,10 @@
 {% extends base.html %}
 
-{% block head %}
-{% end %}
-
 {% block body %}
-
-{% block body-top %}
-
+<!-- HEADER -->
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
-      <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-        <span class="icon-bar"></span>
-      </a>
       <a href="/" class="brand">BT-Share</a>
       <div class="nav-collapse">
         <ul class="nav">
@@ -47,20 +39,20 @@
           {% end %}
 
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
   </div>
 </div>
+<!-- E HEADER -->
 
-{% end %}
-
+<!-- BODY -->
 {% block body-content %}
 {% end %}
+<!-- E BODY -->
 
-{% block body-footer %}
+<!-- FOOTER -->
 <footer class="footer">
   <p class="pull-right"> created_by <a href="https://github.com/zhkzyth/spider">zhkzyth</a></p>
 </footer>
-{% end %}
-
+<!-- E FOOTER -->
 {% end %}

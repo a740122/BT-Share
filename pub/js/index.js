@@ -13,21 +13,9 @@
     }
   });
 
-  requirejs(['jquery', 'bootstrap'], function($, bootstrap) {
+  requirejs(['jquery', 'common'], function($, common) {
     return $(function() {
-      return $('#search-form').submit(function() {
-        var keyWord, redirectUrl;
-
-        keyWord = $("#search-form input:first").val();
-        redirectUrl = window.location.protocol + "//" + window.location.host + '/search/';
-        if (keyWord) {
-          redirectUrl += "q_" + keyWord;
-        }
-        setTimeout((function() {
-          return window.location = redirectUrl;
-        }), 1);
-        return false;
-      });
+      return common.bindSearch();
     });
   });
 

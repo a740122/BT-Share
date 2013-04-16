@@ -1,0 +1,105 @@
+{% extends front.html %}
+
+{% block title %}
+{{ source_info['name'] }} - {{ options.site_name }} - Your Web
+{% end %}
+
+{% block head %}
+<link rel="stylesheet" href="{{static_url('css/tmp/detail.less.css')}}" type="text/css" />
+{% end %}
+
+
+{% block body-content %}
+<div class="container">
+  <div class="row-fluid">
+    <div class="span3">
+      {% block photo_info %}{% end %}
+    </div>
+    <div class="span9 source-info">
+      {% block content %}{% end %}
+    </div>
+  </div>
+</div>
+{% end %}
+
+
+{% block photo_info %}
+<div class="">
+
+  {% if source_info.get('img','') %}
+    <img src="source_info.get('img')" alt="">
+  {% else %}
+    <div class="no_photo"></div>
+  {% end %}
+
+</div>
+{% end %}
+
+{% block content %}
+<div class="span9">
+  <div class="">
+    <h1 class="source-title">
+      {{ source_info['name'] }}
+    </h1>
+  </div>
+  <table class="table table-condensed table-striped table-bordered">
+    <tbody>
+      <tr>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="">
+    <p class="">资源介绍</p>
+    <div class="">
+      <p>
+        {{ source_info['description'] }}
+      </p>
+    </div>
+    <br>
+  </div>
+
+  <div class="">
+    <div class="tabbable" id="">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#tab_0">
+            <i class="icon-magnet"></i> 磁力链接</a></li>
+        <li class=""><a data-toggle="tab" href="#tab_1">
+            <i class=""></i> BT种子</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="tab_0" class="tab-pane active">
+          <table class="table table-condensed table-striped table-hover">
+            <tbody><tr style="" class="">
+                <td>
+                  {{ source_info['name'] }}
+                </td>
+                <td class="span3">
+                  <a alt="" href="{{ source_info['magnet_link'] }}" rel="nofollow" class="btn btn-mini">
+                    <i class="icon-magnet"></i> 链接</a>
+                </td>
+              </tr>
+          </tbody></table>
+        </div>
+
+        <div id="tab_1" class="tab-pane">
+          <table class="table table-condensed table-striped table-hover">
+            <tbody><tr style="" class="">
+                <td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+{% end %}
+
+{% block js-script %}
+<script type="text/javascript" src="{{ static_url('js/lib/require.js') }}" data-main="{{ static_url('js/detail') }}"></script>
+{% end %}

@@ -10,14 +10,7 @@ require.config
       jquery: 'lib/jquery',
       bootstrap:'lib/bootstrap'
 
-
 # Start the main app logic.
-requirejs ['jquery', 'bootstrap'],($,bootstrap) ->
+requirejs ['jquery','common'],($,common) ->
   $ ->
-    $('#search-form').submit ->
-      keyWord = $("#search-form input:first").val()
-      redirectUrl = window.location.protocol+"//"+window.location.host+'/search/'
-      if keyWord
-        redirectUrl += "q_"+keyWord
-      setTimeout (-> window.location = redirectUrl),1
-      false
+    common.bindSearch()
