@@ -9,7 +9,6 @@ from tornado.ioloop import IOLoop, PeriodicCallback
 from tornado.options import define, options
 from tornado.httpserver import HTTPServer
 
-define("f", default="tornado_config.cfg", help="config file path")
 define("debug", default=True, help="debug mode")
 define("port", default=8880, help="the port tornado listen to")
 define("bind_ip", default="0.0.0.0", help="the bind ip")
