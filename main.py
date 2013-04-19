@@ -9,6 +9,9 @@ from tornado.ioloop import IOLoop, PeriodicCallback
 from tornado.options import define, options
 from tornado.httpserver import HTTPServer
 
+#DIR = os.path.dirname(os.path.abspath(__file__))
+#DEBUG = os.path.isfile(os.path.join(DIR, '.debug'))
+
 define("debug", default=True, help="debug mode")
 define("port", default=8880, help="the port tornado listen to")
 define("bind_ip", default="0.0.0.0", help="the bind ip")
@@ -25,6 +28,7 @@ define("using_xsrf", default=False,
 define("reg_key", default=None,
        help="if setted new user is not allowed \
        except login with '/login?key=<reg_key>'.")
+
 
 class Application(web.Application):
     def __init__(self):

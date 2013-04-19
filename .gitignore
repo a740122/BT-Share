@@ -1,5 +1,6 @@
 *.pyc
 node_modules
+.debug
 #.*py#
 #static/js/.*/\#.*coffee\#
 static/less/*.less#
