@@ -66,9 +66,9 @@ def spider():
     callbackFilter['func'] = callback
 
     args = dict(
-        url=['http://www.mininova.org/today', ],
-        depth=1,
-        threadNum=1,
+        url=['http://www.mininova.org/today', 'http://www.mininova.org/yesterday'],
+        depth=3,
+        threadNum=4,
         keyword='',
         entryFilter=entryFilter,
         yieldFilter=yieldFilter,
