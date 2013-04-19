@@ -8,6 +8,7 @@ CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 from crawler import Crawler
 from database import Database
 from logmanager import LogManager
+from spiders import mininova
 import cus_mail
 import util
 
@@ -20,7 +21,8 @@ class HTMLParseException(Exception):
 class SpiderManager(object):
     def __init__(self, spiders):
         try:
-            self.logger = LogManager(logFile='spider.log', logLevel=5, logTree="spider").logger
+            self.logger = LogManager(
+                logFile='spider.log', logLevel=5, logTree="spider").logger
         except:
             #todo format the backtrace
             raise Exception, "can not init logger"
@@ -50,15 +52,16 @@ class SpiderManager(object):
                 content = util.tail(fp)
                 fp.close()
                 sub = 'bt-share-log-%s' % datetime.now()
-                cus_mail.send_mail(['zhkzyth@gmail.com',],sub, content)
+                cus_mail.send_mail(['zhkzyth@gmail.com', ], sub, content)
             except:
                 self.logger.error(traceback.format_exc())
+
 
 def main():
     """
        test case for our spider
     """
-    spiders = [mininova_spider(), ]
+    spiders = [mininova.spider(), ]
     crawler = SpiderManager(spiders)
     crawler.run()
 

@@ -9,6 +9,9 @@ import datetime
 import os
 import sys
 SITE_ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+SPIDER_ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))+'/crawler/'
+
+sys.path.insert(0, SPIDER_ROOT)
 sys.path.insert(0, SITE_ROOT)
 
 import scheduler

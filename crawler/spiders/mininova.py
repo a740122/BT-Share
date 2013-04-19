@@ -5,7 +5,7 @@ from hashlib import md5
 from database import Database
 
 
-def mininova_spider():
+def spider():
     def callback(webPage):
         url, pageSource = webPage.getDatas()
         soup = BeautifulSoup(pageSource)
