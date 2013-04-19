@@ -657,3 +657,1012 @@ NameError: global name 'HTMLException' is not defined
 
 2013-04-18 21:31:57,703 Thread-1 INFO Depth 2 Finish. Total visited Links: 643
 
+2013-04-18 22:11:27,982 Thread-1 INFO Depth 3 Finish. Total visited Links: 5008
+
+2013-04-18 22:11:28,638 MainThread INFO spider tasks done!
+2013-04-19 12:28:52,608 Thread-1 INFO the spider has been running!
+2013-04-19 12:29:00,647 Thread-2 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-04-19 12:30:04,712 Thread-2 INFO Depth 2 Finish. Total visited Links: 185
+
+2013-04-19 12:37:49,188 Thread-2 INFO Depth 3 Finish. Total visited Links: 1523
+
+2013-04-19 14:44:23,241 Thread-1 INFO the spider has been running!
+2013-04-19 14:44:31,250 Thread-2 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-04-19 14:45:27,309 Thread-2 INFO Depth 2 Finish. Total visited Links: 185
+
+2013-04-19 14:51:35,694 Thread-2 INFO Depth 3 Finish. Total visited Links: 1523
+
+2013-04-19 14:57:04,702 Thread-1 INFO the spider has been running!
+2013-04-19 14:57:12,712 Thread-2 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-04-19 14:58:16,777 Thread-2 INFO Depth 2 Finish. Total visited Links: 185
+
+2013-04-19 14:58:49,054 Thread-1 INFO the spider has been running!
+2013-04-19 14:58:57,060 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 14:59:45,116 Thread-2 INFO Depth 2 Finish. Total visited Links: 158
+
+2013-04-19 15:02:33,294 Thread-2 INFO Depth 3 Finish. Total visited Links: 878
+
+2013-04-19 15:12:54,918 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:02,927 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:03,080 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:03,081 Thread-1 ERROR can not send email
+2013-04-19 15:13:03,090 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:03,090 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:11,099 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:11,099 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:11,222 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:11,222 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:11,222 Thread-1 ERROR can not send email
+2013-04-19 15:13:11,222 Thread-1 ERROR can not send email
+2013-04-19 15:13:11,227 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:11,227 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:11,227 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:19,236 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:19,236 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:19,236 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:19,355 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:19,355 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:19,355 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:19,356 Thread-1 ERROR can not send email
+2013-04-19 15:13:19,356 Thread-1 ERROR can not send email
+2013-04-19 15:13:19,356 Thread-1 ERROR can not send email
+2013-04-19 15:13:19,357 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:19,357 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:19,357 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:19,357 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:27,366 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:27,366 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:27,366 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:27,366 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:27,503 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:27,503 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:27,503 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:27,503 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:27,504 Thread-1 ERROR can not send email
+2013-04-19 15:13:27,504 Thread-1 ERROR can not send email
+2013-04-19 15:13:27,504 Thread-1 ERROR can not send email
+2013-04-19 15:13:27,504 Thread-1 ERROR can not send email
+2013-04-19 15:13:27,506 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:27,506 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:27,506 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:27,506 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:27,506 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:35,515 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:35,515 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:35,515 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:35,515 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:35,515 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:35,647 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:35,647 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:35,647 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:35,647 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:35,647 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:35,647 Thread-1 ERROR can not send email
+2013-04-19 15:13:35,647 Thread-1 ERROR can not send email
+2013-04-19 15:13:35,647 Thread-1 ERROR can not send email
+2013-04-19 15:13:35,647 Thread-1 ERROR can not send email
+2013-04-19 15:13:35,647 Thread-1 ERROR can not send email
+2013-04-19 15:13:35,649 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:35,649 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:35,649 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:35,649 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:35,649 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:35,649 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:43,658 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:43,658 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:43,658 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:43,658 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:43,658 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:43,658 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:13:43,774 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:43,774 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:43,774 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:43,774 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:43,774 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:43,774 Thread-1 INFO 
+                 now your seeds num is 3101!
+                 
+2013-04-19 15:13:43,775 Thread-1 ERROR can not send email
+2013-04-19 15:13:43,775 Thread-1 ERROR can not send email
+2013-04-19 15:13:43,775 Thread-1 ERROR can not send email
+2013-04-19 15:13:43,775 Thread-1 ERROR can not send email
+2013-04-19 15:13:43,775 Thread-1 ERROR can not send email
+2013-04-19 15:13:43,775 Thread-1 ERROR can not send email
+2013-04-19 15:13:43,776 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:43,776 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:43,776 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:43,776 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:43,776 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:43,776 Thread-1 INFO the spider has been running!
+2013-04-19 15:13:43,776 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:28,515 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:36,525 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:16:36,679 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:16:36,679 Thread-1 ERROR can not send email
+2013-04-19 15:16:36,681 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:36,681 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:44,690 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:16:44,690 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:16:44,850 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:16:44,850 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:16:44,851 Thread-1 ERROR can not send email
+2013-04-19 15:16:44,851 Thread-1 ERROR can not send email
+2013-04-19 15:16:44,853 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:44,853 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:44,853 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:52,862 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:16:52,862 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:16:52,862 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:16:53,026 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:16:53,026 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:16:53,026 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:16:53,027 Thread-1 ERROR can not send email
+2013-04-19 15:16:53,027 Thread-1 ERROR can not send email
+2013-04-19 15:16:53,027 Thread-1 ERROR can not send email
+2013-04-19 15:16:53,028 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:53,028 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:53,028 Thread-1 INFO the spider has been running!
+2013-04-19 15:16:53,028 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:01,038 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:01,038 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:01,038 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:01,038 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:01,195 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:01,195 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:01,195 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:01,195 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:01,195 Thread-1 ERROR can not send email
+2013-04-19 15:17:01,195 Thread-1 ERROR can not send email
+2013-04-19 15:17:01,195 Thread-1 ERROR can not send email
+2013-04-19 15:17:01,195 Thread-1 ERROR can not send email
+2013-04-19 15:17:01,197 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:01,197 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:01,197 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:01,197 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:01,197 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:09,206 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:09,206 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:09,206 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:09,206 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:09,206 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:09,358 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:09,358 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:09,358 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:09,358 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:09,358 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:09,358 Thread-1 ERROR can not send email
+2013-04-19 15:17:09,358 Thread-1 ERROR can not send email
+2013-04-19 15:17:09,358 Thread-1 ERROR can not send email
+2013-04-19 15:17:09,358 Thread-1 ERROR can not send email
+2013-04-19 15:17:09,358 Thread-1 ERROR can not send email
+2013-04-19 15:17:09,360 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:09,360 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:09,360 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:09,360 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:09,360 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:09,360 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:17,370 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:17,370 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:17,370 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:17,370 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:17,370 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:17,370 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:17,524 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:17,524 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:17,524 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:17,524 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:17,524 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:17,524 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:17,525 Thread-1 ERROR can not send email
+2013-04-19 15:17:17,525 Thread-1 ERROR can not send email
+2013-04-19 15:17:17,525 Thread-1 ERROR can not send email
+2013-04-19 15:17:17,525 Thread-1 ERROR can not send email
+2013-04-19 15:17:17,525 Thread-1 ERROR can not send email
+2013-04-19 15:17:17,525 Thread-1 ERROR can not send email
+2013-04-19 15:17:17,527 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:17,527 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:17,527 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:17,527 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:17,527 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:17,527 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:17,527 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:32,376 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:40,385 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:40,538 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:40,538 Thread-1 ERROR can not send email
+2013-04-19 15:17:40,540 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:40,540 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:48,549 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:48,549 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:17:48,692 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:48,692 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:17:48,692 Thread-1 ERROR can not send email
+2013-04-19 15:17:48,692 Thread-1 ERROR can not send email
+2013-04-19 15:17:48,694 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:48,694 Thread-1 INFO the spider has been running!
+2013-04-19 15:17:48,694 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:04,466 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:12,475 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:12,625 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:12,625 Thread-1 ERROR can not send email
+2013-04-19 15:19:12,627 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:12,627 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:20,636 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:20,636 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:20,776 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:20,776 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:20,777 Thread-1 ERROR can not send email
+2013-04-19 15:19:20,777 Thread-1 ERROR can not send email
+2013-04-19 15:19:20,778 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:20,778 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:20,778 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:28,788 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:28,788 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:28,788 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:28,954 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:28,954 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:28,954 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:28,955 Thread-1 ERROR can not send email
+2013-04-19 15:19:28,955 Thread-1 ERROR can not send email
+2013-04-19 15:19:28,955 Thread-1 ERROR can not send email
+2013-04-19 15:19:28,957 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:28,957 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:28,957 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:28,957 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:36,967 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:36,967 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:36,967 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:36,967 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:19:37,127 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:37,127 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:37,127 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:37,127 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:19:37,127 Thread-1 ERROR can not send email
+2013-04-19 15:19:37,127 Thread-1 ERROR can not send email
+2013-04-19 15:19:37,127 Thread-1 ERROR can not send email
+2013-04-19 15:19:37,127 Thread-1 ERROR can not send email
+2013-04-19 15:19:37,129 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:37,129 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:37,129 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:37,129 Thread-1 INFO the spider has been running!
+2013-04-19 15:19:37,129 Thread-1 INFO the spider has been running!
+2013-04-19 15:21:36,322 Thread-1 INFO the spider has been running!
+2013-04-19 15:21:44,331 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:25:54,684 Thread-1 INFO the spider has been running!
+2013-04-19 15:26:02,690 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:26:02,845 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:26:02,846 Thread-1 ERROR can not send email
+2013-04-19 15:26:02,847 Thread-1 INFO the spider has been running!
+2013-04-19 15:26:02,847 Thread-1 INFO the spider has been running!
+2013-04-19 15:26:55,317 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:03,324 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:27:03,470 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:27:03,477 Thread-1 ERROR can not send email
+2013-04-19 15:27:03,479 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:03,479 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:11,488 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:27:11,488 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:27:11,633 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:27:11,633 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:27:11,634 Thread-1 ERROR can not send email
+2013-04-19 15:27:11,634 Thread-1 ERROR can not send email
+2013-04-19 15:27:11,635 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:11,635 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:11,635 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:30,560 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:38,570 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:27:38,729 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:27:38,737 Thread-1 ERROR can not send email
+2013-04-19 15:27:38,740 Thread-1 INFO the spider has been running!
+2013-04-19 15:27:38,740 Thread-1 INFO the spider has been running!
+2013-04-19 15:28:20,964 Thread-1 INFO the spider has been running!
+2013-04-19 15:28:28,974 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:28:29,144 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:28:29,145 Thread-1 ERROR can not send email
+2013-04-19 15:28:29,146 Thread-1 INFO the spider has been running!
+2013-04-19 15:28:29,146 Thread-1 INFO the spider has been running!
+2013-04-19 15:29:07,662 Thread-1 INFO the spider has been running!
+2013-04-19 15:29:15,671 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:29:15,835 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:29:15,835 Thread-1 ERROR can not send email
+2013-04-19 15:29:15,838 Thread-1 INFO the spider has been running!
+2013-04-19 15:29:15,838 Thread-1 INFO the spider has been running!
+2013-04-19 15:29:23,847 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:29:23,847 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:29:23,975 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:29:23,975 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:29:23,975 Thread-1 ERROR can not send email
+2013-04-19 15:29:23,975 Thread-1 ERROR can not send email
+2013-04-19 15:29:23,976 Thread-1 INFO the spider has been running!
+2013-04-19 15:29:23,976 Thread-1 INFO the spider has been running!
+2013-04-19 15:29:23,976 Thread-1 INFO the spider has been running!
+2013-04-19 15:30:48,224 Thread-1 INFO the spider has been running!
+2013-04-19 15:30:56,233 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:30:56,387 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:30:56,387 Thread-1 ERROR can not send email
+2013-04-19 15:30:56,388 Thread-1 INFO the spider has been running!
+2013-04-19 15:30:56,388 Thread-1 INFO the spider has been running!
+2013-04-19 15:32:52,581 Thread-1 INFO the spider has been running!
+2013-04-19 15:33:00,591 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:33:00,750 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:33:00,750 Thread-1 ERROR can not send email
+2013-04-19 15:33:00,752 Thread-1 INFO the spider has been running!
+2013-04-19 15:33:00,752 Thread-1 INFO the spider has been running!
+2013-04-19 15:33:07,897 Thread-1 INFO the spider has been running!
+2013-04-19 15:33:15,906 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:33:16,052 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:33:16,052 Thread-1 ERROR can not send email
+2013-04-19 15:33:16,054 Thread-1 INFO the spider has been running!
+2013-04-19 15:33:16,054 Thread-1 INFO the spider has been running!
+2013-04-19 15:33:57,829 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:05,838 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:34:06,003 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:34:06,003 Thread-1 ERROR can not send email
+2013-04-19 15:34:06,005 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:06,005 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:14,014 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:34:14,014 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:34:14,159 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:34:14,159 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:34:14,160 Thread-1 ERROR can not send email
+2013-04-19 15:34:14,160 Thread-1 ERROR can not send email
+2013-04-19 15:34:14,161 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:14,161 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:14,161 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:32,970 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:40,979 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:34:41,114 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:34:41,114 Thread-1 ERROR can not send email
+2013-04-19 15:34:41,116 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:41,116 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:49,124 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:34:49,124 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:34:49,269 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:34:49,269 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:34:49,269 Thread-1 ERROR can not send email
+2013-04-19 15:34:49,269 Thread-1 ERROR can not send email
+2013-04-19 15:34:49,271 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:49,271 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:49,271 Thread-1 INFO the spider has been running!
+2013-04-19 15:34:55,878 Thread-1 INFO the spider has been running!
+2013-04-19 15:35:03,885 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:35:04,058 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:35:04,058 Thread-1 ERROR can not send email
+2013-04-19 15:35:04,060 Thread-1 INFO the spider has been running!
+2013-04-19 15:35:04,060 Thread-1 INFO the spider has been running!
+2013-04-19 15:35:21,988 Thread-1 INFO the spider has been running!
+2013-04-19 15:35:29,998 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:35:30,189 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:35:30,190 Thread-1 ERROR can not send email
+2013-04-19 15:35:30,192 Thread-1 INFO the spider has been running!
+2013-04-19 15:35:30,192 Thread-1 INFO the spider has been running!
+2013-04-19 15:42:46,345 Thread-1 INFO the spider has been running!
+2013-04-19 15:42:54,354 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:42:55,246 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:42:55,312 Thread-1 ERROR ['  File "/usr/local/lib/python2.7/threading.py", line 525, in __bootstrap\n    self.__bootstrap_inner()\n', '  File "/usr/local/lib/python2.7/threading.py", line 552, in __bootstrap_inner\n    self.run()\n', '  File "/home/zhkzyth/codeRep/BT-Share/scheduler/scheduler.py", line 131, in run\n    task.run()\n', '  File "/home/zhkzyth/codeRep/BT-Share/scheduler/scheduler.py", line 48, in run\n    self.func()\n', '  File "/home/zhkzyth/codeRep/BT-Share/scheduler/scheduler.py", line 177, in __call__\n    self.func()\n', '  File "/home/zhkzyth/codeRep/BT-Share/crawler/application.py", line 146, in main\n    crawler.run()\n', '  File "/home/zhkzyth/codeRep/BT-Share/crawler/application.py", line 138, in run\n    self.logger.error( \'\' + repr(traceback.format_stack()))\n']
+2013-04-19 15:42:55,314 Thread-1 INFO the spider has been running!
+2013-04-19 15:42:55,314 Thread-1 INFO the spider has been running!
+2013-04-19 15:45:10,796 Thread-1 INFO the spider has been running!
+2013-04-19 15:45:18,805 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:45:19,735 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:45:19,736 Thread-1 ERROR Traceback (most recent call last):
+  File "/home/zhkzyth/codeRep/BT-Share/crawler/application.py", line 135, in run
+    cus_mail.send_mail('zhkzyth@gmail.com','bt-share-log-%s'+datetime.now(), content)
+TypeError: cannot concatenate 'str' and 'datetime.datetime' objects
+
+2013-04-19 15:45:19,737 Thread-1 INFO the spider has been running!
+2013-04-19 15:45:19,737 Thread-1 INFO the spider has been running!
+2013-04-19 15:49:57,435 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:05,444 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:06,297 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:09,711 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:09,711 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:17,720 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:17,720 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:18,587 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:18,587 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:21,664 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:21,664 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:21,664 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:29,673 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:29,673 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:29,673 Thread-6 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:30,608 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:30,608 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:30,608 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:33,734 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:33,734 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:33,734 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:33,734 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:41,742 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:41,742 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:41,742 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:41,742 Thread-8 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:41,759 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:41,759 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:41,759 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:41,759 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:44,854 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:44,854 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:44,854 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:44,854 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:44,854 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:52,863 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:52,863 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:52,863 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:52,863 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:52,863 Thread-10 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:50:53,743 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:53,743 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:53,743 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:53,743 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:53,743 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:50:56,885 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:56,885 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:56,885 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:56,885 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:56,885 Thread-1 INFO the spider has been running!
+2013-04-19 15:50:56,885 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:04,894 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:04,894 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:04,894 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:04,894 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:04,894 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:04,894 Thread-12 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:05,749 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:05,749 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:05,749 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:05,749 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:05,749 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:05,749 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:08,848 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:08,848 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:08,848 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:08,848 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:08,848 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:08,848 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:08,848 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:16,857 Thread-14 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:16,857 Thread-14 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:16,857 Thread-14 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:16,857 Thread-14 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:16,857 Thread-14 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:16,857 Thread-14 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:16,857 Thread-14 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:17,023 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:17,023 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:17,023 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:17,023 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:17,023 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:17,023 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:17,023 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:20,059 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,068 Thread-16 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:28,973 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:32,040 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,049 Thread-18 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:40,921 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:43,973 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:51,982 Thread-20 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:52,733 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:51:55,870 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:03,881 Thread-22 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:04,716 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:07,811 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:15,820 Thread-24 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:16,645 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:19,768 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:27,778 Thread-26 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:28,708 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:31,814 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:39,824 Thread-28 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:40,677 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:52:43,783 Thread-1 INFO the spider has been running!
+2013-04-19 15:58:46,069 Thread-1 INFO the spider has been running!
+2013-04-19 15:58:54,079 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:58:54,528 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:58:56,303 Thread-1 INFO the spider has been running!
+2013-04-19 15:58:56,303 Thread-1 INFO the spider has been running!
+2013-04-19 15:59:04,312 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:59:04,312 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 15:59:05,274 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:59:05,274 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 15:59:07,070 Thread-1 INFO the spider has been running!
+2013-04-19 15:59:07,070 Thread-1 INFO the spider has been running!
+2013-04-19 15:59:07,070 Thread-1 INFO the spider has been running!
+2013-04-19 16:00:16,756 Thread-1 INFO the spider has been running!
+2013-04-19 16:00:24,766 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:00:24,797 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:00:27,816 Thread-1 INFO the spider has been running!
+2013-04-19 16:00:27,816 Thread-1 INFO the spider has been running!
+2013-04-19 16:00:35,825 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:00:35,825 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:00:36,647 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:00:36,647 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:00:39,808 Thread-1 INFO the spider has been running!
+2013-04-19 16:00:39,808 Thread-1 INFO the spider has been running!
+2013-04-19 16:00:39,808 Thread-1 INFO the spider has been running!
+2013-04-19 16:05:13,686 Thread-1 INFO the spider has been running!
+2013-04-19 16:05:21,698 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:05:22,560 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:05:25,526 Thread-1 INFO the spider has been running!
+2013-04-19 16:05:25,526 Thread-1 INFO the spider has been running!
+2013-04-19 16:05:33,534 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:05:33,534 Thread-4 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:05:34,409 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:05:34,409 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:05:37,385 Thread-1 INFO the spider has been running!
+2013-04-19 16:05:37,385 Thread-1 INFO the spider has been running!
+2013-04-19 16:05:37,385 Thread-1 INFO the spider has been running!
+2013-04-19 16:30:01,175 Thread-1 INFO the spider has been running!
+2013-04-19 16:30:09,185 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:30:09,462 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:36:07,869 Thread-1 INFO the spider has been running!
+2013-04-19 16:36:15,878 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:36:16,782 Thread-1 INFO now your seeds num is 3101.
+2013-04-19 16:37:03,556 Thread-1 INFO the spider has been running!
+2013-04-19 16:37:11,565 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
+
+2013-04-19 16:37:12,419 Thread-1 INFO now your seeds num is 3101.

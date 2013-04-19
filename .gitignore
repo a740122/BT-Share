@@ -1,7 +1,14 @@
 *.pyc
+
 node_modules
+
 .debug
-#.*py#
-#static/js/.*/\#.*coffee\#
+
 static/less/*.less#
+
+#personal config file
+crawler/mail_config.py 
+
+#no log file
 log/
+*.log

@@ -9,7 +9,14 @@ from Queue import Queue
 from crawler import Crawler
 from database import Database
 from logmanager import LogManager
+from libs import util
 
+import os
+import sys
+import traceback
+PARENT_ROOT = os.path.dirname(os.path.realpath(__file__))
+
+import cus_mail
 
 class HTMLParseException(Exception):
     def __init__(self):
@@ -77,11 +84,9 @@ def mininova_spider():
     callbackFilter['func'] = callback
 
     args = dict(
-        url=['http://www.mininova.org/today',
-             'http://www.mininova.org/yesterday',
-             'http://www.mininova.org/sub/35'],
-        depth=3,
-        threadNum=2,
+        url=['http://www.mininova.org/today',],
+        depth=1,
+        threadNum=1,
         keyword='',
         entryFilter=entryFilter,
         yieldFilter=yieldFilter,
@@ -100,7 +105,6 @@ class SpiderManager(object):
         except:
             #todo format the backtrace
             raise Exception, "can not init logger"
-
         self.queue = Queue()
         self.database = Database(db="bt_tornado")
         self.spiders = spiders
@@ -109,31 +113,27 @@ class SpiderManager(object):
 
         self.logger.info("the spider has been running!")
         #create a global thread num
-        # global thread_num = len(spider_configs) + lock
-        # or use the queue
         for num in range(len(self.spiders)):
             self.queue.put(num)
-        # last_insert_id = self.database.get_last_insert_id(collection='seed')
         try:
             for spider in self.spiders:
                 crawler = Crawler(spider, self.queue)
                 crawler.start()
             self.queue.join()
-            self.logger.info("spider tasks done!")
-            #spiders have been walked,now we turn
-            # self.grap_seed_file()
         except:
             self.logger.error("spider cannot run.")
         finally:
-            pass
-
-    def grap_seed_file(self, last_insert_id):
-        #update the task list
-        grap_seed_set = self.database['seed'].find(
-            {"_id": {"$gt": last_insert_id}})
-        creator = self.database['user'].find_one({'group': 'admin'})['email']
-        self.logger.info("sync seeds with xunlei done!")
-
+            seed_num = self.database.db['seed'].count()
+            textfile = PARENT_ROOT + '/log/spider.log'
+            self.logger.info("now your seeds num is %s." % seed_num)
+            try:
+                fp = open(textfile, 'rb')
+                content = util.tail(fp)
+                fp.close()
+                sub = 'bt-share-log-%s' % datetime.now()
+                cus_mail.send_mail(['zhkzyth@gmail.com',],sub, content)
+            except:
+                self.logger.error(traceback.format_exc())
 
 def main():
     """

@@ -1,20 +1,31 @@
-# funny BT
+# funny resource share via BT
 
-It is a funny bt engine,you can find bt seed and download it!
+It is a funny bt search engine...hmm , not really funny if you cant find what you want XD...
 
-features
+Features(alpha)
 --------
-- bt seed search
-- bt sources download on line based on the xunlei api or local wget
-- share/rate
+- seed search
 
 tech detail
 -----------
-based on below techs:
-- JQ
-- tornado
-- mondodb
+- FrontEnd
+  - JQ
+  - requirejs
+  - bootstrap
+- BackEnd
+  - tornado
+  - mondodb
+  - redis
+  - more...
 
 TODO
 ----
-- make it happend!!!=.=
+- support category
+- more resources
+- support live play
+- support comment
+- support share
+
+LOG
+---
+- make it happen #done in 2013.4.17
