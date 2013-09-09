@@ -1675,3 +1675,11 @@ TypeError: cannot concatenate 'str' and 'datetime.datetime' objects
 2013-04-19 19:16:04,166 Thread-2 INFO Depth 1 Finish. Total visited Links: 1
 
 2013-04-19 19:16:04,696 Thread-1 INFO now your seeds num is 3101.
+2013-08-12 00:37:10,085 MainThread INFO the spider has been running!
+2013-08-12 00:37:18,089 Thread-1 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-08-12 00:40:54,254 Thread-1 INFO Depth 2 Finish. Total visited Links: 1042
+
+2013-08-12 00:48:14,702 Thread-1 INFO Depth 3 Finish. Total visited Links: 5352
+
+2013-08-12 00:48:16,757 MainThread INFO now your seeds num is 1250.

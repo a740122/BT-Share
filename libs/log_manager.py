@@ -1,15 +1,20 @@
 #coding:utf8
+import os
 import logging
+
 from site_config import SITE_ROOT
+
 
 class LogManager(object):
     def __init__(self, logFile="", logLevel=0, logTree=""):
-        logFile = SITE_ROOT+"/log/"+ logFile
+        logFile = SITE_ROOT+"/log/" + logFile
         try:
-            self.logger = self.configLogger(logFile=logFile, logLevel=logLevel, logTree=logTree)
-        except:
+            self.logger = self.configLogger(
+                logFile=logFile, logLevel=logLevel, logTree=logTree)
+        except Exception, e:
             #todo
-            raise Exception, "log init error"
+            print e
+            raise Exception
 
     def configLogger(self, logFile="", logLevel=0, logTree=""):
         '''配置logging的日志文件以及日志的记录等级'''
@@ -23,10 +28,25 @@ class LogManager(object):
         }
         formatter = logging.Formatter(
             '%(asctime)s %(threadName)s %(levelname)s %(message)s')
-        try:
-            fileHandler = logging.FileHandler(logFile)
-        except IOError, e:
-            raise IOError
+        done = False
+        while not done:
+            try:
+                fileHandler = logging.FileHandler(logFile)
+            except IOError as e:
+                #opps , file does not exit
+                if e.args[0] == 2 and e.filename:
+                    print "Most likely the full path to the \
+                            file doesn't exit,so we will create one."
+                    fp = e.filename[:e.filename.rfind("/")]
+
+                    if not os.path.exists(fp):
+                        os.makedirs(fp)
+                else:
+                    print "Most likely some other error...\
+                            let's just reraise for now"
+                    raise
+            else:
+                done = True
         else:
             fileHandler.setFormatter(formatter)
             logger.addHandler(fileHandler)

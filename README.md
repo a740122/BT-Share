@@ -12,6 +12,7 @@ tech detail
   - JQ
   - requirejs
   - bootstrap
+  - grunt
 - BackEnd
   - tornado
   - mondodb
@@ -19,13 +20,16 @@ tech detail
   - more...
 
 TODO
-----
+---- 
+- auto less/coffe
 - support category
 - more resources
 - support live play
 - support comment
 - support share
 
-LOG
----
-- make it happen #done in 2013.4.17
+DEV LOG
+----  
+* 终于找回时间搞我这个业余的bt爬虫了 2013.09.08 
+* make it happen 2013.4.17
+
