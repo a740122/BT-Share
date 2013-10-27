@@ -2,7 +2,7 @@
 import os
 import logging
 
-from site_config import SITE_ROOT
+from config import SITE_ROOT
 
 
 class LogManager(object):
