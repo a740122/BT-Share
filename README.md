@@ -4,7 +4,7 @@ It is a funny bt search engine...hmm , not really funny if you cant find what yo
 
 Features(alpha)
 --------
-- seed search
+- seed search with the dht crawlers and brute force crawlers
 
 tech detail
 -----------
@@ -13,23 +13,27 @@ tech detail
   - requirejs
   - bootstrap
   - grunt
+
 - BackEnd
   - tornado
   - mondodb
   - redis
-  - more...
+  - ...
 
 TODO
----- 
-- auto less/coffe
-- support category
-- more resources
-- support live play
-- support comment
-- support share
+----
+- reconstruct the code structure
+  - auto less/coffe
+- support dht protocol
+- support full text search(maybe sphinx?)
+- support the thrid login
+- support comment(anonymous is ok)
+- support share(twitter/weibo/google+)
 
 DEV LOG
-----  
-* 终于找回时间搞我这个业余的bt爬虫了 2013.09.08 
+----
+* integrate the [mdht][1] 2013.10.31
+* get time to dev my spider 2013.09.08
 * make it happen 2013.4.17
 
+[1]: https://github.com/zhkzyth/mdht
