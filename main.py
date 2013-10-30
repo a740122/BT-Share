@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.getcwd())
 
 from tornado import web
-from tornado.ioloop import IOLoop, PeriodicCallback
+from tornado.ioloop import IOLoop
 from tornado.options import define, options
 from tornado.httpserver import HTTPServer
 
