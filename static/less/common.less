@@ -1,12 +1,16 @@
-@import url("../bootstrap/variables.less");
+@import url("bootstrap/variables.less");
+html{
+  height:100%;
+}
 
 body {
+    height:100%;
     background-color: #FFFFFF;
-    background-image: url("../../img/grid-18px-masked.png");
+    background-image: url("../img/grid-18px-masked.png");
     background-position: 0 40px;
     background-repeat: repeat-x;
     background-attachment:fixed;
-    padding-top: 90px;
+    /* padding-top: 90px; */
     position: relative;
 }
 
@@ -19,18 +23,25 @@ body {
   }
 }
 
-#codesign {
-  padding-top: 70px;
+.body-wrapper{
+  min-height:100%;
+  position:relative;
 }
 
-.container{
-  min-height:100%;
+.body-content{
+  padding-bottom: 40px;
+  padding-top:90px;
 }
+
 
 .footer {
     border-top: 1px solid #E5E5E5;
-    margin-top: 30px;
-    padding: 20px 10px 20px 0px;
+    padding: 10px 10px 10px 0px;
+    overflow:auto;
+    position:absolute;
+    bottom:0;
+    right:0px;
+    width:100%;
     p {
       color:@grayLight;
     }

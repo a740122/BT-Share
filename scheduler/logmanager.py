@@ -1,7 +1,7 @@
 #coding:utf8
 import logging
 import os
-import sys
+
 SPIDER_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 

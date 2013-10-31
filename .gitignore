@@ -12,3 +12,5 @@ mail_config.py
 #no log file
 log/
 *.log
+
+pub/

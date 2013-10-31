@@ -1,58 +1,63 @@
 {% extends base.html %}
 
 {% block body %}
-<!-- HEADER -->
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <a href="/" class="brand">BT-Share</a>
-      <div class="nav-collapse">
-        <ul class="nav">
-          <li class="active"><a href="/"><i class="icon-white icon-home"></i> Home</a></li>
-        </ul>
-        <form id="search-form" method="GET" action="/search">
-          <input type="text" class="input-medium search-query" name="key">
-          <button type="submit" class="btn">搜索</button>
-        </form>
-        <ul class="nav pull-right">
-          <li class="divider-vertical"></li>
-          {% if current_user %}
-          <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">{{ current_user['name'] }}<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="">
-                <a href="/auth/logout?next={{ url_escape(request.uri) }}">{{ _("Sign out") }}</a>
-              </li>
-            </ul>
-          </li>
+<!-- BODY -->
+<div class="body-wrapper">
 
-          {% else %}
-          <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Sign in<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class=""><a href="/auth/login?next={{ url_escape(request.uri) }}">Google outh2.0</a></li>
-              <li><a href="#">sina</a></li>
-              <li><a href="#">douban</a></li>
-            </ul>
-          </li>
+  <!-- HEADER -->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a href="/" class="brand">BT-Share</a>
+        <div class="nav-collapse">
+          <!-- <ul class="nav"> -->
+          <!--   <li class="active"><a href="/"><i class="icon-white icon-home"></i> Home</a></li> -->
+          <!-- </ul> -->
+          <form id="search-form" method="GET" action="/search">
+            <input type="text" class="input-medium search-query" name="key">
+            <button type="submit" class="btn">搜索</button>
+          </form>
+          <ul class="nav pull-right">
+            <li class="divider-vertical"></li>
+            {% if current_user %}
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">{{ current_user['name'] }}<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="">
+                  <a href="/auth/logout?next={{ url_escape(request.uri) }}">{{ _("Sign out") }}</a>
+                </li>
+              </ul>
+            </li>
 
-          {% end %}
+            {% else %}
+            <!-- <li class="dropdown"> -->
+            <!--   <a data-toggle="dropdown" class="dropdown-toggle" href="#">Sign in<b class="caret"></b></a> -->
+            <!--   <ul class="dropdown-menu"> -->
+            <!--     <\!-- <li class=""><a href="/auth/login?next={{ url_escape(request.uri) }}">Google outh2.0</a></li> -\-> -->
+            <!--     <li><a href="#">sina</a></li> -->
+            <!--     <li><a href="#">douban</a></li> -->
+            <!--   </ul> -->
+            <!-- </li> -->
 
-        </ul>
+            {% end %}
+
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- E HEADER -->
+  <!-- E HEADER -->
 
-<!-- BODY -->
-{% block body-content %}
-{% end %}
+  {% block body-content %}
+  {% end %}
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p class="pull-right"> created_by <a href="https://github.com/zhkzyth/bt-share">zhkzyth</a></p>
+  </div>
+  <!-- E FOOTER -->
+
+</div>
 <!-- E BODY -->
 
-<!-- FOOTER -->
-<footer class="footer">
-  <p class="pull-right"> created_by <a href="https://github.com/zhkzyth/spider">zhkzyth</a></p>
-</footer>
-<!-- E FOOTER -->
 {% end %}

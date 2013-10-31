@@ -9,10 +9,8 @@ from tornado.ioloop import IOLoop
 from tornado.options import define, options
 from tornado.httpserver import HTTPServer
 
-#DIR = os.path.dirname(os.path.abspath(__file__))
-#DEBUG = os.path.isfile(os.path.join(DIR, '.debug'))
-
 define("debug", default=True, help="debug mode")
+define("f", default=None, help="config file")
 define("port", default=8880, help="the port tornado listen to")
 define("bind_ip", default="0.0.0.0", help="the bind ip")
 define("ga_account", default="", help="account of google analytics")
@@ -61,10 +59,9 @@ class Application(web.Application):
 
 
 def main():
-    #tornado.options.parse_command_line()
-    #if options.f:
-        #tornado.options.parse_config_file(options.f)
     tornado.options.parse_command_line()
+    if options.f:
+        tornado.options.parse_config_file(options.f)
 
     http_server = HTTPServer(Application(), xheaders=True)
 
