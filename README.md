@@ -22,8 +22,9 @@ tech detail
 
 TODO
 ----
-- reconstruct the code structure
-  - auto less/coffe
+- fix some serious bug
+  - page error
+  - ??
 - support dht protocol
 - support full text search(maybe sphinx?)
 - support the thrid login
@@ -31,7 +32,8 @@ TODO
 - support share(twitter/weibo/google+)
 
 DEV LOG
-----
+--------
+* reconstruct the code and remove the gruntJS support to make it easy to build 2013.11.1
 * integrate the [mdht][1] 2013.10.31
 * get time to dev my spider 2013.09.08
 * make it happen 2013.4.17
