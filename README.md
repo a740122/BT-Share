@@ -23,22 +23,22 @@ tech detail
 TODO
 ----
 * redesing the seed table
-** page id
-** data transfer
+  * page id
+  * data transfer
 * dht protocol
-** process monitor(maybe)
+* process monitor(maybe)
 * full text search(maybe sphinx?)
-** chinese search
-** description search
+  * chinese search
+  * description search
 * distributed spiders
 * community features
-** the thrid login
-** comment(anonymous is ok)
-** share(twitter/weibo/google+)
-** IRC chat server demo??
+  * the thrid login
+  * comment(anonymous is ok)
+  * share(twitter/weibo/google+)
+  * IRC chat server demo??
 * manage
-** backend manage(refer the lixian.xunlei UI)
-** warm sys
+  * backend manage(refer the lixian.xunlei UI)
+  * warm sys
 
 DEV LOG
 --------
