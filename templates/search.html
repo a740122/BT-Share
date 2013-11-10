@@ -1,1 +1,50 @@
 {% extends front.html %}
+
+{% block title %}
+{{ options.site_name }} - {{ query.get("q") }} - Your Web
+{% end %}
+
+{% block head %}
+<link rel="alternate" type="application/atom+xml" href="?feed=rss" />
+<link rel="stylesheet" href="{{static_url('css/index.css')}}" type="text/css" />
+{% end %}
+
+
+{% block body-content %}
+<div class="container body-content">
+  <div class="row-fluid">
+    <div class="span3">
+      {% block category %}{% end %}
+    </div>
+    {% if page['total'] == 0 %}
+    <div class="offset2">
+      <div class="alert mt20">{{ no_result }}</div>
+    </div>
+    {% else %}
+    <div class="span9 result-list">
+      {% block list %}{% end %}
+    </div>
+    <div class="pagination">{% raw modules.pagination(page,request.uri) %}</div>
+    {% end %}
+  </div>
+</div>
+{% end %}
+
+
+{% block category %}
+<ul class="subnav subnav-fixed nav nav-list">
+  <li><a tabindex="-1" href="/"><i class="icon-chevron-right"></i>全部</a></li>
+</ul>
+{% end %}
+
+{% block list %}
+<ul class="unstyled">
+  {% for seed in seeds %}
+  <li class=""><a href="/detail/{{ seed['_id'] }}">{{ seed['name'] }}</a></li>
+  {% end %}
+</ul>
+{% end %}
+
+{% block js-script %}
+<script type="text/javascript" src="{{ static_url('js/lib/require.js') }}" data-main="{{ static_url('js/index') }}"></script>
+{% end %}

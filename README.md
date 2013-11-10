@@ -12,7 +12,7 @@ tech detail
   - JQ
   - requirejs
   - bootstrap
-  - grunt
+  - less
 
 - BackEnd
   - tornado
@@ -22,17 +22,29 @@ tech detail
 
 TODO
 ----
-- fix some serious bug
-  - page error
-  - ??
-- support dht protocol
-- support full text search(maybe sphinx?)
-- support the thrid login
-- support comment(anonymous is ok)
-- support share(twitter/weibo/google+)
+* redesing the seed table
+** page id
+** data transfer
+* dht protocol
+** process monitor(maybe)
+* full text search(maybe sphinx?)
+** chinese search
+** description search
+* distributed spiders
+* community features
+** the thrid login
+** comment(anonymous is ok)
+** share(twitter/weibo/google+)
+** IRC chat server demo??
+* manage
+** backend manage(refer the lixian.xunlei UI)
+** warm sys
 
 DEV LOG
 --------
+* add error handling, a weak type 2013.11.11
+* add model layer 2013.11.10
+* fix page error bug 2013.11.9-2013.11.10
 * reconstruct the code and remove the gruntJS support to make it easy to build 2013.11.1
 * integrate the [mdht][1] 2013.10.31
 * get time to dev my spider 2013.09.08

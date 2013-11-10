@@ -1,9 +1,8 @@
-#coding:utf8
+#!/usr/bin/env python
+# encoding: utf-8
 import re
 import sys
 import os
-from datetime import datetime
-from threading import Thread
 from bs4 import BeautifulSoup
 from hashlib import md5
 from Queue import Queue

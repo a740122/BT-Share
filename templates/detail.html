@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="{{static_url('css/detail.css')}}" type="text/css" />
 {% end %}
 
-
 {% block body-content %}
 <div class="container body-content">
   <div class="row-fluid">
@@ -27,9 +26,9 @@
 <div class="">
 
   {% if source_info.get('img','') %}
-    <img src="source_info.get('img')" alt="">
+  <img src="source_info.get('img')" alt="">
   {% else %}
-    <div class="no_photo"></div>
+  <div class="no_photo"></div>
   {% end %}
 
 </div>

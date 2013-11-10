@@ -4,6 +4,7 @@ from tornado.auth import GoogleMixin
 from tornado.options import options
 from .base import BaseHandler
 
+
 class AuthLoginHandler(BaseHandler, GoogleMixin):
     @asynchronous
     def get(self):
@@ -40,15 +41,9 @@ class AuthLoginHandler(BaseHandler, GoogleMixin):
         self.set_secure_cookie("email", user["email"])
         self.redirect("/")
 
+
 class AuthLogoutHandler(BaseHandler):
     def get(self):
         self.clear_cookie("name")
         self.clear_cookie("email")
         self.redirect(self.get_argument("next", "/"))
-
-handlers = [
-        (r"/auth/login", AuthLoginHandler),
-        (r"/auth/logout", AuthLogoutHandler),
-]
-ui_modules = {
-}
