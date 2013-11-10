@@ -26,19 +26,25 @@ TODO
   * page id
   * data transfer
 * dht protocol
-* process monitor(maybe)
+  * make it work
+  * write test
+  * write document(wiki)
+* distributed spiders
+  * make it strong/clear/simple
+  * write documents
+  * write test
+* manage
+  * process monitor(maybe)
+  * backend manage(refer the lixian.xunlei UI)
+  * warm sys
 * full text search(maybe sphinx?)
   * chinese search
   * description search
-* distributed spiders
 * community features
   * the thrid login
   * comment(anonymous is ok)
   * share(twitter/weibo/google+)
   * IRC chat server demo??
-* manage
-  * backend manage(refer the lixian.xunlei UI)
-  * warm sys
 
 DEV LOG
 --------
