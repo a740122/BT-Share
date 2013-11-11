@@ -3,13 +3,9 @@
 import tornado
 
 from .base import BaseHandler
-from model import Seed
 
 
 class DetailHandler(BaseHandler):
-
-    @property
-    def seed_dal(self): return Seed()
 
     def get(self, filename):
         context = {}
@@ -23,7 +19,7 @@ class DetailHandler(BaseHandler):
         except:
             raise tornado.web.HTTPError(404)
 
-        source_info = self.seed_dal.get(query)
+        source_info = self.seed_model.get(query)
 
         if not source_info:
             raise tornado.web.HTTPError(404)

@@ -5,6 +5,7 @@ import traceback
 from tornado.web import RequestHandler
 from tornado.options import options
 
+
 class BaseHandler(RequestHandler):
 
     def render_string(self, template_name, **kwargs):
@@ -48,3 +49,16 @@ class BaseHandler(RequestHandler):
                                     trace_info, request_info))
         else:
             self.redirect("/404")
+
+
+    @property
+    def seed_model(self):
+        return self.application.seed_model
+
+    @property
+    def search_engine(self):
+        return self.application.search_engine
+
+    @property
+    def loader(self):
+        return self.application.loader

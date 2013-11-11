@@ -7,12 +7,27 @@ from pymongo.son_manipulator import AutoReference, NamespaceInjector
 
 
 class Database(object):
-    def __init__(self,db=None):
+
+    # def __new__(cls, *args, **kwargs):
+
+    #     if not hasattr(cls, '_instance'):
+    #         orig = super(Database, cls)
+    #         cls._instance = orig.__new__(cls, *args, **kwargs)
+    #     return cls._instance
+
+    #Singleton design pattern
+    @classmethod
+    def get_instance(cls):
+        if not hasattr(cls, '_instance'):
+            cls._instance = cls()
+        return cls._instance
+
+    def __init__(self):
         host = MONGODB_SETTINGS['host']
         port = MONGODB_SETTINGS['port']
         max_pool = MONGODB_SETTINGS['max_pool']
-        self.connection = pymongo.Connection(host,port,max_pool)
-        self.db = self.connection[db]
+        self.connection = pymongo.MongoClient(host, port, max_pool)
+        self.db = self.connection[MONGODB_SETTINGS["database"]]
         self.db.add_son_manipulator(NamespaceInjector())
         self.db.add_son_manipulator(AutoReference(self.db))
 

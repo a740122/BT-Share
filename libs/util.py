@@ -27,6 +27,15 @@ def safe_input(raw_input):
     safe_input = raw_input
     return safe_input
 
+# use closure and decorator to create singleton
+def singleton(cls):
+    instances = {}
+    def getinstance(*args, **kwargs):
+        if cls not in instances:
+            instances[cls] = cls(*args, **kwargs)
+        return instances[cls]
+    return getinstance
+
 
 class AsyncProcessMixin(object):
     def call_subprocess(self, func, callback=None, args=[], kwargs={}):

@@ -6,24 +6,14 @@ from bson.dbref import DBRef
 from bson.timestamp import Timestamp
 from pymongo import DESCENDING, ASCENDING
 
-from database import Database
+# from database import Database
 from conf.config import BT_PAGE_SIZE, BT_MAX_ENTRY_NUM
 
 
 class Model(object):
 
-    def __init__(self, database, table):
-        self.database = database
-        self.table = table
-
-    @property
-    def db(self):
-        """
-
-        Arguments:
-        - `self`:
-        """
-        return Database(self.database)
+    def __init__(self):
+        pass
 
     def dbref(self, table, object_id):
         """

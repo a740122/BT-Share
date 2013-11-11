@@ -2,14 +2,14 @@
 # encoding: utf-8
 import re
 
-from seed import Seed
 from libs.segment import seg_txt_search
+from libs.util import singleton
 
-
-#TODO reconstruct
+@singleton
 class SearchEngine(object):
-    @property
-    def seed_dal(self): return Seed()
+
+    def __init__(self, loaded_model):
+        self.loaded_model = loaded_model
 
     def search_seeds(self, q, current_page=1):
         if not q: return None
@@ -24,7 +24,7 @@ class SearchEngine(object):
 
         params = {"name": {"$regex": search_text}}
 
-        return self.seed_dal.get_seeds(parameters=params, current_page=current_page)
+        return self.loaded_model["seed"].get_seeds(parameters=params, current_page=current_page)
 
     def search_seeds_count(self, q):
         if not q: return 0
@@ -34,4 +34,4 @@ class SearchEngine(object):
                     for seg in seg_txt_search(q)
                     if len(seg) > 1]
         params = {"name": {"$all": keywords}}
-        return self.seed_dal.get_count(params)
+        return self.loaded_model["seed"].get_count(params)

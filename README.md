@@ -22,7 +22,13 @@ tech detail
 
 TODO
 ----
- dht protocol
+* tornado async request how-to
+* mongodb async request how-to
+* mem cached
+* spider routine
+  * script
+  * take it on linode
+* dht protocol
   * make it work
   * write test
   * write document(wiki)
@@ -38,6 +44,7 @@ TODO
   * chinese search
   * description search
 * community features
+  * session support
   * the thrid login
   * comment(anonymous is ok)
   * share(twitter/weibo/google+)
@@ -45,15 +52,20 @@ TODO
 
 DEV LOG
 --------
-* redesing the seed table 2013.11.11
-  * page id
-  * data transfer
-* add error handling, a weak type 2013.11.11
-* add model layer 2013.11.10
-* fix page error bug 2013.11.9-2013.11.10
-* reconstruct the code and remove the gruntJS support to make it easy to build 2013.11.1
-* integrate the [mdht][1] 2013.10.31
-* get time to dev my spider 2013.09.08
-* make it happen 2013.4.17
+* `2013.11.11`
+  * reconstruct model layers to hold data within the life of application
+  * make a connection pool
+  * redesing the seed table
+    * page id
+    * data transfer
+  * add error handling, a weak type
+* `2013.11.9-2013.11.10`
+  * add model layer
+  * fix page error bug
+* `2013.11.1`
+  * reconstruct the code and remove the gruntJS support to make it easy to build
+* `2013.10.31` integrate the [mdht][1]
+* `2013.09.08` get time to dev my spider
+* `2013.4.17`  make it happen
 
 [1]: https://github.com/zhkzyth/mdht

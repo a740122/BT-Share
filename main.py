@@ -15,8 +15,11 @@ import handler.common
 import handler.detail
 import handler.search
 import module
+from libs.loader import Loader
 from libs.util import ui_methods
 from libs.log_manager import LogManager
+from database import Database
+from model.search_engine import SearchEngine
 
 define("debug", default=True, help="debug mode")
 define("f", default="conf/config.py", help="config file")
@@ -66,6 +69,18 @@ class Application(web.Application):
             ui_methods=ui_methods,
         )
         super(Application, self).__init__(handlers, **settings)
+
+        self.db = Database.get_instance()
+
+
+        # Have one global loader for loading models and handlers
+        self.loader = Loader(self.db)
+
+        # Have one global model for db query
+        self.seed_model = self.loader.use("seed.model")
+
+        # Have one gloabl search engine to serve the search serive
+        self.search_engine = SearchEngine(self.loader.loaded["model"])
 
         self.log_manager = LogManager(logFile="application.log",
                                       logLevel=5, logTree="Main")

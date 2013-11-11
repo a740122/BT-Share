@@ -4,10 +4,12 @@
 from model import Model
 from conf.config import BT_PAGE_SIZE
 
-class Seed(Model):
+class SeedModel(Model):
 
-    def __init__(self, database="bt_tornado", table="seed"):
-        super(Seed, self).__init__(database, table)
+    def __init__(self, db=None, table="seed"):
+        self.db = db
+        self.table = table
+        super(SeedModel, self).__init__()
 
     def get_seeds(self, current_page=1, parameters={}, limit=BT_PAGE_SIZE, sort="_id"):
         result = {}

@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 from .base import BaseHandler
-from model.seed import Seed
 # from libs.cache import mem_cache
 
 
 class IndexHandler(BaseHandler):
-
-    @property
-    def seed_dal(self): return Seed()
 
     def get(self):
         #TODO support feed
@@ -18,7 +14,7 @@ class IndexHandler(BaseHandler):
             return
 
         current_page = int(self.get_argument("p", 1))
-        result = self.seed_dal.get_seeds(current_page=current_page)
+        result = self.seed_model.get_seeds(current_page=current_page)
         result["no_result"] = "嗷嗷，暂时木有内容哦～"
 
         self.render("index.html", **result)
