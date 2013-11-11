@@ -3,7 +3,7 @@
 
 import pymongo
 from conf.config import MONGODB_SETTINGS
-from pymongo.son_manipulator import AutoReference
+from pymongo.son_manipulator import AutoReference, NamespaceInjector
 
 
 class Database(object):
@@ -13,6 +13,7 @@ class Database(object):
         max_pool = MONGODB_SETTINGS['max_pool']
         self.connection = pymongo.Connection(host,port,max_pool)
         self.db = self.connection[db]
+        self.db.add_son_manipulator(NamespaceInjector())
         self.db.add_son_manipulator(AutoReference(self.db))
 
     def insert(self, table, documents):
@@ -51,6 +52,7 @@ class Database(object):
         """
         return self.db[table].find(parameters).count()
 
+    # auto increasing id for tables to avoid exploring _id to outside in case of attacks
     def get_id(self, table):
         """
 

@@ -1,13 +1,12 @@
 #coding:utf8
 import logging
 import os
-import sys
-SPIDER_ROOT = os.path.dirname(os.path.realpath(__file__))
 
+from config import CURRENT_DIR
 
 class LogManager(object):
     def __init__(self, logFile="", logLevel=0, logTree=""):
-        logFile = SPIDER_ROOT+"/log/"+ logFile
+        logFile = CURRENT_DIR+"/log/"+ logFile
         try:
             self.logger = self.configLogger(logFile=logFile, logLevel=logLevel, logTree=logTree)
         except:

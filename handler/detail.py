@@ -2,7 +2,6 @@
 # encoding: utf-8
 import tornado
 
-from bson import ObjectId
 from .base import BaseHandler
 from model import Seed
 
@@ -19,9 +18,8 @@ class DetailHandler(BaseHandler):
         if not filename:
             raise tornado.web.HTTPError(404)
 
-        #TODO page id?
         try:
-            query = {"_id":ObjectId(filename)} if filename else {}
+            query = {"_id":int(filename)} if filename else {}
         except:
             raise tornado.web.HTTPError(404)
 

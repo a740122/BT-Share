@@ -8,7 +8,7 @@ proxiex.py
 """
 
 from threadPool import ThreadPool
-    import requests
+import requests
 
 
 #代理服务器列表

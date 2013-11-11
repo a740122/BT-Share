@@ -22,10 +22,7 @@ tech detail
 
 TODO
 ----
-* redesing the seed table
-  * page id
-  * data transfer
-* dht protocol
+ dht protocol
   * make it work
   * write test
   * write document(wiki)
@@ -48,6 +45,9 @@ TODO
 
 DEV LOG
 --------
+* redesing the seed table 2013.11.11
+  * page id
+  * data transfer
 * add error handling, a weak type 2013.11.11
 * add model layer 2013.11.10
 * fix page error bug 2013.11.9-2013.11.10

@@ -1,38 +1,33 @@
-#coding:utf8
+#!/usr/bin/env python
+# encoding: utf-8
+import traceback
 from datetime import datetime
 from Queue import Queue
-import os
-import traceback
-CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 
+import util
 from crawler import Crawler
 from database import Database
 from logmanager import LogManager
 from spiders import mininova
-import cus_mail
-import util
-
-
-class HTMLParseException(Exception):
-    def __init__(self):
-        Exception.__init__(self)
-
+from config import CURRENT_DIR, MONGO_SETTINGS
+from monitor import send_mail
 
 class SpiderManager(object):
-    def __init__(self, spiders):
+    def __init__(self, spiders=None, db=None):
         try:
             self.logger = LogManager(
                 logFile='spider.log', logLevel=5, logTree="spider").logger
         except:
-            #todo format the backtrace
+            #TODO format the backtrace
             raise Exception, "can not init logger"
         self.queue = Queue()
-        self.database = Database(db="bt_tornado")
+        self.database = Database(db=db)
         self.spiders = spiders
 
     def run(self):
 
         self.logger.info("the spider has been running!")
+
         #create a global thread num
         for num in range(len(self.spiders)):
             self.queue.put(num)
@@ -52,7 +47,7 @@ class SpiderManager(object):
                 content = util.tail(fp)
                 fp.close()
                 sub = 'bt-share-log-%s' % datetime.now()
-                cus_mail.send_mail(['zhkzyth@gmail.com', ], sub, content)
+                send_mail(['zhkzyth@gmail.com', ], sub, content)
             except:
                 self.logger.error(traceback.format_exc())
 
@@ -62,7 +57,7 @@ def main():
        test case for our spider
     """
     spiders = [mininova.spider(), ]
-    crawler = SpiderManager(spiders)
+    crawler = SpiderManager(spiders, MONGO_SETTINGS.database)
     crawler.run()
 
 if __name__ == "__main__":

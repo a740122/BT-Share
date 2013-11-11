@@ -1,10 +1,13 @@
-#coding:utf8
+#!/usr/bin/env python
+# encoding: utf-8
 import re
 from bs4 import BeautifulSoup
 from hashlib import md5
+
 from database import Database
+from config import MONGO_SETTINGS
 
-
+# Spider Factory
 def spider():
     def callback(webPage):
         url, pageSource = webPage.getDatas()
@@ -13,7 +16,7 @@ def spider():
         _ = ''
         #more robust
         param = {}
-        #get id
+        #calculate id to avoid repeat data
         param['id'] = md5(url).hexdigest(),
         #get url
         param['url'] = url,
@@ -50,7 +53,7 @@ def spider():
         else:
             param['magnet_link'] = _
         query = {"id": param['id']}
-        database = Database(db="bt_tornado")
+        database = Database(db=MONGO_SETTINGS.database)
         database.saveData(collection='seed', query=query, document=param)
 
     #args to init spider

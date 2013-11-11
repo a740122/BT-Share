@@ -24,11 +24,3 @@ class SearchHandler(BaseHandler):
         context['no_result'] = "暂无数据，试试其他关键词吧＝)"
 
         self.render("search.html", **context)
-
-
-handlers = [
-        (r"/search(?:/q_([^\s]*))?", SearchHandler),
-]
-
-ui_modules = {
-}

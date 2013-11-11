@@ -1,24 +1,22 @@
-#coding:utf8
-
+#!/usr/bin/env python
+# encoding: utf-8
 """
 crawler.py
 ~~~~~~~~~~~~~
 
 主要模块，爬虫的具体实现。
 """
-
-from urlparse import urljoin,urlparse
-from collections import deque
 import re
-import traceback
-from locale import getdefaultlocale
-from hashlib import md5
-import logging
 import time
+import logging
 import threading
-from datetime import datetime
-
+import traceback
+from hashlib import md5
 from bs4 import BeautifulSoup
+from datetime import datetime
+from collections import deque
+from locale import getdefaultlocale
+from urlparse import urljoin,urlparse
 
 from database import Database
 from webPage import WebPage

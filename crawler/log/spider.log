@@ -1683,3 +1683,28 @@ TypeError: cannot concatenate 'str' and 'datetime.datetime' objects
 2013-08-12 00:48:14,702 Thread-1 INFO Depth 3 Finish. Total visited Links: 5352
 
 2013-08-12 00:48:16,757 MainThread INFO now your seeds num is 1250.
+2013-11-11 15:42:37,687 MainThread INFO the spider has been running!
+2013-11-11 15:42:45,692 Thread-1 INFO Depth 1 Finish. Total visited Links: 2
+
+2013-11-11 15:43:42,121 Thread-2 WARNING Page not avaliable. Status code:503 URL: http://www.mininova.org/tor/13256568 
+
+2013-11-11 15:43:42,178 Thread-4 WARNING Page not avaliable. Status code:503 URL: http://www.mininova.org/tor/13256569 
+
+2013-11-11 15:43:42,342 Thread-3 WARNING Page not avaliable. Status code:503 URL: http://www.mininova.org/tor/13256567 
+
+2013-11-11 15:43:42,655 Thread-2 WARNING Page not avaliable. Status code:503 URL: http://www.mininova.org/tor/13256565 
+
+2013-11-11 15:43:42,655 Thread-5 WARNING Page not avaliable. Status code:503 URL: http://www.mininova.org/tor/13256566 
+
+2013-11-11 15:43:42,677 Thread-4 WARNING Page not avaliable. Status code:503 URL: http://www.mininova.org/tor/13256564 
+
+2013-11-11 15:47:30,202 Thread-5 DEBUG HTTPConnectionPool(host='www.mininova.org', port=80): Max retries exceeded with url: /tor/13256561 (Caused by <class 'socket.error'>: [Errno 60] Operation timed out) URL: http://www.mininova.org/tor/13256561 
+
+2013-11-11 15:47:30,203 Thread-2 DEBUG HTTPConnectionPool(host='www.mininova.org', port=80): Max retries exceeded with url: /tor/13256562 (Caused by <class 'socket.error'>: [Errno 60] Operation timed out) URL: http://www.mininova.org/tor/13256562 
+
+2013-11-11 15:47:30,204 Thread-4 DEBUG HTTPConnectionPool(host='www.mininova.org', port=80): Max retries exceeded with url: /tor/13256560 (Caused by <class 'socket.error'>: [Errno 60] Operation timed out) URL: http://www.mininova.org/tor/13256560 
+
+2013-11-11 15:47:56,355 Thread-3 DEBUG HTTPConnectionPool(host='www.mininova.org', port=80): Max retries exceeded with url: /tor/13256563 (Caused by <class 'socket.error'>: [Errno 60] Operation timed out) URL: http://www.mininova.org/tor/13256563 
+
+2013-11-11 15:49:50,538 MainThread INFO the spider has been running!
+2013-11-11 16:10:29,220 MainThread INFO the spider has been running!
