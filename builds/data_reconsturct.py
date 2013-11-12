@@ -3,21 +3,26 @@
 
 from pymongo import Connection
 
-def get_id(collection=None):
-    value = db_to["ids"].find_and_modify(
-        {"name": collection}, {"$inc": {"value": 1}}, new=True, upsert=True)
-    return value["value"]
+def make_big_data():
 
-conn = Connection(host='localhost', port=27017)
-db_from = conn['bt_share']
-db_to = conn['bt_tornado']
+    def get_id(collection=None):
+        value = db_to["ids"].find_and_modify(
+            {"name": collection}, {"$inc": {"value": 1}}, new=True, upsert=True)
+        return value["value"]
 
-datas = db_from["test"].find()
-new_datas = []
+    conn = Connection(host='localhost', port=27017)
+    db_from = conn['bt_share']
+    db_to = conn['bt_tornado']
 
-for doc in datas:
-    doc["_id"] = get_id("seed")
-    new_datas.append(doc)
+    datas = db_from["seed"].find()
+    # new_datas = []
 
-for newdata in new_datas:
-   db_to['seed'].save(newdata)
+    for doc in datas:
+        doc["_id"] = get_id("seed")
+
+    for newdata in datas:
+        db_to['seed'].save(newdata)
+
+
+for k in range(1, 10):
+    make_big_data()
