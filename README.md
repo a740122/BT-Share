@@ -22,9 +22,6 @@ tech detail
 
 TODO
 ----
-* tornado async request how-to
-* mongodb async request how-to
-* mem cached
 * spider routine
   * script
   * take it on linode
@@ -39,6 +36,10 @@ TODO
   * make it strong/clear/simple
   * write documents
   * write test
+* mem cached
+* security check
+  * search input (go check wordpress)
+  * xss
 * manage
   * process monitor(maybe)
   * backend manage(refer the lixian.xunlei UI)
@@ -53,8 +54,13 @@ TODO
   * share(twitter/weibo/google+)
   * IRC chat server demo??
 * change linode py to pypy
+
+
 DEV LOG
 --------
+* `2013.11.14`
+  * tornado async request how-to
+  * mongodb async request how-to
 * `2013.11.11`
   * reconstruct model layers to hold data within the life of application
   * make a connection pool
