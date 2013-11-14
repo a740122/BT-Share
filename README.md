@@ -28,6 +28,9 @@ TODO
 * spider routine
   * script
   * take it on linode
+  * better
+    * scrapy
+    * based on gevent
 * dht protocol
   * make it work
   * write test
@@ -49,7 +52,7 @@ TODO
   * comment(anonymous is ok)
   * share(twitter/weibo/google+)
   * IRC chat server demo??
-
+* change linode py to pypy
 DEV LOG
 --------
 * `2013.11.11`

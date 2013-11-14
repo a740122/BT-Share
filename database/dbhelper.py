@@ -1,19 +1,16 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import motor
 import pymongo
-from conf.config import MONGODB_SETTINGS
+import tornado
 from pymongo.son_manipulator import AutoReference, NamespaceInjector
+
+from conf.config import MONGODB_SETTINGS
 
 
 class Database(object):
 
-    # def __new__(cls, *args, **kwargs):
-
-    #     if not hasattr(cls, '_instance'):
-    #         orig = super(Database, cls)
-    #         cls._instance = orig.__new__(cls, *args, **kwargs)
-    #     return cls._instance
 
     #Singleton design pattern
     @classmethod
@@ -26,11 +23,12 @@ class Database(object):
         host = MONGODB_SETTINGS['host']
         port = MONGODB_SETTINGS['port']
         max_pool = MONGODB_SETTINGS['max_pool']
-        self.connection = pymongo.MongoClient(host, port, max_pool)
+        self.connection = motor.MotorClient(host, port, max_pool).open_sync()
         self.db = self.connection[MONGODB_SETTINGS["database"]]
         self.db.add_son_manipulator(NamespaceInjector())
         self.db.add_son_manipulator(AutoReference(self.db))
 
+    @tornado.gen.coroutine
     def insert(self, table, documents):
         """
 
@@ -39,8 +37,10 @@ class Database(object):
         - `table`:
         - `documents`:
         """
-        return self.db[table].insert(documents)
+        result = yield motor.Op(self.db[table].insert, documents)
+        raise tornado.gen.Return(result)
 
+    @tornado.gen.coroutine
     def query(self, table, parameters, sort, offset, limit, order=pymongo.DESCENDING, fields=None):
         """
 
@@ -53,10 +53,10 @@ class Database(object):
         - `limit`:
         - `fields`:
         """
-        cursor = self.db[table].find(parameters, fields).skip(offset).limit(limit)
-        cursor.sort(sort, order)
-        return cursor
+        result = yield motor.Op(self.db[table].find(parameters, fields).skip(offset).limit(limit).sort(sort, order).to_list)
+        raise tornado.gen.Return(result)
 
+    @tornado.gen.coroutine
     def get_count(self, table, parameters):
         """
 
@@ -65,9 +65,10 @@ class Database(object):
         - `table`:
         - `parameters`:
         """
-        return self.db[table].find(parameters).count()
+        result = yield motor.Op(self.db[table].find(parameters).count)
+        raise tornado.gen.Return(result)
 
-    # auto increasing id for tables to avoid exploring _id to outside in case of attacks
+    @tornado.gen.coroutine
     def get_id(self, table):
         """
 
@@ -75,9 +76,10 @@ class Database(object):
         - `self`:
         - `table`:
         """
-        value = self.db["ids"].find_and_modify({"name": table}, {"$inc": {"value": 1}}, new=True, upsert=True)
-        return value["value"]
+        value = yield motor.Op(self.db["ids"].find_and_modify({"name": table}, {"$inc": {"value": 1}}, new=True, upsert=True))
+        raise tornado.gen.Return(value["value"])
 
+    @tornado.gen.coroutine
     def find_one(self, table, parameters):
         """
 
@@ -86,8 +88,10 @@ class Database(object):
         - `table`:
         - `parameters`:
         """
-        return self.db[table].find_one(parameters)
+        result = yield motor.Op(self.db[table].find_one, parameters)
+        raise tornado.gen.Return(result)
 
+    @tornado.gen.coroutine
     def update(self, table, parameters, update, safe=True):
         """
 
@@ -99,7 +103,8 @@ class Database(object):
         - `safe`:
         """
 
-        return self.db[table].update(parameters, update, safe)
+        result = yield motor.Op(self.db[table].update(parameters, update, safe))
+        raise tornado.gen.Return(result)
 
     def dereference(self, dbref):
         """
@@ -110,6 +115,7 @@ class Database(object):
         """
         return self.db.dereference(dbref)
 
+    @tornado.gen.coroutine
     def remove(self, table, parameters):
         """
 
@@ -118,4 +124,5 @@ class Database(object):
         - `table`:
         - `parameters`:
         """
-        self.db[table].remove(parameters)
+        result = yield motor.Op(self.db[table].remove, parameters)
+        raise tornado.gen.Return(result)

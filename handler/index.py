@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 # encoding: utf-8
+import tornado
+from tornado import gen
+
 from .base import BaseHandler
-# from libs.cache import mem_cache
+#from libs.cache import mem_cache
 
 
 class IndexHandler(BaseHandler):
 
+    @tornado.web.asynchronous
+    @gen.engine
     def get(self):
         #TODO support feed
         feed = self.get_argument("feed", None)
@@ -14,10 +19,11 @@ class IndexHandler(BaseHandler):
             return
 
         current_page = int(self.get_argument("p", 1))
-        result = self.seed_model.get_seeds(current_page=current_page)
+        result = yield self.seed_model.get_seeds(current_page=current_page)
         result["no_result"] = "嗷嗷，暂时木有内容哦～"
 
         self.render("index.html", **result)
+
 
 
 class FeedHandler(BaseHandler):

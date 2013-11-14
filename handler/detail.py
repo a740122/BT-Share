@@ -7,6 +7,8 @@ from .base import BaseHandler
 
 class DetailHandler(BaseHandler):
 
+    @tornado.web.asynchronous
+    @tornado.gen.engine
     def get(self, filename):
         context = {}
         source_info = None
@@ -19,7 +21,7 @@ class DetailHandler(BaseHandler):
         except:
             raise tornado.web.HTTPError(404)
 
-        source_info = self.seed_model.get(query)
+        source_info = yield self.seed_model.get(query)
 
         if not source_info:
             raise tornado.web.HTTPError(404)

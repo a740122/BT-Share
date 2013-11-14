@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
+import tornado
 
 from .base import BaseHandler
 from libs import util
@@ -8,12 +9,14 @@ from libs import util
 
 class SearchHandler(BaseHandler):
 
+    @tornado.web.asynchronous
+    @tornado.gen.engine
     def get(self, query):
         context ={}
         query = util.safe_input(query)
         current_page = int(self.get_argument("p",1))
 
-        result = self.search_engine.search_seeds(query, current_page)
+        result = yield self.search_engine.search_seeds(query, current_page)
         if result:
             context.update(result)
         context['query'] = {"q": query}
