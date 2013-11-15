@@ -12,7 +12,7 @@ from pymongo.errors import ConnectionFailure
 from config import MONGO_SETTINGS
 
 class Database(object):
-    def __init__(self, host=MONGO_SETTINGS.host, port=MONGO_SETTINGS.port, db=MONGO_SETTINGS.database):
+    def __init__(self, host=MONGO_SETTINGS["host"], port=MONGO_SETTINGS["port"], db=MONGO_SETTINGS["database"]):
         try:
             self.conn = Connection(host=host, port=port)
             self.db = self.conn[db]

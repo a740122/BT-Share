@@ -57,7 +57,7 @@ def main():
        test case for our spider
     """
     spiders = [mininova.spider(), ]
-    crawler = SpiderManager(spiders, MONGO_SETTINGS.database)
+    crawler = SpiderManager(spiders, MONGO_SETTINGS["database"])
     crawler.run()
 
 if __name__ == "__main__":

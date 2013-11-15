@@ -7,10 +7,14 @@ node_modules
 static/less/*.less#
 
 #personal config file
-mail_config.py 
+mail_config.py
 
 #no log file
 log/
 *.log
 
 pub/
+
+#no local config
+local_config.py
+local_settings.py
