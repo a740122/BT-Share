@@ -6,7 +6,7 @@ SITE_ROOT = "/Users/admin/code/bt-share/"
 # mongodb
 MONGODB_SETTINGS = {
     'host': '127.0.0.1',
-    'port': '11217',
+    'port': 11217,
     'max_pool': 300,
     "database": "bt_tornado",
 }

@@ -3,13 +3,10 @@ An interface to mdht that abstracts away Twisted details (like the reactor)
 
 """
 import sys
-
-
 from twisted.internet import reactor, defer
 
 from mdht import constants
 from mdht.protocols.krpc_iterator import IKRPC_Iterator, KRPC_Iterator
-
 
 
 class MDHT(object):
@@ -17,7 +14,9 @@ class MDHT(object):
     proto = None
 
     def __init__(self, node_id,
-            port=constants.dht_port, bootstrap_addresses=None):
+                 port=constants.dht_port, bootstrap_addresses=None,
+                 db=None, logger=None
+    ):
         """
         Prepares the MDHT client
 
@@ -82,10 +81,10 @@ class MDHT(object):
             print >> sys.stderr,error
             return None
 
-        def temp_fun(ip_address,self,port):
+        def temp_fun(ip_address, self, port):
             print ip_address,port
             d = self.ping((ip_address,port))
-            d.addCallbacks(ping_success,ping_fail)
+            d.addCallbacks(ping_success, ping_fail)
             return None
 
         dl = defer.DeferredList([])
@@ -93,7 +92,7 @@ class MDHT(object):
         # make ping request
         for hostname, port in addresses:
             d = reactor.resolve(hostname)
-            d.addCallback(temp_fun,self,port)
+            d.addCallback(temp_fun, self, port)
             # dl.append(d)
 
         return dl

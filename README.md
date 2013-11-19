@@ -18,7 +18,8 @@ tech detail
   - tornado
   - mondodb
   - redis
-  - ...
+  - twisted
+  - gevent
 
 TODO
 ----
