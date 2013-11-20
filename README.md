@@ -23,21 +23,23 @@ tech detail
 
 TODO
 ----
+* dht protocol
+  * make it work
+  * write test
+  * write document(wiki)
 * spider routine
   * script
   * take it on linode
   * better
     * scrapy
     * based on gevent
-* dht protocol
-  * make it work
-  * write test
-  * write document(wiki)
 * distributed spiders
-  * make it strong/clear/simple
+  * rewrite it into gevent
   * write documents
   * write test
 * mem cached
+* error check
+  * custom erro type, like NoneExitError/EmptyResultError...
 * security check
   * search input (go check wordpress)
   * xss

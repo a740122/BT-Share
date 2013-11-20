@@ -26,9 +26,8 @@
 import os.path
 import logging
 import traceback
-
-from logging import DEBUG, WARNING, ERROR
 from twisted.python import log
+from logging import DEBUG, WARNING, ERROR
 
 class Logger(object):
     """
@@ -112,7 +111,7 @@ class Logger(object):
         self._raw_log(logging.error, message, exc_info)
 
     @staticmethod
-    def basicConfig(level=DEBUG, filename=None):
+    def basicConfig(level=DEBUG, filename=None, filemode='a'):
         """
         Apply a basic logging configuration which outputs the log to the
         console (stderr). Optionally, the minimum log level can be set, one
@@ -122,14 +121,10 @@ class Logger(object):
         logging.basicConfig(level=level,
                             format='%(asctime)s %(levelname)s %(message)s',
                             datefmt='%Y-%m-%d %H:%M:%S',
-                            filename=filename
+                            filename=filename,
+                            filemode=filemode,
         )
 
 observer = log.PythonLoggingObserver()
 observer.start()
 logger = Logger()
-
-if __name__ == '__main__':
-    # Run the code from examples
-    import doctest
-    doctest.testmod()

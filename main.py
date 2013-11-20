@@ -72,7 +72,6 @@ class Application(web.Application):
 
         self.db = Database.get_instance()
 
-
         # Have one global loader for loading models and handlers
         self.loader = Loader(self.db)
 
