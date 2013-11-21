@@ -4,6 +4,7 @@ An interface to mdht that abstracts away Twisted details (like the reactor)
 """
 import sys
 from twisted.internet import reactor, defer
+from twisted.python import log
 
 from mdht import constants
 from mdht.protocols.krpc_iterator import IKRPC_Iterator, KRPC_Iterator
@@ -15,7 +16,7 @@ class MDHT(object):
 
     def __init__(self, node_id,
                  port=constants.dht_port, bootstrap_addresses=None,
-                 db=None, logger=None
+                 db=None
     ):
         """
         Prepares the MDHT client
@@ -44,7 +45,7 @@ class MDHT(object):
                     IKRPC_Iterator)
 
         for funcname in funcnames:
-            # print funcname
+            log.msg(funcname)
             func = getattr(self.proto, funcname, None)
             assert func is not None
             setattr(self, funcname, func)
@@ -71,28 +72,28 @@ class MDHT(object):
             addresses = set(addresses)
             addresses.update(constants.bootstrap_addresses)
 
-        # def ping_success(result):
-        #     print "ok,we finally got it"
-        #     return result
+        def ping_success(result):
+            log.msg("ok,we finally got it")
+            return result
 
-        # ## log the timeout,so we need to do another reconnect
-        # ## or change another bootstrap address
-        # def ping_fail(error):
-        #     print >> sys.stderr,error
-        #     return None
+        ## log the timeout,so we need to do another reconnect
+        ## or change another bootstrap address
+        def ping_fail(error):
+            log.msg(repr(error))
+            return None
 
-        # def temp_fun(ip_address, self, port):
-        #     print ip_address,port
-        #     d = self.ping((ip_address,port))
-        #     d.addCallbacks(ping_success, ping_fail)
-        #     return None
+        def save_init_node(ip_address, port):
+            log.msg(ip_address,port)
+            d = self.ping((ip_address,port))
+            d.addCallbacks(ping_success, ping_fail)
+            return None
 
         dl = defer.DeferredList([])
 
         # make ping request
         for hostname, port in addresses:
             d = reactor.resolve(hostname)
-            d.addCallback(temp_fun, self, port)
+            d.addCallback(save_init_node, port)
             dl.append(d)
 
         return dl

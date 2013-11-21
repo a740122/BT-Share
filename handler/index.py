@@ -13,17 +13,17 @@ class IndexHandler(BaseHandler):
     @gen.engine
     def get(self):
         #TODO support feed
-        # feed = self.get_argument("feed", None)
-        # if feed == 'rss':
-            # self.render("feed.html")
-            # return
+        feed = self.get_argument("feed", None)
+        if feed == 'rss':
+            self.render("feed.html")
+            return
 
-        # current_page = int(self.get_argument("p", 1))
-        # result = yield self.seed_model.get_seeds(current_page=current_page)
-        # result = {}
-        # result["no_result"] = "嗷嗷，暂时木有内容哦～"
+        current_page = int(self.get_argument("p", 1))
+        result = yield self.seed_model.get_seeds(current_page=current_page)
+        result = {}
+        result["no_result"] = "嗷嗷，暂时木有内容哦～"
 
-        self.render("test.html", **result)
+        self.render("index.html", **result)
 
 
 

@@ -17,6 +17,7 @@ from mdht.krpc_types import Query
 from mdht.protocols.krpc_sender import KRPC_Sender, IKRPC_Sender
 from mdht.kademlia.routing_table import TreeRoutingTable
 
+
 class IKRPC_Responder(IKRPC_Sender):
     """
     KRPC_Sender with better query handling and responses to incoming queries
@@ -215,7 +216,7 @@ class KRPC_Responder(KRPC_Sender):
         return self.sendQuery(query, address, timeout)
 
     def find_node(self, address, node_id, timeout=None):
-        print "ok,we are in the find_node part"
+        log.msg("ok,we are in the find_node part")
         timeout = timeout or constants.rpctimeout
         query = Query()
         query.rpctype = "find_node"

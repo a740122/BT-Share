@@ -1,5 +1,4 @@
 #encoding:utf-8
-
 #
 SITE_ROOT = "/Users/admin/code/bt-share/"
 

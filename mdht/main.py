@@ -16,15 +16,15 @@ def main():
     mdhtNodes= []
 
     db = MongoDb()
-    _logger = logger.basicConfig(level=DEBUG)
+    logger.basicConfig(level=DEBUG)
     # _logger = logger.basicConfig(level=DEBUG, filename=ROOT_PATH+"/log/mdht.log")
 
     # distribute 500 nodes
-    while  num<500:
+    while  num<5:
         rand_id = random.getrandbits(160)
 
         #TODO change to factory and add logger/db support
-        mdhtNodes.append(MDHT(rand_id, bootstrap_addresses=constants.bootstrap_addresses, port=_port, db=db, logger=_logger))
+        mdhtNodes.append(MDHT(rand_id, bootstrap_addresses=constants.bootstrap_addresses, port=_port, db=db))
 
         num += 1
         _port += 1

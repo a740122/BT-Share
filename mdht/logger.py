@@ -29,6 +29,8 @@ import traceback
 from twisted.python import log
 from logging import DEBUG, WARNING, ERROR
 
+
+#TODO make it rotate
 class Logger(object):
     """
     Logger mixin/base class adding verbose logging to subclasses.
@@ -127,4 +129,3 @@ class Logger(object):
 
 observer = log.PythonLoggingObserver()
 observer.start()
-logger = Logger()

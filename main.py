@@ -2,13 +2,10 @@
 # encoding: utf-8
 import os
 import tornado
-import sys
 from tornado import web
 from tornado.ioloop import IOLoop
 from tornado.options import define, options
 from tornado.httpserver import HTTPServer
-
-sys.path.insert(0, os.getcwd())
 
 import handler.index
 import handler.common
