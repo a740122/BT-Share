@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
 @author Greg Skoczek
 
@@ -9,6 +11,7 @@ from twisted.internet import defer
 
 from mdht.protocols.krpc_responder import KRPC_Responder, IKRPC_Responder
 from mdht.protocols.errors import TimeoutError, KRPCError
+
 
 class IterationError(Exception):
     """
@@ -90,6 +93,7 @@ class IKRPC_Iterator(IKRPC_Responder):
         @see IterationError
 
         """
+
 
 class KRPC_Iterator(KRPC_Responder):
 

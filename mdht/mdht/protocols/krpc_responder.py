@@ -1,12 +1,12 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
 This module encapsulates a twisted protocol encapsulating the core DHT
 node functionality.
-
 """
 import time
 import random
 import hashlib
-
 from collections import deque, defaultdict
 from zope.interface import implements
 from twisted.python import log
@@ -210,6 +210,7 @@ class KRPC_Responder(KRPC_Sender):
                     " announce_peerReceived")
 
     def ping(self, address, timeout=None):
+        log.msg("make a ping request from %s:%s")
         timeout = timeout or constants.rpctimeout
         query = Query()
         query.rpctype = "ping"

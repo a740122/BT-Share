@@ -1,8 +1,8 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
 An interface to mdht that abstracts away Twisted details (like the reactor)
-
 """
-import sys
 from twisted.internet import reactor, defer
 from twisted.python import log
 
@@ -88,15 +88,14 @@ class MDHT(object):
             d.addCallbacks(ping_success, ping_fail)
             return None
 
-        dl = defer.DeferredList([])
-
         # make ping request
+        dl = []
         for hostname, port in addresses:
             d = reactor.resolve(hostname)
             d.addCallback(save_init_node, port)
             dl.append(d)
 
-        return dl
+        return defer.DeferredList(dl)
 
     def schedule(self, delay, func, *args, **kwargs):
         """

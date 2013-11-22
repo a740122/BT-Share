@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
 @author Greg Skoczek
 
@@ -9,6 +11,7 @@ import sys
 
 from mdht.coding import basic_coder
 from mdht import constants
+
 
 class Node(object):
     """

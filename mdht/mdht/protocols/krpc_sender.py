@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
 @author Greg Skoczek
 
@@ -10,7 +12,7 @@ import random
 
 from zope.interface import implements, Interface
 from twisted.python import log
-from twisted.internet import reactor, defer, protocol
+from twisted.internet import reactor, defer, protocol, task
 
 from mdht import constants, contact
 from mdht.coding import krpc_coder
@@ -18,6 +20,8 @@ from mdht.coding.krpc_coder import InvalidKRPCError
 from mdht.krpc_types import Query, Response, Error
 from mdht.transaction import Transaction
 from mdht.protocols.errors import TimeoutError, KRPCError
+from mdht.database import database
+
 
 class IKRPC_Sender(Interface):
     """
@@ -181,6 +185,38 @@ class KRPC_Sender(protocol.DatagramProtocol):
             self._transactions = dict()
             self.routing_table = routing_table_class(self.node_id)
 
+
+            #TODO serialize update and don't replace
+            #TODO
+            # restore node list from db
+            node_list = database["routing_table"].find({"_id":{"$ne":str(self.node_id)}})
+            for node in node_list:
+                _ = contact.Node(int(node["_id"]), (node["ip"], node["port"]))
+                self.routing_table.offer_node(_)
+
+            # routine task
+            routine_time = 10 #60s
+            def save_routing_table():
+                database["routing_table"].drop()
+                nodes = self.routing_table.get_nodes()
+                params = []
+                for k in nodes:
+                    params.append({
+                        "_id":  str(nodes[k].node_id),
+                        "ip":   nodes[k].address[0],
+                        "port": nodes[k].address[1]
+                    })
+                if params:
+                    log.msg("current nodes:%s" % params)
+                    database["routing_table"].insert(params)
+
+            # set a routine to keep routing table updated
+            # smore data lossing is ok here
+            save_routing_table_loop = task.LoopingCall(save_routing_table)
+            save_routing_table_loop.start(routine_time)
+
+
+
     def datagramReceived(self, data, address):
         """
         This method is called by twisted when a datagram is received
@@ -229,7 +265,7 @@ class KRPC_Sender(protocol.DatagramProtocol):
 
     def sendKRPC(self, krpc, address):
         encoded_packet = krpc_coder.encode(krpc)
-        print "sendKRPC",encoded_packet,address,"\n"
+        log.msg("sendKRPC",encoded_packet,address,"\n")
         self.transport.write(encoded_packet, address)
 
     def sendQuery(self, query, address, timeout):
@@ -257,7 +293,8 @@ class KRPC_Sender(protocol.DatagramProtocol):
         # has to complete (ie: receive a response or error)
         t.timeout_call = self._reactor.callLater(constants.rpctimeout,
                                 t.deferred.errback, TimeoutError())
-        # Store this transaction
+        # Store this transaction, so when we receive responses back,
+        # we can check whether their rightness
         self._transactions[query._transaction_id] = t
         # Add a callback that removes this transaction
         # after it has been processed
@@ -284,13 +321,15 @@ class KRPC_Sender(protocol.DatagramProtocol):
         """
         # Pull the node corresponding to this response out
         # of our routing table, or create it if it doesn't exist
-        print "_query_success_callback, and result is ",response
+        log.msg("_query_success_callback, and result is %s" % response)
 
+
+        # get/create node, and update the node's activeness for later calculation
         rt_node = self.routing_table.get_node(response._from)
-
         responsenode = (rt_node if rt_node is not None
                         else contact.Node(response._from, address))
         responsenode.successful_query(transaction.time)
+
         self.routing_table.offer_node(responsenode)
         # Pass the response further down the callback chain
         return response
@@ -334,7 +373,7 @@ class KRPC_Sender(protocol.DatagramProtocol):
         """
         transaction_id = transaction.query._transaction_id
         if transaction_id in self._transactions:
-                del self._transactions[transaction_id]
+            del self._transactions[transaction_id]
 
         if transaction.timeout_call.active():
             transaction.timeout_call.cancel()
