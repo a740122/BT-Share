@@ -23,6 +23,10 @@ REDIS_SETTING = {
     'key_prefix': 'Q2::'
 }
 
+ROUTING_TIME = 30# per second
+
+HOOK_ITERATE = long("D20E34D7C69C296B7CB7447532DF6AA4D2BE001C", 16)
+
 try:
     from local_settings import *
 except:

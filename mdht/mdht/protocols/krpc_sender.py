@@ -9,7 +9,7 @@ is written with the Twisted Network framework
 
 """
 import random
-
+import logging
 from zope.interface import implements, Interface
 from twisted.python import log
 from twisted.internet import reactor, defer, protocol, task
@@ -171,6 +171,7 @@ class IKRPC_Sender(Interface):
 
         """
 
+
 ## based on UDP
 class KRPC_Sender(protocol.DatagramProtocol):
 
@@ -181,41 +182,43 @@ class KRPC_Sender(protocol.DatagramProtocol):
         # one from twisted.internet
         if _reactor is None:
             self._reactor = reactor
-            self.node_id = long(node_id)
-            self._transactions = dict()
-            self.routing_table = routing_table_class(self.node_id)
+        self.node_id = long(node_id)
+        self._transactions = dict()
+        self.routing_table = routing_table_class(self.node_id)
+        self.db = database
 
+        node_list = database["routing_table"].find({"_id":{"$ne":str(self.node_id)}})
+        for _node in node_list:
+            node = contact.Node(int(_node["_id"]), (_node["ip"], _node["port"]))
+            self.routing_table.offer_node(node)
 
-            #TODO serialize update and don't replace
-            #TODO
-            # restore node list from db
-            node_list = database["routing_table"].find({"_id":{"$ne":str(self.node_id)}})
-            for node in node_list:
-                _ = contact.Node(int(node["_id"]), (node["ip"], node["port"]))
-                self.routing_table.offer_node(_)
+        # TODO necess to store nodes periodically?
+        # set a routine to keep routing table updated
+        # smore data lossing is ok here
+        # save_routing_table_loop = task.LoopingCall(save_routing_table)
+        # save_routing_table_loop.start(ROUTING_TIME)
 
-            # routine task
-            routine_time = 10 #60s
-            def save_routing_table():
-                database["routing_table"].drop()
-                nodes = self.routing_table.get_nodes()
-                params = []
-                for k in nodes:
-                    params.append({
-                        "_id":  str(nodes[k].node_id),
-                        "ip":   nodes[k].address[0],
-                        "port": nodes[k].address[1]
-                    })
-                if params:
-                    log.msg("current nodes:%s" % params)
-                    database["routing_table"].insert(params)
+    def stopProtocol(self):
+        log.msg("connection shutdown by admin, try to save the routing table.Be patient")
+        self.save_routing_table()
 
-            # set a routine to keep routing table updated
-            # smore data lossing is ok here
-            save_routing_table_loop = task.LoopingCall(save_routing_table)
-            save_routing_table_loop.start(routine_time)
+    def save_routing_table(self):
+        nodes = self.routing_table.get_nodes()
+        params = []
+        for k in nodes:
+            #TODO add more fileds
+            params.append({
+                "_id":  str(nodes[k].node_id),
+                "ip":   nodes[k].address[0],
+                "port": nodes[k].address[1]
+            })
+        if params:
+            try:
+                database["routing_table"].insert(params, continue_on_error=True)
+            except:
+                log.error("save nodes to routing_table break.")
 
-
+            log.msg("nodes has saved to routing_table: %s" % params)
 
     def datagramReceived(self, data, address):
         """
@@ -231,12 +234,19 @@ class KRPC_Sender(protocol.DatagramProtocol):
         try:
             krpc = krpc_coder.decode(data)
         except InvalidKRPCError:
-            log.msg("Malformed packet received from %s:%d" % address)
+            log.msg("Malformed packet received from %s:%d" % address, logLevel=logging.WARNING)
             return
         self.krpcReceived(krpc, address)
 
     def krpcReceived(self, krpc, address):
         if isinstance(krpc, Query):
+
+        # TODO add a save_or_update_node func
+        # # save the ping reveived address
+        # node = contact.Node(query._from, address)
+        # self.routing_table.offer_node(node)
+        # log.msg("save ping received node(%s:%s) to routing table" % address)
+
             self.queryReceived(krpc, address)
         else:
             transaction = self._transactions.get(krpc._transaction_id, None)
@@ -257,7 +267,7 @@ class KRPC_Sender(protocol.DatagramProtocol):
             dispatcher(query, address)
 
     def responseReceived(self, response, transaction, address):
-        print "response received."
+        log.msg("response received.")
         transaction.deferred.callback(response)
 
     def errorReceived(self, error, transaction, address):

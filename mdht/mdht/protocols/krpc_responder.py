@@ -12,6 +12,7 @@ from zope.interface import implements
 from twisted.python import log
 
 from mdht import constants
+from mdht import contact
 from mdht.coding import basic_coder
 from mdht.krpc_types import Query
 from mdht.protocols.krpc_sender import KRPC_Sender, IKRPC_Sender
@@ -142,9 +143,9 @@ class KRPC_Responder(KRPC_Sender):
     implements(IKRPC_Responder)
 
     def __init__(self,
-            routing_table_class=TreeRoutingTable,
-            node_id=None,
-            _reactor=None):
+                 routing_table_class=TreeRoutingTable,
+                 node_id=None,
+                 _reactor=None):
 
         if node_id is None:
             node_id = random.getrandbits(160)
@@ -160,6 +161,8 @@ class KRPC_Responder(KRPC_Sender):
     def ping_Received(self, query, address):
         # The ping response needs no additional protocol
         # data, so build_response() is empty
+        log.msg("ping received from address: %s:%s" % address)
+
         response = query.build_response()
         self.sendResponse(response, address)
 
@@ -171,9 +174,9 @@ class KRPC_Responder(KRPC_Sender):
             nodes = [target_node]
         else:
             nodes = self.routing_table.get_closest_nodes(query.target_id)
-        # Include the nodes in the response
-        response = query.build_response(nodes=nodes)
-        self.sendResponse(response, address)
+            # Include the nodes in the response
+            response = query.build_response(nodes=nodes)
+            self.sendResponse(response, address)
 
     def get_peers_Received(self, query, address):
         nodes = None
@@ -184,12 +187,12 @@ class KRPC_Responder(KRPC_Sender):
         if dont_have_peers:
             peers = None
             nodes = self.routing_table.get_closest_nodes(query.target_id)
-        # Generate a token that we can recalculate
-        # later (upon receiving an announce_peer query
-        token = self._token_generator.generate(query, address)
-        # Attach the peers, nodes, and token to the response message
-        response = query.build_response(nodes=nodes, peers=peers, token=token)
-        self.sendResponse(response, address)
+            # Generate a token that we can recalculate
+            # later (upon receiving an announce_peer query
+            token = self._token_generator.generate(query, address)
+            # Attach the peers, nodes, and token to the response message
+            response = query.build_response(nodes=nodes, peers=peers, token=token)
+            self.sendResponse(response, address)
 
     def announce_peer_Received(self, query, address):
         token = query.token
@@ -271,7 +274,7 @@ class _TokenGenerator(object):
         self._prune_secrets()
         time_since_last_secret = time.time() - self.last_secret_time
         if (time_since_last_secret >= constants._secret_timeout or
-                len(self.secrets) == 0):
+            len(self.secrets) == 0):
             self.secrets.appendleft(self._new_secret())
 
         self.last_secret_time = time.time()
@@ -290,7 +293,7 @@ class _TokenGenerator(object):
             hashed_token = self._get_hash(query, address, secret)
             if hashed_token == token:
                 return True
-        return False
+            return False
 
     def _get_hash(self, query, address, secret):
         """
