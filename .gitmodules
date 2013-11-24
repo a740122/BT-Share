@@ -1,0 +1,6 @@
+[submodule "a-super-fast-crawler"]
+	path = a-super-fast-crawler
+	url = https://github.com/zhkzyth/a-super-fast-crawler
+[submodule "mdht"]
+	path = mdht
+	url = https://github.com/zhkzyth/mdht
