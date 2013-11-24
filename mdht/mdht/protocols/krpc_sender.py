@@ -198,59 +198,6 @@ class KRPC_Sender(protocol.DatagramProtocol):
                                 )
             self.routing_table.offer_node(node)
 
-        # TODO necess to store nodes periodically?
-        # set a routine to keep routing table updated
-        # smore data lossing is ok here
-        # save_routing_table_loop = task.LoopingCall(save_routing_table)
-        # save_routing_table_loop.start(ROUTING_TIME)
-
-    def stopProtocol(self):
-        log.msg("connection shutdown by admin, try to save the routing table.Be patient")
-        self._save_routing_table()
-        self._save_sources_peers()
-
-    def _save_routing_table(self):
-        nodes = self.routing_table.get_nodes()
-        params = []
-        for k in nodes:
-            params.append({
-                "_id":  str(nodes[k].node_id),
-                "ip":   nodes[k].address[0],
-                "port": nodes[k].address[1],
-                "last_updated": nodes[k].last_updated,
-                "totalrtt": nodes[k].totalrtt,
-                "successcount": nodes[k].successcount,
-                "failcount": nodes[k].failcount,
-            })
-        if params:
-            try:
-                database["routing_table"].insert(params, continue_on_error=True)
-                log.msg("nodes has saved to routing_table: %s" % params)
-            except:
-                log.error("save nodes to routing_table break.")
-
-    def _save_sources_peers(self):
-        documents = []
-        t_dict  = self._datastore
-        for target_id in t_dict:
-            peer_list = []
-            for peer in t_dict[target_id]:
-                peer_list.append({
-                    "ip": peer["ip"],
-                    "port": peer["port"],
-                })
-            documents.append({
-                "_id": str(target_id),
-                "peer_list": peer_list,
-            })
-        if documents:
-            try:
-                database["sources"].insert(documents, continue_on_error=True)
-                log.msg("sources has saved to sources table: %s" % documents)
-            except:
-                log.error("save to sources table break.")
-
-
     def datagramReceived(self, data, address):
         """
         This method is called by twisted when a datagram is received
