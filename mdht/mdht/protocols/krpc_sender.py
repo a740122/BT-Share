@@ -189,7 +189,13 @@ class KRPC_Sender(protocol.DatagramProtocol):
 
         node_list = database["routing_table"].find({"_id":{"$ne":str(self.node_id)}})
         for _node in node_list:
-            node = contact.Node(int(_node["_id"]), (_node["ip"], _node["port"]))
+            node = contact.Node(node_id=int(_node["_id"]),
+                                address=(_node["ip"], _node["port"]),
+                                last_updated=_node["last_updated"],
+                                totalrtt=_node["totalrtt"],
+                                successcount=_node["successcount"],
+                                failcount=_node["failcount"],
+                                )
             self.routing_table.offer_node(node)
 
         # TODO necess to store nodes periodically?
@@ -200,25 +206,50 @@ class KRPC_Sender(protocol.DatagramProtocol):
 
     def stopProtocol(self):
         log.msg("connection shutdown by admin, try to save the routing table.Be patient")
-        self.save_routing_table()
+        self._save_routing_table()
+        self._save_sources_peers()
 
-    def save_routing_table(self):
+    def _save_routing_table(self):
         nodes = self.routing_table.get_nodes()
         params = []
         for k in nodes:
-            #TODO add more fileds
             params.append({
                 "_id":  str(nodes[k].node_id),
                 "ip":   nodes[k].address[0],
-                "port": nodes[k].address[1]
+                "port": nodes[k].address[1],
+                "last_updated": nodes[k].last_updated,
+                "totalrtt": nodes[k].totalrtt,
+                "successcount": nodes[k].successcount,
+                "failcount": nodes[k].failcount,
             })
         if params:
             try:
                 database["routing_table"].insert(params, continue_on_error=True)
+                log.msg("nodes has saved to routing_table: %s" % params)
             except:
                 log.error("save nodes to routing_table break.")
 
-            log.msg("nodes has saved to routing_table: %s" % params)
+    def _save_sources_peers(self):
+        documents = []
+        t_dict  = self._datastore
+        for target_id in t_dict:
+            peer_list = []
+            for peer in t_dict[target_id]:
+                peer_list.append({
+                    "ip": peer["ip"],
+                    "port": peer["port"],
+                })
+            documents.append({
+                "_id": str(target_id),
+                "peer_list": peer_list,
+            })
+        if documents:
+            try:
+                database["sources"].insert(documents, continue_on_error=True)
+                log.msg("sources has saved to sources table: %s" % documents)
+            except:
+                log.error("save to sources table break.")
+
 
     def datagramReceived(self, data, address):
         """
@@ -240,18 +271,13 @@ class KRPC_Sender(protocol.DatagramProtocol):
 
     def krpcReceived(self, krpc, address):
         if isinstance(krpc, Query):
-
-        # TODO add a save_or_update_node func
-        # # save the ping reveived address
-        # node = contact.Node(query._from, address)
-        # self.routing_table.offer_node(node)
-        # log.msg("save ping received node(%s:%s) to routing table" % address)
-
+            self._save_received_node(krpc, address)
             self.queryReceived(krpc, address)
         else:
             transaction = self._transactions.get(krpc._transaction_id, None)
             if transaction is not None:
                 if isinstance(krpc, Response):
+                    self._save_received_node(krpc, address)
                     self.responseReceived(krpc, transaction, address)
                 elif isinstance(krpc, Error):
                     self.errorReceived(krpc, transaction, address)
@@ -267,10 +293,11 @@ class KRPC_Sender(protocol.DatagramProtocol):
             dispatcher(query, address)
 
     def responseReceived(self, response, transaction, address):
-        log.msg("response received.")
+        log.msg("response received from node(%s:%s)." % address)
         transaction.deferred.callback(response)
 
     def errorReceived(self, error, transaction, address):
+        log.msg("error received from node(%s:%s)." % address)
         transaction.deferred.errback(KRPCError(error))
 
     def sendKRPC(self, krpc, address):
@@ -358,7 +385,9 @@ class KRPC_Sender(protocol.DatagramProtocol):
         # is either a TimeoutError or a KRPCError
         f = failure.trap(TimeoutError, KRPCError)
 
-        errornodes = self.routing_table.get_node_by_address(address)
+        # FIXME not thread save? but there is thread at all.
+        import copy
+        errornodes = copy.deepcopy(self.routing_table.get_node_by_address(address))
         if errornodes is None:
             return failure
 
@@ -402,3 +431,14 @@ class KRPC_Sender(protocol.DatagramProtocol):
             transaction_id = random.getrandbits(constants.transaction_id_size)
             if transaction_id not in self._transactions:
                 return transaction_id
+
+
+    def _save_received_node(self, krpc, address):
+        """
+        save node from the out request node if it is not in routing table yet
+        """
+        if self.routing_table.get_node(krpc._from):
+            return
+        node = contact.Node(node_id=krpc._from, address=address)
+        self.routing_table.offer_node(node)
+        log.msg("save the request from node(%s:%s) done" % address)

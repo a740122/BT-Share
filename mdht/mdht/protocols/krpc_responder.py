@@ -12,7 +12,7 @@ from zope.interface import implements
 from twisted.python import log
 
 from mdht import constants
-from mdht import contact
+from mdht.database import database
 from mdht.coding import basic_coder
 from mdht.krpc_types import Query
 from mdht.protocols.krpc_sender import KRPC_Sender, IKRPC_Sender
@@ -156,17 +156,22 @@ class KRPC_Responder(KRPC_Sender):
 
         # Datastore is used for storing peers on torrents
         self._datastore = defaultdict(set)
+        resources_set = database["sources"].find()
+        for resources in resources_set:
+            self._datastore[resources_set["_id"]] = resources_set["peer_list"]
+
         self._token_generator = _TokenGenerator()
 
     def ping_Received(self, query, address):
         # The ping response needs no additional protocol
         # data, so build_response() is empty
-        log.msg("ping received from address: %s:%s" % address)
+        log.msg("ping_Received from node(%s:%s)" % address)
 
         response = query.build_response()
         self.sendResponse(response, address)
 
     def find_node_Received(self, query, address):
+        log.msg("find_node_Received from node(%s:%s)" % address)
         target_node = self.routing_table.get_node(query.target_id)
         # If we have the target node, return it
         # otherwise return the nodes closest to the target ID
@@ -174,11 +179,14 @@ class KRPC_Responder(KRPC_Sender):
             nodes = [target_node]
         else:
             nodes = self.routing_table.get_closest_nodes(query.target_id)
-            # Include the nodes in the response
-            response = query.build_response(nodes=nodes)
-            self.sendResponse(response, address)
+
+        # Include the nodes in the response
+        response = query.build_response(nodes=nodes)
+        self.sendResponse(response, address)
 
     def get_peers_Received(self, query, address):
+        log.msg("get_peers_Received from node(%s:%s)" % address)
+
         nodes = None
         peers = self._datastore.get(query.target_id) or list()
         # Check if we have peers for the target infohash
@@ -187,16 +195,21 @@ class KRPC_Responder(KRPC_Sender):
         if dont_have_peers:
             peers = None
             nodes = self.routing_table.get_closest_nodes(query.target_id)
-            # Generate a token that we can recalculate
-            # later (upon receiving an announce_peer query
-            token = self._token_generator.generate(query, address)
-            # Attach the peers, nodes, and token to the response message
-            response = query.build_response(nodes=nodes, peers=peers, token=token)
-            self.sendResponse(response, address)
+        # Generate a token that we can recalculate
+        # later (upon receiving an announce_peer query
+        token = self._token_generator.generate(query, address)
+        # Attach the peers, nodes, and token to the response message
+        response = query.build_response(nodes=nodes, peers=peers, token=token)
+        self.sendResponse(response, address)
 
     def announce_peer_Received(self, query, address):
+        log.msg("announce_peers_Received from node(%s:%s)" % address)
         token = query.token
         token_is_valid = self._token_generator.verify(query, address, token)
+
+        #temp hack
+        token_is_valid = True
+
         if token_is_valid:
             # If the token is valid, we authenticate
             # the querying node to store itself as a peer
@@ -213,14 +226,14 @@ class KRPC_Responder(KRPC_Sender):
                     " announce_peerReceived")
 
     def ping(self, address, timeout=None):
-        log.msg("make a ping request from %s:%s")
+        log.msg("make a ping request to node (%s:%s)" % address)
         timeout = timeout or constants.rpctimeout
         query = Query()
         query.rpctype = "ping"
         return self.sendQuery(query, address, timeout)
 
     def find_node(self, address, node_id, timeout=None):
-        log.msg("ok,we are in the find_node part")
+        log.msg("make a find_node request to node(%s:%s)" % address)
         timeout = timeout or constants.rpctimeout
         query = Query()
         query.rpctype = "find_node"
@@ -228,6 +241,7 @@ class KRPC_Responder(KRPC_Sender):
         return self.sendQuery(query, address, timeout)
 
     def get_peers(self, address, target_id, timeout=None):
+        log.msg("make a get_peers request to node(%s:%s)" % address)
         timeout = timeout or constants.rpctimeout
         query = Query()
         query.rpctype = "get_peers"
@@ -235,6 +249,7 @@ class KRPC_Responder(KRPC_Sender):
         return self.sendQuery(query, address, timeout)
 
     def announce_peer(self, address, target_id, token, port, timeout=None):
+        log.msg("make a announce_peers request to node(%s:%s)" % address)
         timeout = timeout or constants.rpctimeout
         query = Query()
         query.rpctype = "announce_peer"
