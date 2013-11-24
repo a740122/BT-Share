@@ -13,11 +13,14 @@ features(alpha)
 code structure
 -------------
 - web
-  Web module is built on [tornado][5], and use it to provide seed search at 80 port.
-- crawler
-  Crawler module runs a lot of spiders to crawl bittorents from serveral famous web sites.
-- mdht
-  MDHT module is built on [twisted][3], and use it as a fake bittorent client to collect resouces' hashinfo from the [dht][4] network.
+
+   Web module is built on tornado, and use it to provide seed search at 80 port.
+- [crawler][11]
+
+   Crawler module runs a lot of spiders to crawl bittorents from serveral famous web sites.
+- [mdht][12]
+
+   MDHT module is built on [twisted][3], and use it as a fake bittorent client to collect resouces' hashinfo from the [dht][4] network.
 
 
 tech detail
@@ -103,8 +106,33 @@ inspired by
 -----------
 - [xiaoxia][2]
 
+   he has made a search engine, based on dht, but no open sources.
+- [gsko/mdht][6]
+
+   i build my mdht based on his implementation.
+- [kevinlynx/dhtcrawler][7]
+
+    thanks to kevinlynx,his dhtcrwaler code really helps me to make understand what those f**king documents was saying.
+- [daydayfree/diggit][8]
+
+   i try to simulate the code structure from daydayfree's code, specially how to add the model layer and db layer to tornado.
+- [3n1b-com/3n1b.com][9]
+
+   i learned how to make my handlers live longer in the app life cycle and more.
+- [lvyaojia/crawler][10]
+
+   i use the code to implement the crawler module and change it to suit my need.
+   May rewrite it to gevent by my own.
+
 
 [1]: https://github.com/zhkzyth/mdht
 [2]: http://xiaoxia.org/2013/05/11/magnet-search-engine/
 [3]: http://en.wikipedia.org/wiki/Twisted_%28software%29
 [4]: http://www.bittorrent.org/beps/bep_0005.html
+[6]: https://github.com/gsko/mdht
+[7]: https://github.com/kevinlynx/dhtcrawler
+[8]: https://github.com/daydayfree/diggit
+[9]: https://github.com/3n1b-com/3n1b.com
+[10]: https://github.com/lvyaojia/crawler
+[11]: https://github.com/zhkzyth/a-super-fast-crawler
+[12]: https://github.com/zhkzyth/mdht
