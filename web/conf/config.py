@@ -1,6 +1,8 @@
 #encoding:utf-8
-#
-SITE_ROOT = "/Users/admin/code/bt-share/"
+import os
+import inspect
+
+SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))))
 
 # mongodb
 MONGODB_SETTINGS = {
