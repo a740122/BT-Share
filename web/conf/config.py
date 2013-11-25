@@ -14,7 +14,7 @@ MONGODB_SETTINGS = {
 
 # pagination
 BT_PAGE_SIZE = 20
-BT_MAX_ENTRY_NUM = 1000 * BT_PAGE_SIZE
+BT_MAX_ENTRY_NUM = 5 * BT_PAGE_SIZE
 
 try:
     from local_settings import *

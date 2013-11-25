@@ -20,7 +20,6 @@ class IndexHandler(BaseHandler):
 
         current_page = int(self.get_argument("p", 1))
         result = yield self.seed_model.get_seeds(current_page=current_page)
-        result = {}
         result["no_result"] = "嗷嗷，暂时木有内容哦～"
 
         self.render("index.html", **result)

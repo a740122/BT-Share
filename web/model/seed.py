@@ -16,7 +16,6 @@ class SeedModel(Model):
 
     @tornado.gen.coroutine
     def get_seeds(self, current_page=1, parameters={}, limit=BT_PAGE_SIZE, sort="_id", callback=None):
-        # TODO change 2 to 1 check
         result = {}
         count = yield self.get_count(parameters)
         offset = (current_page-1) * limit

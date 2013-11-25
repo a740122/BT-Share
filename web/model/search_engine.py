@@ -26,6 +26,7 @@ class SearchEngine(object):
 
         params = {"name": {"$regex": search_text}}
 
+        #TODO security check
         result = yield self.loaded_model["seed"].get_seeds(parameters=params, current_page=current_page)
         raise tornado.gen.Return(result)
 
