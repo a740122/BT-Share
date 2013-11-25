@@ -42,30 +42,26 @@ tech detail
 
 todo
 ----
-* take it on linode
-* add a changer scripts to make magnet to bitorrent
-* spider routine
-  * script
-  * better
-    * scrapy
-    * based on gevent
+* add a handy helper to change magnet to bt
+* add firewall support
+* error check
+  * custom erro type, like NoneExitError/EmptyResultError...
+* mem cached
+* security check
+  * search input (go check wordpress)
+  * xss
+* rewrite spider
+   * refer scrapy
+   * based on gevent
 * dht protocol
   * write test
-  * write document(wiki)
 * distributed spiders
   * rewrite it into gevent
   * write documents
   * write test
-* mem cached
-* error check
-  * custom erro type, like NoneExitError/EmptyResultError...
-* security check
-  * search input (go check wordpress)
-  * xss
 * manage
-  * process monitor(maybe)
   * backend manage(refer the lixian.xunlei UI)
-  * warm sys
+  * simple warm sys
 * full text search(maybe sphinx?)
   * chinese search
   * description search
@@ -77,9 +73,17 @@ todo
   * IRC chat server demo??
 * change linode py to pypy
 
+bugs
+----
+* git submodule init not clone the master branch by defaut ?
+* log dir in every module disappear
+* some strange guys stars my project.LOL
 
 dev log
 --------
+* `2013.11.26`
+   * take it on linode
+   * use supervisor to manage process
 * `2013.11.24`
   * dht protocol, make the collecter work
 * `2013.11.14`
