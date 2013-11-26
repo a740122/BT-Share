@@ -43,7 +43,6 @@ tech detail
 todo
 ----
 * add a handy helper to change magnet to bt
-* add firewall support
 * error check
   * custom erro type, like NoneExitError/EmptyResultError...
 * mem cached
@@ -80,8 +79,10 @@ bugs
 * some strange guys stars my project.LOL
 
 dev log
---------
+-----------
 * `2013.11.26`
+   * add firewall support
+* `2013.11.25`
    * take it on linode
    * use supervisor to manage process
 * `2013.11.24`
