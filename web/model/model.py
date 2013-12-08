@@ -110,6 +110,7 @@ class Model(object):
         result = yield self.db.update(self.table, parameters, update)
         raise tornado.gen.Return(result)
 
+    #TODO avoid to use skip ,cause it slow down the time
     def pages(self, count=1, current_page=1, list_rows=BT_PAGE_SIZE, cheat=False):
 
         count = count if count < BT_MAX_ENTRY_NUM else BT_MAX_ENTRY_NUM
