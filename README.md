@@ -42,28 +42,18 @@ tech detail
 
 todo
 ----
-* add a handy helper to change magnet to bt
-* error check
-  * custom erro type, like NoneExitError/EmptyResultError...
-* mem cached
 * security check
   * search input (go check wordpress)
   * xss
-* rewrite spider
-   * refer scrapy
-   * based on gevent
-* dht protocol
-  * write test
-* distributed spiders
-  * rewrite it into gevent
-  * write documents
-  * write test
+* mem cached
 * manage
   * backend manage(refer the lixian.xunlei UI)
   * simple warm sys
 * full text search(maybe sphinx?)
   * chinese search
   * description search
+* dht protocol
+  * write test
 * community features
   * session support
   * the thrid login
@@ -71,15 +61,17 @@ todo
   * share(twitter/weibo/google+)
   * IRC chat server demo??
 * change linode py to pypy
+* error check
+  * custom erro type, like NoneExitError/EmptyResultError...
 
-bugs
-----
-* git submodule init not clone the master branch by defaut ?
-* log dir in every module disappear
-* some strange guys stars my project.LOL
+known bugs
+---------
 
 dev log
 -----------
+* `2013.12.22`
+   * add a handy helper to change magnet to bt
+   * remove spider support since we have dht crawler now
 * `2013.11.26`
    * add firewall support
 * `2013.11.25`
