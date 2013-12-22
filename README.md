@@ -6,7 +6,7 @@ I hope the tech stack don't scare you, and if you find the protocol documents ju
 
 Demo
 --------
-![image](https://github.com/BT-Share/raw/bt-share-demo.png)
+![image](https://github.com/zhkzyth/BT-Share/blob/master/raw/bt-share-demo.png)
 
 
 features(beta)
