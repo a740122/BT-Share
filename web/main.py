@@ -40,7 +40,7 @@ class Application(web.Application):
             (r"/feed", handler.index.FeedHandler),
             (r"/404", handler.common.Better404),
             (r"/detail/(\w+)", handler.detail.DetailHandler),
-            (r"/search(?:/q_([^\s]*))?", handler.search.SearchHandler),
+            (r"/search/q_([^\s]*)", handler.search.SearchHandler),
             (r"/.*", handler.common.Better404),
             ## TODO may implement
             #(r"/sitemap\.xml", handler.index.SitemapHandler),
@@ -84,6 +84,7 @@ class Application(web.Application):
         self.log_manager.logger.info(
             "load finished! listening on %s:%s"
             % (options.bind_ip, options.port))
+
 
 def main():
     tornado.options.parse_command_line()

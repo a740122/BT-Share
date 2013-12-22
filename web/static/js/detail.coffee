@@ -10,7 +10,7 @@ require.config
       jquery: 'lib/jquery',
       bootstrap:'lib/bootstrap'
 
-
 # Start the main app logic.
-requirejs ['jquery', 'bootstrap'],($,bootstrap) ->
+requirejs ['jquery','common'],($,common) ->
   $ ->
+    common.bindSearch()

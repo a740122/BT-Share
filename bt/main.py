@@ -1,10 +1,15 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# -*- coding:utf-8 -*-
+"""
+A single funcs to download and parse bt files.
+
+TODO use gevent to make it faster.
+TODO use a middle ware to make it stronger.
+"""
 import os
 import hashlib
-import sys
 import requests
+import socket
 from requests.exceptions import RequestException,Timeout
 from pymongo import Connection
 
@@ -16,27 +21,31 @@ from log_manager import LogManager
 mongo = Connection(host=MONGO['host'], port=MONGO['port'])
 db = mongo[MONGO['db']]
 
-# TODO
 logger = LogManager("application.log")
+
+# TODO implement it in C
+tp = TorrentParser.get_instance()
 
 #parse torrent file
 def parse_torrent_file(file):
     try:
-        tp = TorrentParser(file)
+        tp.parse_torrent(file)
         return {
-
-            "file_name_list": tp.get_files_details(),
+            "name": tp.get_torrent_name(),
+            "file_list": tp.get_files_details(),
             "creation_date": tp.get_creation_date(),
             "tracker_url": tp.get_tracker_url(),
             "client_name": tp.get_client_name(),
+            # TODO how to get torrent description?
+            "description": None,
             "parse_result":'ok'
         }
     except ParsingError:
         logger.error("torrent file(%s) seems broken." % file)
     except:
-        logger.error(sys.exc_info()[0])
+        logger.exception("unexpected error raised.")
 
-    return {"parse_result": 'imcomplete'}
+    return {"parse_result": 'bad'}
 
 def save_file_to_disk(content, info_hash):
     """
@@ -55,16 +64,42 @@ def file_path(info_hash):
     check_path('%s/%s/'%(_md5[0:2], _md5[2:5]))
     return {'path':'%s/%s/'%(_md5[0:2], _md5[2:5]), 'file_name':'%s.torrent'%_md5}
 
-#
 def check_path(path):
+    """
+    check torrent path ,if not exit,just make a one
+    """
     if not os.path.exists(os.path.abspath('%s/%s'%('torrents', path))):
         os.mkdir(os.path.abspath('%s/%s'%('torrents', path)))
 
+# TODO make it as a middle layer
 def get_server_list(info_hash):
+    """
+    we try serveral place to get torrents
+    """
     upper_hash  = info_hash.upper()
-    _url = 'http://torrage.com/torrent/%s.torrent'%upper_hash
+    urls = []
+    urls.append('http://torrage.com/torrent/%s.torrent'%upper_hash)
+    urls.append('http://torcache.net/torrent/%s.torrent'%upper_hash)
+    urls.append(format_btbox_url(upper_hash))
+    urls.append('https://zoink.it/torrent/%s.torrent'%upper_hash)
+    return urls
 
-    return [_url]
+def format_btbox_url(upper_hash):
+    """
+    btbox request such a url to get a torrent
+    """
+    header = upper_hash[0:2]
+    tail   = upper_hash[-2:]
+    return "http://bt.box.n0808.com/" + header + "/" + tail + "/" + upper_hash + ".torrent"
+
+def format_magnet_link(maghash, tracker_url):
+    """
+    Return the magnet url of torrent file
+    """
+    magnet = "magnet:?xt=urn:btih:%s" % maghash
+    if tracker_url:
+        magnet += "&tr=%s" % tracker_url
+    return magnet
 
 def get_file(info_hash):
     """
@@ -73,56 +108,60 @@ def get_file(info_hash):
     """
     # whether we have got the torrent
     done = False
+
     _info_hash = hex(long(info_hash))[2:].rstrip("L")
 
     fetch_list = get_server_list(_info_hash)
 
+    db.sources.update({'_id':info_hash}, {'$set':{'download':1}})
+
     for _url in fetch_list:
-        if done == False:
-            try:
 
-                #TODO timeout should be controlled by config
-                _content = requests.get(_url, timeout=REQUEST_TIMEOUT).content
+        if done == True:
+            break
 
-                if 'File not found' not in _content:
+        try:
+
+            result = requests.get(_url, timeout=REQUEST_TIMEOUT)
+
+            if result.status_code == 200:
+
+                _path = save_file_to_disk(result.content, info_hash)
+                _abspath = os.path.abspath('%s/%s'%('torrents', _path.get('path')))
+                abspath = "%s/%s" % (_abspath, _path.get('file_name'))
+
+                result = parse_torrent_file(abspath)
+
+                if result['parse_result'] == 'ok':
                     done = True
 
-                    _path = save_file_to_disk(_content, info_hash)
-                    _abspath = os.path.abspath('%s/%s'%('torrents', _path.get('path')))
-                    abspath = "%s/%s" % (_abspath, _path.get('file_name'))
+                    magnet_link = format_magnet_link(_info_hash, result['tracker_url'])
 
-                    result = parse_torrent_file(abspath)
+                    db.source_info.update({'_id':_info_hash}, {'$set':{'download':1,
+                                                                       'name': result['name'],
+                                                                       'description': result['description'],
+                                                                       'magnet_link': magnet_link,
+                                                                       'file_path':'%s/%s/%s'%('torrents',_path.get('path'), _path.get('file_name')),
+                                                                       'file_list': result['file_list'],
+                                                                       'creation_date': result['creation_date'],
+                                                                       'tracker_url': result['tracker_url'],
+                                                                       'client_name': result['client_name']
+                                                                       }},
+                                          upsert=True)
+        #BUG: https://github.com/kennethreitz/requests/issues/1787
+        except (Timeout,socket.timeout):
+            # info_hash exist?
+           logger.warning("request torrent %s timeout." % info_hash)
+        except RequestException, e:
+            # may get blocked ?
+           logger.warning("request torrent %s raise exception.And reason is " % e.args[1])
+        except:
+            logger.exception("opps.Some unexpected exceptions just happend.")
 
-                    if result['pares_result'] == 'ok':
-                        db.temp.update({'_id':info_hash}, {'$set':{'download':1,
-                                                                   'file_path':'%s/%s/%s'%('torrents',_path.get('path'), _path.get('file_name')),
-                                                                   'state': 'ok',
-                                                                   'file_names': result['file_name_list'],
-                                                                   'creation_date': result['creation_date'],
-                                                                   'tracker_url': result['tracker_url'],
-                                                                   'client_name': result['client_name']
-                                                                   }},
-                                       upsert=True)
-                    else:
-                        # the torrent file was not parsed correctly.
-                        # for now, just mark its status
-                        # TODO handle the bad situation
-                        db.source.update({'_id':info_hash}, {'$set':{'download':1,
-                                                                   'file_path':'%s/%s/%s'%('torrents',_path.get('path'), _path.get('file_name')),
-                                                                   'state': result['state'],
-                                                                   }})
-            except Timeout:
-                # info_hash exist?
-               logger.warning("request torrent %s timeout.should try again in the next run.")
-            except RequestException, e:
-                # may get blocked ?
-               logger.warning("request torrent %s raise exception.And reason is " % e.args[1])
-            except:
-                db.source.update({'_id':info_hash}, {'$set':{'download':1,
-                                                             'file_path':'%s/%s/%s'%('torrents',_path.get('path'), _path.get('file_name')),
-                                                             'state': 'bad',
-                                                            }})
-                logger.error(sys.exc_info()[0])
+    # TODO  may redownload again
+    if done != True:
+        db.sources.update({'_id':info_hash}, {'$set':{"state":'bad'}})
+        logger.warning("request torrent %s fail." % info_hash)
 
 def down_bt():
     """
@@ -132,5 +171,5 @@ def down_bt():
         get_file(item.get('_id'))
 
 if __name__ == "__main__":
-    # I write a crontab to run every 6 hours
+    # write a crontab to run every x hours
     down_bt()

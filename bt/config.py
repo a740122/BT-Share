@@ -3,12 +3,12 @@
 import os
 import inspect
 
-SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))))
+SITE_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
 MONGO = {
     'host': '127.0.0.1',
     'port': 27017,
-    'db': 'test'
+    'db': 'bt_test'
 }
 
 # how long would we wait the request of torrent

@@ -24,6 +24,7 @@ class Loader(object):
         if(_type == "handler"):
             return self.load_handler(_name)
 
+    #TODO support extra parameter
     def load_model(self, name):
         if(name in self.loaded["model"]):
             return self.loaded["model"][name]

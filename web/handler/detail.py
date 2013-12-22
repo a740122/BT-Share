@@ -16,8 +16,10 @@ class DetailHandler(BaseHandler):
         if not filename:
             raise tornado.web.HTTPError(404)
 
+        #TODO security check here
+
         try:
-            query = {"_id":int(filename)} if filename else {}
+            query = {"_id":filename} if filename else {}
         except:
             raise tornado.web.HTTPError(404)
 

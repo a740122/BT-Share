@@ -1,4 +1,5 @@
 #coding:utf8
+import sys
 import os
 import logging
 
@@ -6,16 +7,17 @@ from config import SITE_ROOT
 
 
 class LogManager(object):
-    def __init__(self, logFile="", logLevel=0, logTree=""):
+    def __init__(self, logFile="", logLevel=5, logTree=""):
         logFile = SITE_ROOT+"/log/" + logFile
         try:
             self.logger = self._configLogger(
                 logFile=logFile, logLevel=logLevel, logTree=logTree)
-        except Exception, e:
+        except:
             # log init error should raie early
-            raise Exception
+            print sys.exc_info()[0]
+            raise
 
-    def _configLogger(self, logFile="", logLevel=0, logTree=""):
+    def _configLogger(self, logFile="", logLevel=5, logTree=""):
         '''配置logging的日志文件以及日志的记录等级'''
         logger = logging.getLogger(logTree)
         LEVELS = {
@@ -52,3 +54,6 @@ class LogManager(object):
         logger.addHandler(fileHandler)
         logger.setLevel(LEVELS.get(logLevel))
         return logger
+
+    def __getattr__(self, name):
+        return getattr(self.logger, name)

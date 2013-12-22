@@ -9,7 +9,7 @@ from conf.config import BT_PAGE_SIZE
 
 class SeedModel(Model):
 
-    def __init__(self, db=None, table="seed"):
+    def __init__(self, db=None, table="source_info"):
         self.db = db
         self.table = table
         super(SeedModel, self).__init__()

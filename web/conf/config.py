@@ -9,12 +9,14 @@ MONGODB_SETTINGS = {
     'host': 'localhost',
     'port': 27017,
     'max_pool': 300,
-    "database": "bt_tornado",
+    "database": "bt_test",
 }
 
 # pagination
 BT_PAGE_SIZE = 20
 BT_MAX_ENTRY_NUM = 5 * BT_PAGE_SIZE
+
+debug = False
 
 try:
     from local_settings import *

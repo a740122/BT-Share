@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 '''
 Parses a torrent file and provides method to access the following attributes.
     . Tracker URL
@@ -13,6 +15,9 @@ Created on 2012-03-07
 @author: mohanr
 '''
 
+"""
+Modified by zhkzyth @ 2013.12.22
+"""
 from datetime import datetime
 from StringIO import StringIO
 import os
@@ -58,7 +63,8 @@ class TorrentParser(object):
             self.curr_char = None
 
         def next_char(self):
-            self.curr_char = self.torr_str.read(1) # to provide 2 ways of accessing the current parsed char - 1. as return value, 2. as self.curr_char (useful in some circumstances)
+            # to provide 2 ways of accessing the current parsed char - 1. as return value, 2. as self.curr_char (useful in some circumstances)
+            self.curr_char = self.torr_str.read(1)
             return self.curr_char
 
         def step_back(self, position=-1, mode=1):
@@ -120,8 +126,13 @@ class TorrentParser(object):
 
             return int(parsed_int)
 
+    def __init__(self):
+        """
 
-    def __init__(self, torrent_file_path):
+        """
+        pass
+
+    def parse_torrent(self, torrent_file_path):
         '''
         Reads the torrent file and sets the content as an object attribute.
 
@@ -146,11 +157,34 @@ class TorrentParser(object):
 
         self.parsed_content = self._parse_torrent()
 
+        # drop resources
+        self.torrent_file = None
+        self.torrent_content = None
+        self.torrent_str = None
+
+    @classmethod
+    def get_instance(cls):
+        """
+        Singleton pattern
+        """
+        if not hasattr(cls, '_instance'):
+            cls._instance = cls()
+        return cls._instance
 
     def get_tracker_url(self):
         ''' Returns the tracker URL from the parsed torrent file. '''
         return self.parsed_content.get('announce')
 
+    def get_torrent_name(self):
+        ''' Return the file name of a single file or the dir name of multi files.'''
+        name = self.parsed_content.get('name')
+        if name is None:
+            # we need to make a guess here
+            # here we use max_size to judge
+            file_list = self.get_files_details()
+            max_size_file = sorted(file_list, key=lambda _file:_file[1])[-1]
+            name = max_size_file[0]
+        return name
 
     def get_creation_date(self, time_format='iso'):
         ''' Returns creation date of the torrent, if present, in ISO time_format from the parsed torrent file.
@@ -189,7 +223,6 @@ class TorrentParser(object):
                 parsed_files_info.append((files_info.get('name'), files_info.get('length'), ))
 
         return parsed_files_info
-
 
     def _parse_torrent(self):
         ''' Parse the torrent content in bencode format into python data format.
