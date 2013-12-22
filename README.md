@@ -6,7 +6,7 @@ I hope the tech stack don't scare you, and if you find the protocol documents ju
 
 Demo
 --------
-![image](https://github.com/zhkzyth/BT-Share/blob/master/raw/bt-share-demo.png)
+![image](https://raw.github.com/zhkzyth/BT-Share/master/raw/bt-share-demo.png)
 
 
 features(beta)
@@ -46,7 +46,8 @@ tech detail
 
 todo
 ----
-* extend server limit
+* server
+  * don't use root user
   * socket num
   * ulimit
   * and so on
@@ -85,6 +86,8 @@ known bugs
 
 dev log
 -----------
+* `2013.12.23`
+   * beta version comes out!!! [http://106.187.50.89:8880/][13]
 * `2013.12.22`
    * add a handy helper to change magnet to bt
    * remove spider support since we have dht crawler now
@@ -149,3 +152,4 @@ inspired by
 [10]: https://github.com/lvyaojia/crawler
 [11]: https://github.com/zhkzyth/a-super-fast-crawler
 [12]: https://github.com/zhkzyth/mdht
+[13]: http://106.187.50.89:8880/
