@@ -4,10 +4,14 @@ It is a funny bt search engine...hmm , not really funny if you cant find what yo
 
 I hope the tech stack don't scare you, and if you find the protocol documents just hard to read, just read the code or read the inspired ones...
 
-
-features(alpha)
+Demo
 --------
-- seed search with the help of [DHT][4] collecters and violent crawlers.
+![image](https://github.com/BT-Share/raw/bt-share-demo.png)
+
+
+features(beta)
+--------
+- magnet link search with the help of [DHT][4] collecters.
 
 
 code structure
@@ -15,9 +19,9 @@ code structure
 - web
 
    Web module is built on tornado, and use it to provide seed search at 80 port.
-- [crawler][11]
+- bt
 
-   Crawler module runs a lot of spiders to crawl bittorents from serveral famous web sites.
+   bt download module runs http requests for details of torrents.
 - [mdht][12]
 
    MDHT module is built on [twisted][3], and use it as a fake bittorent client to collect resouces' hashinfo from the [dht][4] network.
