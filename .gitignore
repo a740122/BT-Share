@@ -15,3 +15,5 @@ mail_config.py
 #no local config
 local_config.py
 local_settings.py
+
+supervisor_pro.conf

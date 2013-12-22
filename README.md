@@ -42,27 +42,39 @@ tech detail
 
 todo
 ----
+* extend server limit
+  * socket num
+  * ulimit
+  * and so on
+* recontruct file structures
+  * remove unused test dir
+* web UI
+  * file list support
+* full text search(maybe sphinx?)
+  * chinese search
+  * description search
 * security check
   * search input (go check wordpress)
   * xss
 * mem cached
+* routing logs to avoid waste of large files
 * manage
   * backend manage(refer the lixian.xunlei UI)
   * simple warm sys
-* full text search(maybe sphinx?)
-  * chinese search
-  * description search
 * dht protocol
-  * write test
+  * routing_table algorithm errors?
+* write test for three module
+* rewrite bt to use gevent
+* document
+  * BT wiki
+  * deploy howto
+  * structure howto
 * community features
   * session support
   * the thrid login
   * comment(anonymous is ok)
   * share(twitter/weibo/google+)
   * IRC chat server demo??
-* change linode py to pypy
-* error check
-  * custom erro type, like NoneExitError/EmptyResultError...
 
 known bugs
 ---------
