@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: #FFFFFF;
+  background-image: url("../img/grid-18px-masked.png");
+  background-position: 0 40px;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  /* padding-top: 90px; */
+
+  position: relative;
+}
+#search-form {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  float: left;
+}
+#search-form button {
+  margin: 0;
+}
+.body-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.body-content {
+  padding-bottom: 40px;
+  padding-top: 90px;
+}
+.footer {
+  border-top: 1px solid #E5E5E5;
+  padding: 10px 10px 10px 0px;
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  width: 100%;
+}
+.footer p {
+  color: #999999;
+}
+.no_photo {
+  background-color: #d9edf7;
+}

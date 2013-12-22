@@ -12,8 +12,6 @@ mail_config.py
 #no log file
 *.log
 
-pub/
-
 #no local config
 local_config.py
 local_settings.py
