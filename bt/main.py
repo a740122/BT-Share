@@ -154,7 +154,7 @@ def get_file(info_hash):
            logger.warning("request torrent %s timeout." % info_hash)
         except RequestException, e:
             # may get blocked ?
-           logger.warning("request torrent %s raise exception.And reason is " % e.args[1])
+            logger.warning("request torrent %s raise exception.And reason is %s." % (info_hash, e.strerror))
         except:
             logger.exception("opps.Some unexpected exceptions just happend.")
 
