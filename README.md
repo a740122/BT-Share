@@ -46,6 +46,7 @@ tech detail
 
 todo
 ----
+* a deploy howto
 * server
   * don't use root user
   * socket num
