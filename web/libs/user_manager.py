@@ -9,13 +9,14 @@ class UserManager(object):
         self.database = database.db['user']
 
     def get_user_by_id(self, _id):
-        return self.database.find_one({'_id':ObjectId(_id)})
+        return self.database.find_one({'_id': ObjectId(_id)})
 
     def get_user_email_by_id(self, _id):
-        return self.database.find_one({'id':ObjectId(_id)},{'email': 1})
+        return self.database.find_one({'id': ObjectId(_id)}, {'email': 1})
 
     def get_user(self, email):
-        if not email: return None
+        if not email:
+            return None
         return self.database.find_one({'email': email})
 
     def update_user(self, email, name):

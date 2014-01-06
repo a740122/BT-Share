@@ -20,6 +20,7 @@ from tornado.options import options
 
 _mem_caches = {}
 
+
 def mem_cache(expire=7200, key=""):
     """Mem cache to python dict by key"""
     def wrapper(func):
@@ -36,7 +37,7 @@ def mem_cache(expire=7200, key=""):
                 return value["value"]
             else:
                 val = func(self, *args, **kwargs)
-                _mem_caches[k] = {"value":val, "expire":now+expire}
+                _mem_caches[k] = {"value": val, "expire": now+expire}
 
                 return val
 
@@ -45,6 +46,7 @@ def mem_cache(expire=7200, key=""):
         else:
             return func
     return wrapper
+
 
 def key_gen(self, key, *args, **kwargs):
     code = hashlib.md5()
@@ -64,6 +66,7 @@ def key_gen(self, key, *args, **kwargs):
     code.update("".join(c))
 
     return code.hexdigest()
+
 
 def _valid_cache(value, now):
     if value:

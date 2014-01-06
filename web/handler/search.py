@@ -12,9 +12,9 @@ class SearchHandler(BaseHandler):
     @tornado.web.asynchronous
     @tornado.gen.engine
     def get(self, query):
-        context ={}
+        context = {}
         query = util.safe_input(query)
-        current_page = int(self.get_argument("p",1))
+        current_page = int(self.get_argument("p", 1))
 
         result = yield self.search_engine.search_seeds(query, current_page)
         if result:

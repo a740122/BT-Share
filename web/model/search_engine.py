@@ -6,6 +6,7 @@ import tornado
 from libs.segment import seg_txt_search
 from libs.util import singleton
 
+
 @singleton
 class SearchEngine(object):
 
@@ -14,7 +15,8 @@ class SearchEngine(object):
 
     @tornado.gen.coroutine
     def search_seeds(self, q, current_page=1):
-        if not q: raise tornado.gen.Return(None)
+        if not q:
+            raise tornado.gen.Return(None)
         if isinstance(q, unicode):
             q = q.encode("utf-8")
 
@@ -32,7 +34,8 @@ class SearchEngine(object):
 
     @tornado.gen.coroutine
     def search_seeds_count(self, q):
-        if not q: raise tornado.gen.Return(None)
+        if not q:
+            raise tornado.gen.Return(None)
         if isinstance(q, unicode):
             q = q.encode("utf-8")
         keywords = [seg

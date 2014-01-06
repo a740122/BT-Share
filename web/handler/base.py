@@ -31,7 +31,7 @@ class BaseHandler(RequestHandler):
 
             exc_info = kwargs["exc_info"]
             trace_info = ''.join(["%s<br/>" % line for line in traceback.format_exception(*exc_info)])
-            request_info = ''.join(["<strong>%s</strong>: %s<br/>" % (k, self.request.__dict__[k] ) for k in self.request.__dict__.keys()])
+            request_info = ''.join(["<strong>%s</strong>: %s<br/>" % (k, self.request.__dict__[k]) for k in self.request.__dict__.keys()])
             error = exc_info[1]
 
             self.set_header('Content-Type', 'text/html')
@@ -46,10 +46,9 @@ class BaseHandler(RequestHandler):
                             <p>%s</p>
                          </body>
                        </html>""" % (error, error,
-                                    trace_info, request_info))
+                                     trace_info, request_info))
         else:
             self.redirect("/404")
-
 
     @property
     def seed_model(self):

@@ -19,7 +19,7 @@ class DetailHandler(BaseHandler):
         #TODO security check here
 
         try:
-            query = {"_id":filename} if filename else {}
+            query = {"_id": filename} if filename else {}
         except:
             raise tornado.web.HTTPError(404)
 
@@ -30,4 +30,4 @@ class DetailHandler(BaseHandler):
 
         context['source_info'] = source_info
 
-        self.render("detail.html",**context)
+        self.render("detail.html", **context)

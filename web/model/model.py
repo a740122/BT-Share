@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
-
 import datetime
 import tornado
 from bson.dbref import DBRef
 from bson.timestamp import Timestamp
 from pymongo import DESCENDING
-
 
 # from database import Database
 from conf.config import BT_PAGE_SIZE, BT_MAX_ENTRY_NUM
@@ -94,6 +92,7 @@ class Model(object):
         """
         result = yield self.db.get_count(self.table, parameters)
         raise tornado.gen.Return(result)
+
     @tornado.gen.coroutine
     def remove(self, parameters):
         """
@@ -117,18 +116,22 @@ class Model(object):
         pages = count / list_rows
         pages = pages + 1 if not count % list_rows == 0 else pages
 
-        if(pages == 0): pages = 1
-        if(current_page < 1): current_page = 1
-        if(current_page > pages): current_page = pages
+        if(pages == 0):
+            pages = 1
+        if(current_page < 1):
+            current_page = 1
+        if(current_page > pages):
+            current_page = pages
 
         previous_page = current_page - 1 if current_page > 1 else 1
         next_page = current_page + 1 if current_page < pages else pages
 
-        result =  {  "prev": previous_page,
-                     "next": next_page,
-                     "current": current_page,
-                     "pages": pages,
-                     "total": count,
-                 }
+        result = {
+            "prev": previous_page,
+            "next": next_page,
+            "current": current_page,
+            "pages": pages,
+            "total": count,
+        }
 
         return result

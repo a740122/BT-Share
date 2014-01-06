@@ -11,7 +11,6 @@ from conf.config import MONGODB_SETTINGS
 
 class Database(object):
 
-
     #Singleton design pattern
     @classmethod
     def get_instance(cls):
