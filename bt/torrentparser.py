@@ -102,7 +102,7 @@ class TorrentParser(object):
                     . Explore using regex to accomplish the parsing.
                     . Could re-purpose this function to parse str_length.
             '''
-            self.step_back() # just to make sure we are parsing the integer of correct format
+            self.step_back()  # just to make sure we are parsing the integer of correct format
 
             if self.next_char() != TorrentParser.INT_START:
                 raise ParsingError('Error while parsing for an integer. Found %s at position %d while %s is expected.' %
@@ -182,7 +182,7 @@ class TorrentParser(object):
             # we need to make a guess here
             # here we use max_size to judge
             file_list = self.get_files_details()
-            max_size_file = sorted(file_list, key=lambda _file:_file[1])[-1]
+            max_size_file = sorted(file_list, key=lambda _file: _file[1])[-1]
             name = max_size_file[0]
         return name
 
@@ -202,11 +202,9 @@ class TorrentParser(object):
             else:
                 return time_stamp
 
-
     def get_client_name(self):
         ''' Returns the name of the client that created the torrent if present, from the parsed torrent file. '''
         return self.parsed_content.get('created by')
-
 
     def get_files_details(self):
         ''' Parses torrent file and returns details of the files contained in the torrent.
@@ -214,12 +212,12 @@ class TorrentParser(object):
         '''
         parsed_files_info = []
         files_info = self.parsed_content.get('info')
-        if files_info: # 'info' should be present in all torrent files. Nevertheless..
+        if files_info:  # 'info' should be present in all torrent files. Nevertheless..
             multiple_files_info = files_info.get('files')
-            if multiple_files_info: # multiple-file torrent
+            if multiple_files_info:  # multiple-file torrent
                 for file_info in multiple_files_info:
                     parsed_files_info.append((os.path.sep.join(file_info.get('path')), file_info.get('length'), ))
-            else: # single file torrent
+            else:  # single file torrent
                 parsed_files_info.append((files_info.get('name'), files_info.get('length'), ))
 
         return parsed_files_info
@@ -233,7 +231,8 @@ class TorrentParser(object):
         '''
         parsed_char = self.torrent_str.next_char()
 
-        if not parsed_char: return # EOF
+        if not parsed_char:
+            return  # EOF
 
         # Parsing logic
         if parsed_char == self.DICT_LIST_END:
@@ -242,7 +241,7 @@ class TorrentParser(object):
         elif parsed_char == self.INT_START:
             return self.torrent_str.parse_int()
 
-        elif parsed_char in string.digits: # string
+        elif parsed_char in string.digits:  # string
             self.torrent_str.step_back()
             return self.torrent_str.parse_str()
 
@@ -251,18 +250,18 @@ class TorrentParser(object):
             while True:
                 dict_key = self._parse_torrent()
                 if not dict_key:
-                    break # End of dict
-                dict_value = self._parse_torrent() # parse value
+                    break  # End of dict
+                dict_value = self._parse_torrent()  # parse value
                 parsed_dict.setdefault(dict_key, dict_value)
 
             return parsed_dict
 
         elif parsed_char == self.LIST_START:
-            parsed_list=[]
+            parsed_list = []
             while True:
                 list_item = self._parse_torrent()
                 if not list_item:
-                    break # End of list
+                    break  # End of list
                 parsed_list.append(list_item)
 
             return parsed_list
