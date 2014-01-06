@@ -12,7 +12,7 @@ MONGO = {
 }
 
 # how long would we wait the request of torrent
-REQUEST_TIMEOUT = 10 # secs
+REQUEST_TIMEOUT = 10  # secs
 
 # how many items should we update in an update task
 UPDATE_NUM = 1000

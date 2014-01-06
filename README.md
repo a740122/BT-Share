@@ -71,10 +71,6 @@ todo
   * routing_table algorithm errors?
 * write test for three module
 * rewrite bt to use gevent
-* document
-  * BT wiki
-  * deploy howto
-  * structure howto
 * community features
   * session support
   * the thrid login
@@ -82,13 +78,18 @@ todo
   * share(twitter/weibo/google+)
   * IRC chat server demo??
 
+
 known bugs
 ---------
 
+
 dev log
 -----------
+* `2013.1.6`
+   * reconstruct the file structure
+   * fix some bugs
 * `2013.12.23`
-   * beta version comes out!!! [http://106.187.50.89:8880/][13]
+   * beta version comes out!!!
 * `2013.12.22`
    * add a handy helper to change magnet to bt
    * remove spider support since we have dht crawler now
